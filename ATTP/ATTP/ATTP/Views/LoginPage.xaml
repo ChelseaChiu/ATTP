@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ATTP.Views.LoginPage">
+
+    <StackLayout x:Name="MasterLayout">
+
+        <StackLayout x:Name="LogoStackLayout" VerticalOptions="FillAndExpand">
+            <Image x:Name="LoginImageIcon" Source="LoginImageIcon.png" Margin="0,80,0,0"  />
+        </StackLayout>
+
+        <StackLayout x:Name="LoginEntries" VerticalOptions="StartAndExpand">
+ 
+            <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="True"/>
+
+            <Label x:Name="Label_Username" Text="Username/Student_ID" />
+            <Entry x:Name="Entry_Username" Placeholder="Username"/>
+            <Label x:Name="Label_Password" Text="Password" />
+            <Entry x:Name="Entry_Password" Placeholder="Password"/>
+            <Button x:Name="Btn_SignIn" Text="Sign in" Clicked="SignInProcedure" />
+        </StackLayout>
+
+    </StackLayout>
+
+
+</ContentPage>
