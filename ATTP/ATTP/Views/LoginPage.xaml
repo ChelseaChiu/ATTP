@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:ATTP.Helpers;assembly=ATTP"
+             xmlns:local="clr-namespace:ATTP"
+             
+             x:Class="ATTP.Views.LoginPage">
+            
+
+    <StackLayout x:Name="MasterLayout">
+
+        <StackLayout x:Name="LogoStackLayout" VerticalOptions="FillAndExpand">
+            <Image x:Name="LoginImageIcon" Source="LoginImageIcon.png" Margin="0,80,0,0" ScaleX="2" ScaleY="2" />
+        </StackLayout>
+
+        <StackLayout x:Name="LoginEntries" VerticalOptions="StartAndExpand">
+ 
+            <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="True"/>
+
+            <Label x:Name="TranslationUsernameLabel" Text="{i18n:Translate TranslationUsername}" />
+            <Entry x:Name="Entry_Username" Placeholder="{i18n:Translate TranslationLogin}"/>
+            <Label x:Name="TranslationPasswordLabel" Text="{i18n:Translate TranslationPassword}" />
+            <Entry x:Name="Entry_Password" Placeholder="{i18n:Translate TranslationPassword}"/>
+            <Button x:Name="Btn_SignIn" Text="{i18n:Translate TranslationSignIn}" Clicked="SignInProcedure" />
+            <Picker ItemsSource="{Binding Languages}"
+                    ItemDisplayBinding="{Binding DisplayName}" 
+                    x:Name="PickerLanguages"/>
+        </StackLayout>
+
+    </StackLayout>
+
+
+</ContentPage>

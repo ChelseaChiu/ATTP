@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TranslationLogin" xml:space="preserve">
+    <value>ชื่อผู้ใช้/บัตรประจำตัวนักศึกษา </value>
+    <comment>Comment Username</comment>
+  </data>
+  <data name="TranslationPassword" xml:space="preserve">
+    <value>รหัสผ่าน</value>
+    <comment>Comment Password</comment>
+  </data>
+  <data name="TranslationUsername" xml:space="preserve">
+    <value>ชื่อผู้ใช้</value>
+    <comment>Comment Login Details</comment>
+  </data>
+  <data name="TranslationSignIn" xml:space="preserve">
+    <value>ลงชื่อเข้าใช้</value>
+    <comment>Comment Sign In</comment>
+  </data>
+</root>

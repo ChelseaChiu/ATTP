@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ATTP.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ControlTemplate x:Key="MainPageTemplate">
+                <StackLayout BackgroundColor="White">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.35*" />
+                            <ColumnDefinition Width="0.65*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="32" />
+                            <RowDefinition Height="32" />
+                        </Grid.RowDefinitions>
+                        <Image x:Name="headerLogo" Source="HeaderLogo.png" Grid.RowSpan="2" Aspect="AspectFill" />
+                        <Label x:Name="NameLbl" Text="Show Student Name" FontSize="24" Grid.Column="1" TextColor="Red" VerticalTextAlignment="Center"/>
+                        <Label x:Name="IdLbl" Text="Show Student ID" FontSize="24" Grid.Column="1" Grid.Row="1" TextColor="Red" VerticalTextAlignment="Center"/>
+                    </Grid>
+                    <ContentPresenter />
+                </StackLayout>
+            </ControlTemplate>
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>
