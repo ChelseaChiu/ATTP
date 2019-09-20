@@ -15,13 +15,9 @@ namespace ATTP.Views
         {
             InitializeComponent();
         }
-        async void OnAlertYesNoClicked(object sender, EventArgs e)
-        {
-            bool answer = await DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
-            if (answer == true)
-            {
-                
-            }
-        }
+        //async void OnAlertYesNoClicked(object sender, EventArgs e)
+        //{
+        //    await DisplayAlert("IMPORTANT", "Have you done your orientation?","OK");
+        //}
     }
 }

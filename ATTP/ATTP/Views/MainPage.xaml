@@ -10,14 +10,13 @@
         <ContentPage Title="Menu">
             <Grid BackgroundColor="Transparent">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="200" />
+                    <RowDefinition Height="160" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid>
-                    <Image Source="bg.png" Aspect="AspectFill" />
-                    <StackLayout Padding="0,20,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                        <Image Source="profile.png" Aspect="AspectFill" WidthRequest="85" HeightRequest="85" />
-                        <Label Text="MENU" TextColor="White" FontSize="Large" />
+                    <StackLayout Padding="0,20,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Red">
+                        <Image Source="WLogo.png" Aspect="AspectFit" WidthRequest="85" HeightRequest="85" />
+                        <Label Text="TAFE Buddy" TextColor="White" FontSize="Large" HorizontalOptions="Center"/>
                     </StackLayout>
                 </Grid>
                 <StackLayout  Grid.Row="1" Spacing="15">
@@ -34,7 +33,7 @@
                              Orientation="Horizontal"
                              Padding="20,10,0,10"
                              Spacing="20">
-                                        <Image Source="{Binding Icon}"
+                                        <Image Source="{Binding IconSource}"
                          WidthRequest="40"
                          HeightRequest="40"
                          VerticalOptions="Center" />

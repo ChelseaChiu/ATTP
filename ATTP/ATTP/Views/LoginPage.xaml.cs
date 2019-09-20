@@ -12,6 +12,7 @@ using ATTP.Resources;
 
 using Plugin.Multilingual;
 using System.Globalization;
+using System.Windows.Input;
 
 namespace ATTP.Views
 {
@@ -19,6 +20,7 @@ namespace ATTP.Views
     public partial class LoginPage : ContentPage
     {
         public ObservableCollection<Language> Languages { get; }
+        public ICommand TapCommand => new Command<string>(OpenBrowser);
         public LoginPage()
         {
             
@@ -89,18 +91,19 @@ namespace ATTP.Views
             User user = new User(Entry_Username.Text, Entry_Password.Text);
             if (user.Valdation())
             {
-                DisplayAlert("Login", "Login Success", "Oke");
+                DisplayAlert("Login", "Login Success", "OK");
                 //App.UserDatabase.SaveUser(user);
-                Navigation.PushAsync(new MainPage());
+                Navigation.PushModalAsync(new MainPage());
             }
             else
             {
-                DisplayAlert("Login", "Login Not COrrect, Error:empty username or password", "Okay");
+                DisplayAlert("Login", "Login Not Correct, Error:empty username or password", "OK");
             }
-
-
         }
-
+        void OpenBrowser(string url)
+        {
+            Device.OpenUri(new Uri(url));
+        }
 
     }
 }

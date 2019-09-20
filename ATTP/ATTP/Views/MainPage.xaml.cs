@@ -19,11 +19,11 @@ namespace ATTP.Views
             InitializeComponent();
             menuList = new List<MasterPageItem>();
             // Adding menu items to menuList and you can define title ,page and icon
-            menuList.Add(new MasterPageItem() { Title = "Home", IconSource = "home.png", TargetType = typeof(HomePage) });
-            menuList.Add(new MasterPageItem() { Title = "Result", IconSource = "setting.png", TargetType = typeof(ResultPage) });
-            menuList.Add(new MasterPageItem() { Title = "Transcript", IconSource = "help.png", TargetType = typeof(TransciptPage) });
-            menuList.Add(new MasterPageItem() { Title = "Profile", IconSource = "logout.png", TargetType = typeof(ProfilePage) });
-            menuList.Add(new MasterPageItem() { Title = "Log Out", IconSource = "logout.png", TargetType = typeof(LoginPage) });
+            menuList.Add(new MasterPageItem() { Title = "Home", IconSource = "Home.png", TargetType = typeof(HomePage) });
+            menuList.Add(new MasterPageItem() { Title = "Result", IconSource = "Result.png", TargetType = typeof(ResultPage) });
+            menuList.Add(new MasterPageItem() { Title = "Transcript", IconSource = "Transcript.png", TargetType = typeof(TransciptPage) });
+            menuList.Add(new MasterPageItem() { Title = "Profile", IconSource = "Profile.png", TargetType = typeof(ProfilePage) });
+            menuList.Add(new MasterPageItem() { Title = "Log Out", IconSource = "Exit.png", TargetType = typeof(LoginPage) });
             // Setting our list to be ItemSource for ListView in MainPage.xaml
             navigationDrawerList.ItemsSource = menuList;
             // Initial navigation, this can be used for our home page

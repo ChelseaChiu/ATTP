@@ -24,7 +24,7 @@ namespace ATTP
             var culture = CrossMultilingual.Current.DeviceCultureInfo;
             AppResources.Culture = culture;
 
-            MainPage = new NavigationPage(new LoginPage());
+            MainPage = new ATTP.Views.LoginPage();
         }
 
         protected override void OnStart()

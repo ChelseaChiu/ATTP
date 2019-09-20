@@ -7,11 +7,22 @@
              ControlTemplate="{StaticResource MainPageTemplate}"
              x:Class="ATTP.Views.HomePage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="White" Margin="20,0,0,0">
-            <Label Text="Home" FontSize="30"
+        <StackLayout BackgroundColor="White" Margin="10,10,10,10">
+            <Label x:Name="HomeLbl" Text="Home" FontSize="30"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="Start" />
-            <StackLayout>
+            <Frame CornerRadius="5" Padding="8" BackgroundColor="#DEFDFF">
+                <StackLayout Orientation="Vertical">
+                    <StackLayout BackgroundColor="#DEFDFF">
+                        <Label x:Name="StudyPathLabel" Text="Diploma of Software Development" FontAttributes="Bold" />
+                        <Label x:Name="CoreLabel" Text="6 of 10 core units"/>
+                        <Label x:Name="ElectiveLabel" Text="4 of 4 elective units"/>
+                        <Label x:Name="ProgressLabel" Text="Progress: 10 of 16 units"/>
+                        <Button x:Name="ParchmentButton" Text="Apply Parchment" BackgroundColor="#A6E4F7" BorderRadius="5" FontAttributes="Bold" HorizontalOptions="Start"/>
+                    </StackLayout>
+                    <Image></Image>
+                </StackLayout>
+            </Frame>
                 <!--<ListView ItemsSource="">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -19,7 +30,6 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>-->
-            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

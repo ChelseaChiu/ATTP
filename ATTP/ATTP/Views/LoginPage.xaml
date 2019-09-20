@@ -21,10 +21,25 @@
             <Entry x:Name="Entry_Username" Placeholder="{i18n:Translate TranslationLogin}"/>
             <Label x:Name="TranslationPasswordLabel" Text="{i18n:Translate TranslationPassword}" />
             <Entry x:Name="Entry_Password" Placeholder="{i18n:Translate TranslationPassword}"/>
-            <Button x:Name="Btn_SignIn" Text="{i18n:Translate TranslationSignIn}" Clicked="SignInProcedure" />
+            <Label x:Name="languageLabel" Text="Select language:"/>
             <Picker ItemsSource="{Binding Languages}"
                     ItemDisplayBinding="{Binding DisplayName}" 
                     x:Name="PickerLanguages"/>
+            <Button x:Name="Btn_SignIn" Text="{i18n:Translate TranslationSignIn}" Clicked="SignInProcedure" BackgroundColor="Red" TextColor="White"/>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Forget your password?" />
+                        <Span Text="Click here " TextColor="Blue" TextDecorations="Underline" FontAttributes="Bold">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://otp.tafesa.edu.au/default.aspx" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text=" to reset" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
         </StackLayout>
 
     </StackLayout>
