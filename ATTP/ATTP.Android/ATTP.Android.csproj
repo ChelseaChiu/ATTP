@@ -137,19 +137,28 @@
     <AndroidResource Include="Resources\drawable\WLogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\drawable\Home.png" />
+    <AndroidResource Include="Resources\drawable\Home.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\drawable\Exit.png" />
+    <AndroidResource Include="Resources\drawable\Exit.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\drawable\Result.png" />
+    <AndroidResource Include="Resources\drawable\Result.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\drawable\Transcript.png" />
+    <AndroidResource Include="Resources\drawable\Transcript.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\drawable\Profile.png" />
+    <AndroidResource Include="Resources\drawable\Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\circle2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Calendar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.Xamarin.Android.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.Xamarin.Android.targets')" />

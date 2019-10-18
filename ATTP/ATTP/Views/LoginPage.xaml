@@ -3,11 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:i18n="clr-namespace:ATTP.Helpers;assembly=ATTP"
              xmlns:local="clr-namespace:ATTP"
-             
+             NavigationPage.HasNavigationBar="False"
              x:Class="ATTP.Views.LoginPage">
-            
 
-    <StackLayout x:Name="MasterLayout">
+    <ScrollView>
+        <StackLayout x:Name="MasterLayout" Margin="6">
 
         <StackLayout x:Name="LogoStackLayout" VerticalOptions="FillAndExpand">
             <Image x:Name="LoginImageIcon" Source="LoginImageIcon.png" Margin="0,80,0,0" ScaleX="2" ScaleY="2" />
@@ -17,32 +17,30 @@
  
             <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="True"/>
 
-            <Label x:Name="TranslationUsernameLabel" Text="{i18n:Translate TranslationUsername}" />
-            <Entry x:Name="Entry_Username" Placeholder="{i18n:Translate TranslationLogin}"/>
-            <Label x:Name="TranslationPasswordLabel" Text="{i18n:Translate TranslationPassword}" />
-            <Entry x:Name="Entry_Password" Placeholder="{i18n:Translate TranslationPassword}"/>
-            <Label x:Name="languageLabel" Text="Select language:"/>
-            <Picker ItemsSource="{Binding Languages}"
-                    ItemDisplayBinding="{Binding DisplayName}" 
-                    x:Name="PickerLanguages"/>
+            <Label x:Name="TranslationUsernameLabel" Text="{i18n:Translate TranslationUsername}" Margin="6" />
+            <Entry x:Name="Entry_Username" Placeholder="{i18n:Translate TranslationLogin}" Margin="6"/>
+            <Label x:Name="TranslationPasswordLabel" Text="{i18n:Translate TranslationPassword}" Margin="6" />
+            <Entry x:Name="Entry_Password" Placeholder="{i18n:Translate TranslationPassword}" Margin="6"/>
+            <Label x:Name="languageLabel" Text="{i18n:Translate TranslationSelectLanguage}" Margin="6" />
+            <Picker ItemsSource="{Binding Languages}" ItemDisplayBinding="{Binding DisplayName}" x:Name="PickerLanguages" Margin="6"/>
             <Button x:Name="Btn_SignIn" Text="{i18n:Translate TranslationSignIn}" Clicked="SignInProcedure" BackgroundColor="Red" TextColor="White"/>
-            <Label>
+            <Label Margin="6">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Forget your password?" />
-                        <Span Text="Click here " TextColor="Blue" TextDecorations="Underline" FontAttributes="Bold">
+                        <Span x:Name="ForgetText" Text="{i18n:Translate TranslationForgetText}" />
+                        <Span x:Name="ClickHereText" Text="{i18n:Translate TranslationForgetText}" TextColor="Blue" TextDecorations="Underline" FontAttributes="Bold">
                             <Span.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding TapCommand}"
                                           CommandParameter="https://otp.tafesa.edu.au/default.aspx" />
                             </Span.GestureRecognizers>
                         </Span>
-                        <Span Text=" to reset" />
+                        <Span x:Name="LoginResetLabel" Text="{i18n:Translate TranslationReset}" />
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
         </StackLayout>
 
     </StackLayout>
-
+  </ScrollView>
 
 </ContentPage>

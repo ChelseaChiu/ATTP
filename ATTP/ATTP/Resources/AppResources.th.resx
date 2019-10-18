@@ -28,4 +28,86 @@
     <value>ลงชื่อเข้าใช้</value>
     <comment>Comment Sign In</comment>
   </data>
+  <data name="TranslationCityLbl" xml:space="preserve">
+    <value>เมือง</value>
+    <comment>Comment City</comment>
+  </data>
+  <data name="TranslationIDlbl" xml:space="preserve">
+    <value>เลขประจำตัวนักเรียน</value>
+    <comment>Comment Stu ID</comment>
+  </data>
+  <data name="TranslationPostcodeLbl" xml:space="preserve">
+    <value>รหัสไปรษณีย์:</value>
+    <comment>Comment Postcode</comment>
+  </data>
+  <data name="TranslationStateLbl" xml:space="preserve">
+    <value>สถานะ</value>
+    <comment>Comment State</comment>
+  </data>
+  <data name="TranslationStreet1Lbl" xml:space="preserve">
+    <value>ที่อยู่</value>
+    <comment>Comment</comment>
+  </data>
+  <data name="TranslationstudentNameLbl" xml:space="preserve">
+    <value>ชื่อ</value>
+    <comment>Comment Name</comment>
+  </data>
+  <data name="TranslationEmailLbl" xml:space="preserve">
+    <value>ส่งอีเมล</value>
+  </data>
+  <data name="TranslationPhoneLbl" xml:space="preserve">
+    <value>หมายเลขโทรศัพท์</value>
+    <comment>Comment Contact Number</comment>
+  </data>
+  <data name="TranslationCoreLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationElectiveLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationProgressLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationStudyPathLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationForgetText" xml:space="preserve">
+    <value>ลืมรหัสผ่านหรือ</value>
+    <comment>Comment Forget Password</comment>
+  </data>
+  <data name="TranslationLoginPageClickerHere" xml:space="preserve">
+    <value>คลิกที่นี่</value>
+    <comment>Comment Click Here</comment>
+  </data>
+  <data name="TranslationSelectLanguage" xml:space="preserve">
+    <value>เลือกภาษา</value>
+    <comment>Comment Select Language </comment>
+  </data>
+  <data name="TranslationReset" xml:space="preserve">
+    <value>รีเซ็ต </value>
+    <comment>Comment to reset</comment>
+  </data>
+  <data name="TranslationHome" xml:space="preserve">
+    <value>ที่บ้าน</value>
+  </data>
+  <data name="TranslationLogOut" xml:space="preserve">
+    <value>ออกจากระบบ</value>
+  </data>
+  <data name="TranslationProfile" xml:space="preserve">
+    <value>โพรไฟล์</value>
+  </data>
+  <data name="TranslationResult" xml:space="preserve">
+    <value>ผลการแข่งขัน</value>
+  </data>
+  <data name="TranslationTranscript" xml:space="preserve">
+    <value>สำเนาบทสนทนา</value>
+  </data>
+  <data name="TranslationApplyforParchment" xml:space="preserve">
+    <value>สมัครใช้กระดาษหนัง</value>
+    <comment>Comment Apply for Parchment</comment>
+  </data>
+  <data name="TranslationEditUsername" xml:space="preserve">
+    <value>แก้ไขโปรไฟล์</value>
+    <comment>Comment Edit Profile </comment>
+  </data>
 </root>

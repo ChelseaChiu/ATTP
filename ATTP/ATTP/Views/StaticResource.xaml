@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:i18n="clr-namespace:ATTP.Helpers;assembly=ATTP"
+             xmlns:local="clr-namespace:ATTP"
+             x:Class="ATTP.Views.StaticResource">
+    
+
+    <ContentPage.Content>
+        <StackLayout x:Name="MainPageTemplatex" BackgroundColor="White">
+            <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="Android, WinPhone">0</On>
+                    <On Platform="iOS">0,20,0,0</On>
+                </OnPlatform>
+            </StackLayout.Padding>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.35*" />
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="36" />
+                    <RowDefinition Height="36" />
+                </Grid.RowDefinitions>
+
+                <Image x:Name="headerLogo" Source="headerlogo.png" Grid.RowSpan="2" Aspect="AspectFill"/>
+                <Label x:Name="studentNameLbl" Text="{i18n:Translate TranslationstudentNameLbl }" Grid.Column="1" TextColor="Red" VerticalOptions="Center"/>
+                <Label x:Name="studentNameLbl2" Text="{i18n:Translate TranslationstudentNameLbl }" Grid.Column="1" TextColor="Red" VerticalOptions="Center"/>
+                <Label x:Name="IDlbl" Text="{i18n:Translate TranslationIDlbl }" Grid.Column="1" Grid.Row="1" TextColor="Red" VerticalOptions="Center"/>
+                <Label x:Name="NameLbl" Text="Astrid Suhartono" FontSize="22" Grid.Column="2" TextColor="Red" VerticalOptions="Center"/>
+                <Label x:Name="IdLbl" Text="001096907" FontSize="22" Grid.Column="2" Grid.Row="1" TextColor="Red" VerticalOptions="Center"/>
+            </Grid>
+            <ContentPresenter />
+        </StackLayout>
+    </ContentPage.Content>
+    
+    
+
+
+
+
+</ContentPage>

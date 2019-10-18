@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ATTP.Resources;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,21 @@ namespace ATTP.Views
         public ProfilePage()
         {
             InitializeComponent();
+
+            StreetLbl.Text = AppResources.TranslationStreetLbl;
+            //StreetLbl.Text = AppResources.TranslationStreet1Lbl;
+            //StreetLbl.Text = AppResources.TranslationCityLbl;
+            //StreetLbl.Text = AppResources.TranslationStateLbl;
+            //StreetLbl.Text = AppResources.TranslationPostcodeLbl;
+            //StreetLbl.Text = AppResources.TranslationPhoneLbl;
+            //StreetLbl.Text = AppResources.TranslationEmailLbl;
+
+
+        }
+
+        protected void EditBtnClicked(object sender, EventArgs e)
+        {
+            Device.OpenUri(new Uri("https://www.tafesa.edu.au/mytafe-sa"));
         }
     }
 }

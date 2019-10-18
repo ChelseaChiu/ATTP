@@ -26,6 +26,121 @@
           <target state="needs-review-translation" state-qualifier="tm-suggestion">登录</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Comment Sign In</note>
         </trans-unit>
+        <trans-unit id="TranslationCityLbl" translate="yes" xml:space="preserve">
+          <source>City</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">市或县</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment City</note>
+        </trans-unit>
+        <trans-unit id="TranslationIDlbl" translate="yes" xml:space="preserve">
+          <source>Student ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">学生身份</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Stu ID</note>
+        </trans-unit>
+        <trans-unit id="TranslationPostcodeLbl" translate="yes" xml:space="preserve">
+          <source>Postcode</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">邮政编码</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Postcode</note>
+        </trans-unit>
+        <trans-unit id="TranslationStateLbl" translate="yes" xml:space="preserve">
+          <source>State</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">状态</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment State</note>
+        </trans-unit>
+        <trans-unit id="TranslationStreet1Lbl" translate="yes" xml:space="preserve">
+          <source>Address</source>
+          <target state="translated">地址</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment</note>
+        </trans-unit>
+        <trans-unit id="TranslationStreetLbl" translate="yes" xml:space="preserve">
+          <source>Street Address 1 </source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">街道地址 1</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment</note>
+        </trans-unit>
+        <trans-unit id="TranslationstudentNameLbl" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">发票名称</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Name</note>
+        </trans-unit>
+        <trans-unit id="TranslationEmailLbl" translate="yes" xml:space="preserve">
+          <source>Email</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">电子邮件</target>
+        </trans-unit>
+        <trans-unit id="TranslationPhoneLbl" translate="yes" xml:space="preserve">
+          <source>Phone Number / Moblie Number</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">电话号码 / 手机号码</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Contact Number</note>
+        </trans-unit>
+        <trans-unit id="TranslationCoreLabel" translate="yes" xml:space="preserve">
+          <source></source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"></target>
+        </trans-unit>
+        <trans-unit id="TranslationElectiveLabel" translate="yes" xml:space="preserve">
+          <source></source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"></target>
+        </trans-unit>
+        <trans-unit id="TranslationProgressLabel" translate="yes" xml:space="preserve">
+          <source></source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"></target>
+        </trans-unit>
+        <trans-unit id="TranslationStudyPathLabel" translate="yes" xml:space="preserve">
+          <source></source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"></target>
+        </trans-unit>
+        <trans-unit id="TranslationForgetText" translate="yes" xml:space="preserve">
+          <source>Forget your password ?</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">是否忘记了密码?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Forget Password</note>
+        </trans-unit>
+        <trans-unit id="TranslationLoginPageClickerHere" translate="yes" xml:space="preserve">
+          <source>Click Here</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">单击此处</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Click Here</note>
+        </trans-unit>
+        <trans-unit id="TranslationSelectLanguage" translate="yes" xml:space="preserve">
+          <source>Select a Language</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">选择语言</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Select Language </note>
+        </trans-unit>
+        <trans-unit id="TranslationReset" translate="yes" xml:space="preserve">
+          <source>to Reset </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">重置</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment to reset</note>
+        </trans-unit>
+        <trans-unit id="TranslationHome" translate="yes" xml:space="preserve">
+          <source>Home</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">住宅</target>
+        </trans-unit>
+        <trans-unit id="TranslationLogOut" translate="yes" xml:space="preserve">
+          <source>Log-Out</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">注销</target>
+        </trans-unit>
+        <trans-unit id="TranslationProfile" translate="yes" xml:space="preserve">
+          <source>Profile</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">个人资料</target>
+        </trans-unit>
+        <trans-unit id="TranslationResult" translate="yes" xml:space="preserve">
+          <source>Result</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">结果</target>
+        </trans-unit>
+        <trans-unit id="TranslationTimeTable" translate="yes" xml:space="preserve">
+          <source>Timetable</source>
+          <target state="new">Timetable</target>
+        </trans-unit>
+        <trans-unit id="TranslationTranscript" translate="yes" xml:space="preserve">
+          <source>Transcript</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">脚本</target>
+        </trans-unit>
+        <trans-unit id="TranslationApplyforParchment" translate="yes" xml:space="preserve">
+          <source>Apply for Parchment</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">申请羊皮纸</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Apply for Parchment</note>
+        </trans-unit>
+        <trans-unit id="TranslationEditUsername" translate="yes" xml:space="preserve">
+          <source>Edit Profile</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">编辑个人资料</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Edit Profile </note>
+        </trans-unit>
       </group>
     </body>
   </file>

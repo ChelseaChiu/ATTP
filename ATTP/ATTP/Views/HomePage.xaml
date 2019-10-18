@@ -2,17 +2,38 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:i18n="clr-namespace:ATTP.Helpers;assembly=ATTP"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              ControlTemplate="{StaticResource MainPageTemplate}"
+             
              x:Class="ATTP.Views.HomePage">
     <ContentPage.Content>
         <StackLayout BackgroundColor="White" Margin="10,10,10,10">
-            <Label x:Name="HomeLbl" Text="Home" FontSize="30"
+            <Label x:Name="HomeLbl" Text="{i18n:Translate TranslationHome}" FontSize="30"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="Start" />
             <Frame CornerRadius="5" Padding="8" BackgroundColor="#DEFDFF">
-                <StackLayout Orientation="Vertical">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="16"/>
+                        <RowDefinition Height="16"/>
+                        <RowDefinition Height="16"/>
+                        <RowDefinition Height="16"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="StudyPathLabel" Text="Diploma of Software Development" FontAttributes="Bold" Grid.Row="0"/>
+                    <Label x:Name="CoreLabel" Text="6 of 10 core units" Grid.Row="1"/>
+                    <Label x:Name="ElectiveLabel" Text="4 of 4 elective units" Grid.Row="2"/>
+                    <Label x:Name="ProgressLabel" Text="Progress: 10 of 16 units" Grid.Row="3"/>
+                    <Image x:Name="circleImage" Source="circle.png" Grid.Column="1" Grid.Row="0" Grid.RowSpan="5"/>
+
+                </Grid>
+                <!--<StackLayout Orientation="Horizontal" Margin="0,0,0,20" >
                     <StackLayout BackgroundColor="#DEFDFF">
                         <Label x:Name="StudyPathLabel" Text="Diploma of Software Development" FontAttributes="Bold" />
                         <Label x:Name="CoreLabel" Text="6 of 10 core units"/>
@@ -20,10 +41,32 @@
                         <Label x:Name="ProgressLabel" Text="Progress: 10 of 16 units"/>
                         <Button x:Name="ParchmentButton" Text="Apply Parchment" BackgroundColor="#A6E4F7" BorderRadius="5" FontAttributes="Bold" HorizontalOptions="Start"/>
                     </StackLayout>
-                    <Image></Image>
-                </StackLayout>
+                    <Image x:Name="circleImage" Source="circle.png" Scale="0.5"/>
+                </StackLayout>-->
             </Frame>
-                <!--<ListView ItemsSource="">
+            <Frame CornerRadius="5" Padding="8" BackgroundColor="#DEFDFF">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="16"/>
+                        <RowDefinition Height="16"/>
+                        <RowDefinition Height="16"/>
+                        <RowDefinition Height="16"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="StudyPathLabel1" Text="Certificate IV of Programming" FontAttributes="Bold" Grid.Row="0"/>
+                    <Label x:Name="CoreLabel1" Text="8 of 8 core units" Grid.Row="1"/>
+                    <Label x:Name="ElectiveLabel1" Text="4 of 4 elective units" Grid.Row="2"/>
+                    <Label x:Name="ProgressLabel1" Text="Progress: 12 of 12 units" Grid.Row="3"/>
+                    <Image x:Name="circleImage1" Source="circle2.png" Scale="0.90" Grid.Column="1" Grid.Row="0" Grid.RowSpan="5"/>
+                </Grid>
+            </Frame>
+
+            <Button x:Name="ParchmentButton" Text="{i18n:Translate TranslationApplyforParchment}" BackgroundColor="#A6E4F7" FontAttributes="Bold" HorizontalOptions="Center" Clicked="ParchmentBtnClicked"/>
+            <!--<ListView ItemsSource="">
                     <ListView.ItemTemplate>
                         <DataTemplate>
 

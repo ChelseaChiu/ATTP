@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="ru" original="ATTP/RESOURCES/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6914.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="ATTP/RESOURCES/APPRESOURCES.RESX" datatype="resx">
+        <trans-unit id="TranslationCityLbl" translate="yes" xml:space="preserve">
+          <source>City</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Город</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment City</note>
+        </trans-unit>
+        <trans-unit id="TranslationCoreLabel" translate="yes" xml:space="preserve">
+          <source></source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"></target>
+        </trans-unit>
+        <trans-unit id="TranslationElectiveLabel" translate="yes" xml:space="preserve">
+          <source></source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"></target>
+        </trans-unit>
+        <trans-unit id="TranslationEmailLbl" translate="yes" xml:space="preserve">
+          <source>Email</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Электронная почта</target>
+        </trans-unit>
+        <trans-unit id="TranslationForgetText" translate="yes" xml:space="preserve">
+          <source>Forget your password ?</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Забыли пароль?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Forget Password</note>
+        </trans-unit>
+        <trans-unit id="TranslationHome" translate="yes" xml:space="preserve">
+          <source>Home</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">домашний</target>
+        </trans-unit>
+        <trans-unit id="TranslationIDlbl" translate="yes" xml:space="preserve">
+          <source>Student ID</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">ИД учащегося</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Stu ID</note>
+        </trans-unit>
+        <trans-unit id="TranslationLogin" translate="yes" xml:space="preserve">
+          <source>Username / Student Identification </source>
+          <target state="new">Username / Student Identification </target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Username</note>
+        </trans-unit>
+        <trans-unit id="TranslationLoginPageClickerHere" translate="yes" xml:space="preserve">
+          <source>Click Here</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">щелкните здесь</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Click Here</note>
+        </trans-unit>
+        <trans-unit id="TranslationLogOut" translate="yes" xml:space="preserve">
+          <source>Log-Out</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Выход</target>
+        </trans-unit>
+        <trans-unit id="TranslationPassword" translate="yes" xml:space="preserve">
+          <source>Password</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Пароль</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Password</note>
+        </trans-unit>
+        <trans-unit id="TranslationPhoneLbl" translate="yes" xml:space="preserve">
+          <source>Phone Number / Moblie Number</source>
+          <target state="new">Phone Number / Moblie Number</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Contact Number</note>
+        </trans-unit>
+        <trans-unit id="TranslationPostcodeLbl" translate="yes" xml:space="preserve">
+          <source>Postcode</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Почтовый индекс</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Postcode</note>
+        </trans-unit>
+        <trans-unit id="TranslationProfile" translate="yes" xml:space="preserve">
+          <source>Profile</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Профиль</target>
+        </trans-unit>
+        <trans-unit id="TranslationProgressLabel" translate="yes" xml:space="preserve">
+          <source></source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"></target>
+        </trans-unit>
+        <trans-unit id="TranslationReset" translate="yes" xml:space="preserve">
+          <source>to Reset </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">к перезагрузке </target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment to reset</note>
+        </trans-unit>
+        <trans-unit id="TranslationResult" translate="yes" xml:space="preserve">
+          <source>Result</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Результат</target>
+        </trans-unit>
+        <trans-unit id="TranslationSelectLanguage" translate="yes" xml:space="preserve">
+          <source>Select a Language</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Выберите язык</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Select Language </note>
+        </trans-unit>
+        <trans-unit id="TranslationSignIn" translate="yes" xml:space="preserve">
+          <source>Sign in</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Вход</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Sign In</note>
+        </trans-unit>
+        <trans-unit id="TranslationStateLbl" translate="yes" xml:space="preserve">
+          <source>State</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Состояние</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment State</note>
+        </trans-unit>
+        <trans-unit id="TranslationStreet1Lbl" translate="yes" xml:space="preserve">
+          <source>Address</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Адрес</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment</note>
+        </trans-unit>
+        <trans-unit id="TranslationStreetLbl" translate="yes" xml:space="preserve">
+          <source>Street Address 1 </source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Адрес 1</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment</note>
+        </trans-unit>
+        <trans-unit id="TranslationstudentNameLbl" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Название</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Name</note>
+        </trans-unit>
+        <trans-unit id="TranslationStudyPathLabel" translate="yes" xml:space="preserve">
+          <source></source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"></target>
+        </trans-unit>
+        <trans-unit id="TranslationTimeTable" translate="yes" xml:space="preserve">
+          <source>Timetable</source>
+          <target state="new">Timetable</target>
+        </trans-unit>
+        <trans-unit id="TranslationTranscript" translate="yes" xml:space="preserve">
+          <source>Transcript</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Расшифровка</target>
+        </trans-unit>
+        <trans-unit id="TranslationUsername" translate="yes" xml:space="preserve">
+          <source>Username</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">пользователя</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Login Details</note>
+        </trans-unit>
+        <trans-unit id="TranslationApplyforParchment" translate="yes" xml:space="preserve">
+          <source>Apply for Parchment</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Подать заявку на пергамент</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Apply for Parchment</note>
+        </trans-unit>
+        <trans-unit id="TranslationEditUsername" translate="yes" xml:space="preserve">
+          <source>Edit Profile</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Изменить профиль</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Edit Profile </note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -28,4 +28,81 @@
     <value>Нэвтрэх</value>
     <comment>Comment Sign In</comment>
   </data>
+  <data name="TranslationCityLbl" xml:space="preserve">
+    <value>Хот</value>
+    <comment>Comment City</comment>
+  </data>
+  <data name="TranslationIDlbl" xml:space="preserve">
+    <value>Оюутны үнэмлэх</value>
+    <comment>Comment Stu ID</comment>
+  </data>
+  <data name="TranslationPostcodeLbl" xml:space="preserve">
+    <value>Шуудангийн код</value>
+    <comment>Comment Postcode</comment>
+  </data>
+  <data name="TranslationStateLbl" xml:space="preserve">
+    <value>Төлөв</value>
+    <comment>Comment State</comment>
+  </data>
+  <data name="TranslationStreet1Lbl" xml:space="preserve">
+    <value>Хаяг</value>
+    <comment>Comment</comment>
+  </data>
+  <data name="TranslationStreetLbl" xml:space="preserve">
+    <value>Гудамжны хаяг 1</value>
+    <comment>Comment</comment>
+  </data>
+  <data name="TranslationstudentNameLbl" xml:space="preserve">
+    <value>Нэр</value>
+    <comment>Comment Name</comment>
+  </data>
+  <data name="TranslationEmailLbl" xml:space="preserve">
+    <value>Э-шуудан</value>
+  </data>
+  <data name="TranslationPhoneLbl" xml:space="preserve">
+    <value>Утасны дугаар / холбоо барих дугаар</value>
+    <comment>Comment Contact Number</comment>
+  </data>
+  <data name="TranslationCoreLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationElectiveLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationProgressLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationStudyPathLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationForgetText" xml:space="preserve">
+    <value>Нууц үгээ мартсан уу?</value>
+    <comment>Comment Forget Password</comment>
+  </data>
+  <data name="TranslationLoginPageClickerHere" xml:space="preserve">
+    <value>Энд дар</value>
+    <comment>Comment Click Here</comment>
+  </data>
+  <data name="TranslationSelectLanguage" xml:space="preserve">
+    <value>Хэл сонгоно уу</value>
+    <comment>Comment Select Language </comment>
+  </data>
+  <data name="TranslationReset" xml:space="preserve">
+    <value>дахин тохируулах
+</value>
+    <comment>Comment to reset</comment>
+  </data>
+  <data name="TranslationHome" xml:space="preserve">
+    <value>Эхлэл</value>
+  </data>
+  <data name="TranslationProfile" xml:space="preserve">
+    <value>Хувийн тохиргоо</value>
+  </data>
+  <data name="TranslationResult" xml:space="preserve">
+    <value>Үр дүн</value>
+  </data>
+  <data name="TranslationApplyforParchment" xml:space="preserve">
+    <value>Илгэн цаасаар түрхэнэ</value>
+    <comment>Comment Apply for Parchment</comment>
+  </data>
 </root>

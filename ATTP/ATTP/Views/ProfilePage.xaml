@@ -3,24 +3,74 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i18n="clr-namespace:ATTP.Helpers;assembly=ATTP"
              mc:Ignorable="d"
+             ControlTemplate="{StaticResource MainPageTemplate}"
              x:Class="ATTP.Views.ProfilePage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Profile Page" 
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Grid>
+        <StackLayout BackgroundColor="White" Margin="10,10,10,10">
+            <Label x:Name="ProfileLbl" Text="{i18n:Translate TranslationProfile}" FontSize="30" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" />
+            <Grid Margin="10,10,10,20">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="0.7*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Frame  Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Margin="10" BorderColor="Black" CornerRadius="50" HeightRequest="30" WidthRequest="30" 
+                        IsClippedToBounds="True" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Image x:Name="profileImg" Source="profileImg.png" Aspect="AspectFill" Margin="-20" HeightRequest="60" WidthRequest="60" />
+                </Frame>
+                <Label x:Name="nameLbl" Text="Binding student name" Grid.Column="1" Grid.Row="0"/>
+                <Label x:Name="StudentNumLbl" Text="Binding student number" Grid.Column="1" Grid.Row="1"/>
+            </Grid>
+            <Grid Margin="10,10,10,30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="0.7*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
+                <Label x:Name="StreetLbl" Text="{i18n:Translate TranslationStreetLbl}" Grid.Row="0"/>
+                <Label x:Name="Street1Lbl" Text="{i18n:Translate TranslationStreet1Lbl}" Grid.Row="1"/>
+                <Label x:Name="CityLbl" Text="{i18n:Translate TranslationCityLbl}" Grid.Row="2"/>
+                <Label x:Name="StateLbl" Text="{i18n:Translate TranslationStateLbl}" Grid.Row="3"/>
+                <Label x:Name="PostcodeLbl" Text="{i18n:Translate TranslationPostcodeLbl}" Grid.Row="4"/>
+                <Label x:Name="PhoneLbl" Text="{i18n:Translate TranslationPhoneLbl}" Grid.Row="5"/>
+                <Label x:Name="EmailLbl" Text="{i18n:Translate TranslationEmailLbl}" Grid.Row="6"/>
+                <Frame BorderColor="Gray" Padding="4" Grid.Column="1" Grid.Row="0">
+                    <Label x:Name="StreetContLbl" Text="Binding street name"/>
+                </Frame>
+                <Frame BorderColor="Gray" Padding="4" Grid.Column="1" Grid.Row="1">
+                    <Label x:Name="Street1ContLbl" Text="Binding street name 2"/>
+                </Frame>
+                <Frame BorderColor="Gray" Padding="4" Grid.Column="1" Grid.Row="2">
+                    <Label x:Name="CityContLbl" Text="Binding city"/>
+                </Frame>
+                <Frame BorderColor="Gray" Padding="4" Grid.Column="1" Grid.Row="3">
+                    <Label x:Name="StateContLbl" Text="Binding state"/>
+                </Frame>
+                <Frame BorderColor="Gray" Padding="4" Grid.Column="1" Grid.Row="4">
+                    <Label x:Name="PostcodeContLbl" Text="Binding postcode"/>
+                </Frame>
+                <Frame BorderColor="Gray" Padding="4" Grid.Column="1" Grid.Row="5">
+                    <Label x:Name="PhoneContLbl" Text="Binding phone"/>
+                </Frame>
+                <Frame BorderColor="Gray" Padding="4" Grid.Column="1" Grid.Row="6">
+                    <Label x:Name="EmailContLbl" Text="Binding Email"/>
+                </Frame>
             </Grid>
+            <Button x:Name="EditButton" Text="{i18n:Translate TranslationEditUsername}" BackgroundColor="#A6E4F7" FontAttributes="Bold" HorizontalOptions="Center" Clicked="EditBtnClicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

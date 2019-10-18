@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TranslationCityLbl" xml:space="preserve">
+    <value>Ville</value>
+    <comment>Comment City</comment>
+  </data>
+  <data name="TranslationCoreLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationElectiveLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationEmailLbl" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="TranslationForgetText" xml:space="preserve">
+    <value>Vous avez oublié votre mot de passe ?</value>
+    <comment>Comment Forget Password</comment>
+  </data>
+  <data name="TranslationHome" xml:space="preserve">
+    <value>Accueil</value>
+  </data>
+  <data name="TranslationIDlbl" xml:space="preserve">
+    <value>ID étudiant</value>
+    <comment>Comment Stu ID</comment>
+  </data>
+  <data name="TranslationLoginPageClickerHere" xml:space="preserve">
+    <value>Cliquez ici</value>
+    <comment>Comment Click Here</comment>
+  </data>
+  <data name="TranslationLogOut" xml:space="preserve">
+    <value>Se déconnecter</value>
+  </data>
+  <data name="TranslationPassword" xml:space="preserve">
+    <value>Mot de p.</value>
+    <comment>Comment Password</comment>
+  </data>
+  <data name="TranslationPostcodeLbl" xml:space="preserve">
+    <value>Code postal</value>
+    <comment>Comment Postcode</comment>
+  </data>
+  <data name="TranslationProfile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="TranslationProgressLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationReset" xml:space="preserve">
+    <value> à Reset </value>
+    <comment>Comment to reset</comment>
+  </data>
+  <data name="TranslationResult" xml:space="preserve">
+    <value>Résultat</value>
+  </data>
+  <data name="TranslationSelectLanguage" xml:space="preserve">
+    <value>Sélectionner une langue</value>
+    <comment>Comment Select Language </comment>
+  </data>
+  <data name="TranslationSignIn" xml:space="preserve">
+    <value>Se connecter</value>
+    <comment>Comment Sign In</comment>
+  </data>
+  <data name="TranslationStateLbl" xml:space="preserve">
+    <value>État</value>
+    <comment>Comment State</comment>
+  </data>
+  <data name="TranslationStreet1Lbl" xml:space="preserve">
+    <value>Adresse</value>
+    <comment>Comment</comment>
+  </data>
+  <data name="TranslationStreetLbl" xml:space="preserve">
+    <value>Adresse postale 1</value>
+    <comment>Comment</comment>
+  </data>
+  <data name="TranslationstudentNameLbl" xml:space="preserve">
+    <value>Nom complet</value>
+    <comment>Comment Name</comment>
+  </data>
+  <data name="TranslationStudyPathLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationTranscript" xml:space="preserve">
+    <value>Transcription</value>
+  </data>
+  <data name="TranslationUsername" xml:space="preserve">
+    <value>Nom d’utilisateur</value>
+    <comment>Comment Login Details</comment>
+  </data>
+  <data name="TranslationApplyforParchment" xml:space="preserve">
+    <value>Appliquer pour parchemin</value>
+    <comment>Comment Apply for Parchment</comment>
+  </data>
+  <data name="TranslationEditUsername" xml:space="preserve">
+    <value>Modifier le profil</value>
+    <comment>Comment Edit Profile </comment>
+  </data>
+</root>

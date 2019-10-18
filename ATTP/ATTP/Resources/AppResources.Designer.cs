@@ -19,7 +19,7 @@ namespace ATTP.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class AppResources {
@@ -61,11 +61,110 @@ namespace ATTP.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Apply for Parchment.
+        /// </summary>
+        internal static string TranslationApplyforParchment {
+            get {
+                return ResourceManager.GetString("TranslationApplyforParchment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to City.
+        /// </summary>
+        internal static string TranslationCityLbl {
+            get {
+                return ResourceManager.GetString("TranslationCityLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string TranslationCoreLabel {
+            get {
+                return ResourceManager.GetString("TranslationCoreLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Profile.
+        /// </summary>
+        internal static string TranslationEditUsername {
+            get {
+                return ResourceManager.GetString("TranslationEditUsername", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string TranslationElectiveLabel {
+            get {
+                return ResourceManager.GetString("TranslationElectiveLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        internal static string TranslationEmailLbl {
+            get {
+                return ResourceManager.GetString("TranslationEmailLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forget your password ?.
+        /// </summary>
+        internal static string TranslationForgetText {
+            get {
+                return ResourceManager.GetString("TranslationForgetText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        internal static string TranslationHome {
+            get {
+                return ResourceManager.GetString("TranslationHome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Student ID.
+        /// </summary>
+        internal static string TranslationIDlbl {
+            get {
+                return ResourceManager.GetString("TranslationIDlbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Username / Student Identification .
         /// </summary>
         internal static string TranslationLogin {
             get {
                 return ResourceManager.GetString("TranslationLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Click Here.
+        /// </summary>
+        internal static string TranslationLoginPageClickerHere {
+            get {
+                return ResourceManager.GetString("TranslationLoginPageClickerHere", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log-Out.
+        /// </summary>
+        internal static string TranslationLogOut {
+            get {
+                return ResourceManager.GetString("TranslationLogOut", resourceCulture);
             }
         }
         
@@ -79,11 +178,137 @@ namespace ATTP.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Phone Number / Moblie Number.
+        /// </summary>
+        internal static string TranslationPhoneLbl {
+            get {
+                return ResourceManager.GetString("TranslationPhoneLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Postcode.
+        /// </summary>
+        internal static string TranslationPostcodeLbl {
+            get {
+                return ResourceManager.GetString("TranslationPostcodeLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profile.
+        /// </summary>
+        internal static string TranslationProfile {
+            get {
+                return ResourceManager.GetString("TranslationProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string TranslationProgressLabel {
+            get {
+                return ResourceManager.GetString("TranslationProgressLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to to Reset .
+        /// </summary>
+        internal static string TranslationReset {
+            get {
+                return ResourceManager.GetString("TranslationReset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Result.
+        /// </summary>
+        internal static string TranslationResult {
+            get {
+                return ResourceManager.GetString("TranslationResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select a Language.
+        /// </summary>
+        internal static string TranslationSelectLanguage {
+            get {
+                return ResourceManager.GetString("TranslationSelectLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sign in.
         /// </summary>
         internal static string TranslationSignIn {
             get {
                 return ResourceManager.GetString("TranslationSignIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to State.
+        /// </summary>
+        internal static string TranslationStateLbl {
+            get {
+                return ResourceManager.GetString("TranslationStateLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        internal static string TranslationStreet1Lbl {
+            get {
+                return ResourceManager.GetString("TranslationStreet1Lbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Street Address 1 .
+        /// </summary>
+        internal static string TranslationStreetLbl {
+            get {
+                return ResourceManager.GetString("TranslationStreetLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string TranslationstudentNameLbl {
+            get {
+                return ResourceManager.GetString("TranslationstudentNameLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string TranslationStudyPathLabel {
+            get {
+                return ResourceManager.GetString("TranslationStudyPathLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Timetable.
+        /// </summary>
+        internal static string TranslationTimeTable {
+            get {
+                return ResourceManager.GetString("TranslationTimeTable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transcript.
+        /// </summary>
+        internal static string TranslationTranscript {
+            get {
+                return ResourceManager.GetString("TranslationTranscript", resourceCulture);
             }
         }
         

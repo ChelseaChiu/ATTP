@@ -7,9 +7,26 @@ using ATTP.Data;
 using ATTP.Resources;
 using Plugin.Multilingual;
 
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ATTP.Models;
+using ATTP.Views;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+using ATTP.Resources;
+
+using Plugin.Multilingual;
+using System.Globalization;
+using System.Windows.Input;
+
 namespace ATTP
 {
-    
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class App : Application
     {
 
@@ -17,19 +34,28 @@ namespace ATTP
         static UserDatabaseController userDatabase;
         static RestService restService;
 
-        public App()
+
+
+
+    public App()
         {
             InitializeComponent();
+
 
             var culture = CrossMultilingual.Current.DeviceCultureInfo;
             AppResources.Culture = culture;
 
+
             MainPage = new ATTP.Views.LoginPage();
+            
+
+            
         }
 
         protected override void OnStart()
         {
             // Handle when your app starts
+
         }
 
         protected override void OnSleep()
@@ -58,7 +84,8 @@ namespace ATTP
         }
 
 
-        public static TokenDatabaseController TokenDatabase
+
+public static TokenDatabaseController TokenDatabase
         {
             get
             {
@@ -71,6 +98,8 @@ namespace ATTP
             }
 
         }
+
+
 
         public static RestService RestService
         {
@@ -85,6 +114,10 @@ namespace ATTP
 
             }
         }
+
+        public static string _language { get; set; }
+
+
 
 
         // ---- End 

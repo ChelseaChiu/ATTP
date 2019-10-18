@@ -13,7 +13,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="TranslationLogin" xml:space="preserve">
-    <value>Username / Student Identification </value>
+    <value>Username / Student ID</value>
     <comment>Comment Username</comment>
   </data>
   <data name="TranslationPassword" xml:space="preserve">
@@ -27,5 +27,17 @@
   <data name="TranslationSignIn" xml:space="preserve">
     <value>Sign in</value>
     <comment>Comment Sign In</comment>
+  </data>
+  <data name="TranslationCoreLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationElectiveLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationProgressLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationStudyPathLabel" xml:space="preserve">
+    <value></value>
   </data>
 </root>

@@ -28,4 +28,90 @@
     <value>로그인</value>
     <comment>Comment Sign In</comment>
   </data>
+  <data name="TranslationCityLbl" xml:space="preserve">
+    <value>구/군/시</value>
+    <comment>Comment City</comment>
+  </data>
+  <data name="TranslationIDlbl" xml:space="preserve">
+    <value>학생 신분증</value>
+    <comment>Comment Stu ID</comment>
+  </data>
+  <data name="TranslationPostcodeLbl" xml:space="preserve">
+    <value>우편 번호</value>
+    <comment>Comment Postcode</comment>
+  </data>
+  <data name="TranslationStateLbl" xml:space="preserve">
+    <value>상태</value>
+    <comment>Comment State</comment>
+  </data>
+  <data name="TranslationStreet1Lbl" xml:space="preserve">
+    <value>주소</value>
+    <comment>Comment</comment>
+  </data>
+  <data name="TranslationStreetLbl" xml:space="preserve">
+    <value>주소 1</value>
+    <comment>Comment</comment>
+  </data>
+  <data name="TranslationstudentNameLbl" xml:space="preserve">
+    <value>이름</value>
+    <comment>Comment Name</comment>
+  </data>
+  <data name="TranslationEmailLbl" xml:space="preserve">
+    <value>전자 메일 /이메일</value>
+  </data>
+  <data name="TranslationPhoneLbl" xml:space="preserve">
+    <value>전화 번호 / 휴대 전화 번호</value>
+    <comment>Comment Contact Number</comment>
+  </data>
+  <data name="TranslationCoreLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationElectiveLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationProgressLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationStudyPathLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationForgetText" xml:space="preserve">
+    <value>암호를 잊으셨습니까?</value>
+    <comment>Comment Forget Password</comment>
+  </data>
+  <data name="TranslationLoginPageClickerHere" xml:space="preserve">
+    <value>여기를 클릭</value>
+    <comment>Comment Click Here</comment>
+  </data>
+  <data name="TranslationSelectLanguage" xml:space="preserve">
+    <value>언어 선택</value>
+    <comment>Comment Select Language </comment>
+  </data>
+  <data name="TranslationReset" xml:space="preserve">
+    <value>재설정하려면 </value>
+    <comment>Comment to reset</comment>
+  </data>
+  <data name="TranslationHome" xml:space="preserve">
+    <value>홈</value>
+  </data>
+  <data name="TranslationLogOut" xml:space="preserve">
+    <value>로그아웃</value>
+  </data>
+  <data name="TranslationProfile" xml:space="preserve">
+    <value>프로필</value>
+  </data>
+  <data name="TranslationResult" xml:space="preserve">
+    <value>결과</value>
+  </data>
+  <data name="TranslationTranscript" xml:space="preserve">
+    <value>기록</value>
+  </data>
+  <data name="TranslationApplyforParchment" xml:space="preserve">
+    <value>양피지 신청</value>
+    <comment>Comment Apply for Parchment</comment>
+  </data>
+  <data name="TranslationEditUsername" xml:space="preserve">
+    <value>프로필 수정</value>
+    <comment>Comment Edit Profile </comment>
+  </data>
 </root>

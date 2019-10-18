@@ -33,14 +33,8 @@
                              Orientation="Horizontal"
                              Padding="20,10,0,10"
                              Spacing="20">
-                                        <Image Source="{Binding IconSource}"
-                         WidthRequest="40"
-                         HeightRequest="40"
-                         VerticalOptions="Center" />
-                                        <Label Text="{Binding Title}"
-                         FontSize="Small"
-                         VerticalOptions="Center"
-                         TextColor="Black"/>
+                                        <Image Source="{Binding ImageSource}" Aspect="AspectFit" WidthRequest="40" HeightRequest="40" VerticalOptions="Center" HorizontalOptions="Start" />
+                                        <Label Text="{Binding Title}" FontSize="Small" VerticalOptions="Center" TextColor="Black"/>
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>

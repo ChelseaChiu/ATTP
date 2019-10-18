@@ -22,17 +22,23 @@ namespace ATTP.Models
 
         public bool Valdation()
         {
-            if ((!string.IsNullOrWhiteSpace(this.Username) && !string.IsNullOrWhiteSpace(this.Password)))
+            if (!string.IsNullOrWhiteSpace(this.Username) && !string.IsNullOrWhiteSpace(this.Password) && this.Username=="001096907")
             {
                 return true;
             }
-                
+
+
+            //else if (this.Username = "001083886")
+            //{
+            //    return false;
+            //}
 
             else
             {
                 return false;
             }
-                
+
+
 
 
         }

@@ -28,4 +28,90 @@
     <value>登入\r\n</value>
     <comment>Comment Sign In</comment>
   </data>
+  <data name="TranslationCityLbl" xml:space="preserve">
+    <value>縣/市</value>
+    <comment>Comment City</comment>
+  </data>
+  <data name="TranslationIDlbl" xml:space="preserve">
+    <value>學生身份</value>
+    <comment>Comment Stu ID</comment>
+  </data>
+  <data name="TranslationPostcodeLbl" xml:space="preserve">
+    <value>郵遞區號</value>
+    <comment>Comment Postcode</comment>
+  </data>
+  <data name="TranslationStateLbl" xml:space="preserve">
+    <value>狀態</value>
+    <comment>Comment State</comment>
+  </data>
+  <data name="TranslationStreet1Lbl" xml:space="preserve">
+    <value>地址</value>
+    <comment>Comment</comment>
+  </data>
+  <data name="TranslationStreetLbl" xml:space="preserve">
+    <value>街道地址 1</value>
+    <comment>Comment</comment>
+  </data>
+  <data name="TranslationstudentNameLbl" xml:space="preserve">
+    <value>名稱</value>
+    <comment>Comment Name</comment>
+  </data>
+  <data name="TranslationEmailLbl" xml:space="preserve">
+    <value>電子郵件</value>
+  </data>
+  <data name="TranslationPhoneLbl" xml:space="preserve">
+    <value>電話號碼 / 手機號碼</value>
+    <comment>Comment Contact Number</comment>
+  </data>
+  <data name="TranslationCoreLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationElectiveLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationProgressLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationStudyPathLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationForgetText" xml:space="preserve">
+    <value>忘記密碼?</value>
+    <comment>Comment Forget Password</comment>
+  </data>
+  <data name="TranslationLoginPageClickerHere" xml:space="preserve">
+    <value>按一下此處</value>
+    <comment>Comment Click Here</comment>
+  </data>
+  <data name="TranslationSelectLanguage" xml:space="preserve">
+    <value>選取語言</value>
+    <comment>Comment Select Language </comment>
+  </data>
+  <data name="TranslationReset" xml:space="preserve">
+    <value>重置</value>
+    <comment>Comment to reset</comment>
+  </data>
+  <data name="TranslationHome" xml:space="preserve">
+    <value>常用</value>
+  </data>
+  <data name="TranslationLogOut" xml:space="preserve">
+    <value>登出</value>
+  </data>
+  <data name="TranslationProfile" xml:space="preserve">
+    <value>設定檔</value>
+  </data>
+  <data name="TranslationResult" xml:space="preserve">
+    <value>結果</value>
+  </data>
+  <data name="TranslationTranscript" xml:space="preserve">
+    <value>文字記錄</value>
+  </data>
+  <data name="TranslationApplyforParchment" xml:space="preserve">
+    <value>申請羊皮紙</value>
+    <comment>Comment Apply for Parchment</comment>
+  </data>
+  <data name="TranslationEditUsername" xml:space="preserve">
+    <value>編輯設定檔</value>
+    <comment>Comment Edit Profile </comment>
+  </data>
 </root>

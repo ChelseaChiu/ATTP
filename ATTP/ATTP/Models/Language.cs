@@ -16,6 +16,13 @@ namespace ATTP.Models
                 get;
                 set;
             }
+
+            public string TestTeest
+            {
+                 get;
+                 set;
+
+             }
         }
     }
 

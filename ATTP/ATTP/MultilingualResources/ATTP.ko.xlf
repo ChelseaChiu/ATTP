@@ -8,23 +8,138 @@
       <group id="ATTP/RESOURCES/APPRESOURCES.RESX" datatype="resx">
         <trans-unit id="TranslationLogin" translate="yes" xml:space="preserve">
           <source>Username / Student Identification </source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">사용자 이름 / 학생 ID </target>
+          <target state="translated" state-qualifier="mt-suggestion">사용자 이름 / 학생 ID </target>
           <note from="MultilingualBuild" annotates="source" priority="2">Comment Username</note>
         </trans-unit>
         <trans-unit id="TranslationPassword" translate="yes" xml:space="preserve">
           <source>Password</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">비밀번호</target>
+          <target state="translated" state-qualifier="tm-suggestion">비밀번호</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Comment Password</note>
         </trans-unit>
         <trans-unit id="TranslationUsername" translate="yes" xml:space="preserve">
           <source>Username</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">사용자 이름</target>
+          <target state="translated" state-qualifier="tm-suggestion">사용자 이름</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Comment Login Details</note>
         </trans-unit>
         <trans-unit id="TranslationSignIn" translate="yes" xml:space="preserve">
           <source>Sign in</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">로그인</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Comment Sign In</note>
+        </trans-unit>
+        <trans-unit id="TranslationCityLbl" translate="yes" xml:space="preserve">
+          <source>City</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">구/군/시</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment City</note>
+        </trans-unit>
+        <trans-unit id="TranslationIDlbl" translate="yes" xml:space="preserve">
+          <source>Student ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">학생 신분증</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Stu ID</note>
+        </trans-unit>
+        <trans-unit id="TranslationPostcodeLbl" translate="yes" xml:space="preserve">
+          <source>Postcode</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">우편 번호</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Postcode</note>
+        </trans-unit>
+        <trans-unit id="TranslationStateLbl" translate="yes" xml:space="preserve">
+          <source>State</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">상태</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment State</note>
+        </trans-unit>
+        <trans-unit id="TranslationStreet1Lbl" translate="yes" xml:space="preserve">
+          <source>Address</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">주소</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment</note>
+        </trans-unit>
+        <trans-unit id="TranslationStreetLbl" translate="yes" xml:space="preserve">
+          <source>Street Address 1 </source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">주소 1</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment</note>
+        </trans-unit>
+        <trans-unit id="TranslationstudentNameLbl" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">이름</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Name</note>
+        </trans-unit>
+        <trans-unit id="TranslationEmailLbl" translate="yes" xml:space="preserve">
+          <source>Email</source>
+          <target state="translated">전자 메일 /이메일</target>
+        </trans-unit>
+        <trans-unit id="TranslationPhoneLbl" translate="yes" xml:space="preserve">
+          <source>Phone Number / Moblie Number</source>
+          <target state="translated">전화 번호 / 휴대 전화 번호</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Contact Number</note>
+        </trans-unit>
+        <trans-unit id="TranslationCoreLabel" translate="yes" xml:space="preserve">
+          <source></source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"></target>
+        </trans-unit>
+        <trans-unit id="TranslationElectiveLabel" translate="yes" xml:space="preserve">
+          <source></source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"></target>
+        </trans-unit>
+        <trans-unit id="TranslationProgressLabel" translate="yes" xml:space="preserve">
+          <source></source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"></target>
+        </trans-unit>
+        <trans-unit id="TranslationStudyPathLabel" translate="yes" xml:space="preserve">
+          <source></source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"></target>
+        </trans-unit>
+        <trans-unit id="TranslationForgetText" translate="yes" xml:space="preserve">
+          <source>Forget your password ?</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">암호를 잊으셨습니까?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Forget Password</note>
+        </trans-unit>
+        <trans-unit id="TranslationLoginPageClickerHere" translate="yes" xml:space="preserve">
+          <source>Click Here</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">여기를 클릭</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Click Here</note>
+        </trans-unit>
+        <trans-unit id="TranslationSelectLanguage" translate="yes" xml:space="preserve">
+          <source>Select a Language</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">언어 선택</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Select Language </note>
+        </trans-unit>
+        <trans-unit id="TranslationReset" translate="yes" xml:space="preserve">
+          <source>to Reset </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">재설정하려면 </target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment to reset</note>
+        </trans-unit>
+        <trans-unit id="TranslationHome" translate="yes" xml:space="preserve">
+          <source>Home</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">홈</target>
+        </trans-unit>
+        <trans-unit id="TranslationLogOut" translate="yes" xml:space="preserve">
+          <source>Log-Out</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">로그아웃</target>
+        </trans-unit>
+        <trans-unit id="TranslationProfile" translate="yes" xml:space="preserve">
+          <source>Profile</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">프로필</target>
+        </trans-unit>
+        <trans-unit id="TranslationResult" translate="yes" xml:space="preserve">
+          <source>Result</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">결과</target>
+        </trans-unit>
+        <trans-unit id="TranslationTimeTable" translate="yes" xml:space="preserve">
+          <source>Timetable</source>
+          <target state="new">Timetable</target>
+        </trans-unit>
+        <trans-unit id="TranslationTranscript" translate="yes" xml:space="preserve">
+          <source>Transcript</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">기록</target>
+        </trans-unit>
+        <trans-unit id="TranslationApplyforParchment" translate="yes" xml:space="preserve">
+          <source>Apply for Parchment</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">양피지 신청</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Apply for Parchment</note>
+        </trans-unit>
+        <trans-unit id="TranslationEditUsername" translate="yes" xml:space="preserve">
+          <source>Edit Profile</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">프로필 수정</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Comment Edit Profile </note>
         </trans-unit>
       </group>
     </body>

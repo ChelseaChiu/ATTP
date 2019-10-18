@@ -28,4 +28,86 @@
     <value>Daftar Masuk</value>
     <comment>Comment Sign In</comment>
   </data>
+  <data name="TranslationCityLbl" xml:space="preserve">
+    <value>Bandar</value>
+    <comment>Comment City</comment>
+  </data>
+  <data name="TranslationIDlbl" xml:space="preserve">
+    <value>Pengenalan pelajar</value>
+    <comment>Comment Stu ID</comment>
+  </data>
+  <data name="TranslationPostcodeLbl" xml:space="preserve">
+    <value>Poskod</value>
+    <comment>Comment Postcode</comment>
+  </data>
+  <data name="TranslationStateLbl" xml:space="preserve">
+    <value>Negeri</value>
+    <comment>Comment State</comment>
+  </data>
+  <data name="TranslationStreet1Lbl" xml:space="preserve">
+    <value>Alamat:</value>
+    <comment>Comment</comment>
+  </data>
+  <data name="TranslationstudentNameLbl" xml:space="preserve">
+    <value>Nama</value>
+    <comment>Comment Name</comment>
+  </data>
+  <data name="TranslationEmailLbl" xml:space="preserve">
+    <value>Emel</value>
+  </data>
+  <data name="TranslationPhoneLbl" xml:space="preserve">
+    <value>Nombor telefon/nombor telefon bimbit</value>
+    <comment>Comment Contact Number</comment>
+  </data>
+  <data name="TranslationCoreLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationElectiveLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationProgressLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationStudyPathLabel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="TranslationForgetText" xml:space="preserve">
+    <value>Lupa kata laluan?</value>
+    <comment>Comment Forget Password</comment>
+  </data>
+  <data name="TranslationLoginPageClickerHere" xml:space="preserve">
+    <value>Klik di sini</value>
+    <comment>Comment Click Here</comment>
+  </data>
+  <data name="TranslationSelectLanguage" xml:space="preserve">
+    <value>Pilih Bahasa</value>
+    <comment>Comment Select Language </comment>
+  </data>
+  <data name="TranslationReset" xml:space="preserve">
+    <value>untuk menetapkan semula </value>
+    <comment>Comment to reset</comment>
+  </data>
+  <data name="TranslationHome" xml:space="preserve">
+    <value>Rumah</value>
+  </data>
+  <data name="TranslationLogOut" xml:space="preserve">
+    <value>Log Keluar</value>
+  </data>
+  <data name="TranslationProfile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="TranslationResult" xml:space="preserve">
+    <value>Hasil</value>
+  </data>
+  <data name="TranslationTranscript" xml:space="preserve">
+    <value>Transkrip</value>
+  </data>
+  <data name="TranslationApplyforParchment" xml:space="preserve">
+    <value>Memohon untuk Parchment</value>
+    <comment>Comment Apply for Parchment</comment>
+  </data>
+  <data name="TranslationEditUsername" xml:space="preserve">
+    <value>Edit Profil</value>
+    <comment>Comment Edit Profile </comment>
+  </data>
 </root>

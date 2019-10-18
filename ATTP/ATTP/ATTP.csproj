@@ -21,6 +21,17 @@
     <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
   </Target>
   <ItemGroup>
+    <None Remove="Assets\Calendar.png" />
+    <None Remove="Assets\circle.png" />
+    <None Remove="Assets\circle2.png" />
+    <None Remove="Assets\Exit.png" />
+    <None Remove="Assets\HeaderLogo.png" />
+    <None Remove="Assets\Home.png" />
+    <None Remove="Assets\LoginImageIcon.PNG" />
+    <None Remove="Assets\Profile.png" />
+    <None Remove="Assets\Result.png" />
+    <None Remove="Assets\Transcript.png" />
+    <None Remove="Assets\WLogo.png" />
     <None Remove="MultilingualResources\ATTP.en-AU.xlf" />
     <None Remove="MultilingualResources\ATTP.en-US.xlf" />
     <None Remove="MultilingualResources\ATTP.ja.xlf" />
@@ -31,6 +42,18 @@
     <None Remove="MultilingualResources\ATTP.zh-Hans.xlf" />
     <None Remove="MultilingualResources\ATTP.zh-Hant.xlf" />
     <None Remove="MultilingualResources\ATTP.zh-TW.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Calendar.png" />
+    <Content Include="Assets\circle.png" />
+    <Content Include="Assets\circle2.png" />
+    <Content Include="Assets\Exit.png" />
+    <Content Include="Assets\HeaderLogo.png" />
+    <Content Include="Assets\LoginImageIcon.PNG" />
+    <Content Include="Assets\Profile.png" />
+    <Content Include="Assets\Result.png" />
+    <Content Include="Assets\Transcript.png" />
+    <Content Include="Assets\WLogo.png" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Bcl.Build" Version="1.0.14" />
@@ -60,11 +83,18 @@
     <EmbeddedResource Update="Views\ResultPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\StaticResource.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\TimetablePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\TransciptPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Home.png" />
     <XliffResource Include="MultilingualResources\ATTP.en-AU.xlf" />
     <XliffResource Include="MultilingualResources\ATTP.en-US.xlf" />
     <XliffResource Include="MultilingualResources\ATTP.ja.xlf" />
