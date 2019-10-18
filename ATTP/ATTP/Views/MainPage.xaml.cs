@@ -19,7 +19,7 @@ namespace ATTP.Views
     {
         public List<MasterPageItem> menuList { get; set; }
 
-        public ObservableCollection<Language> Languages { get; }
+        public ObservableCollection<Language> Languages { get; } 
         public ObservableCollection<Language> ShortName { get; }
 
         public MainPage()
