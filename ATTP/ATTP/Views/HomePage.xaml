@@ -4,6 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:i18n="clr-namespace:ATTP.Helpers;assembly=ATTP"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:control="clr-namespace:ProgressRingControl.Forms.Plugin;assembly=ProgressRing.Forms.Plugin"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              mc:Ignorable="d"
              ControlTemplate="{StaticResource MainPageTemplate}"
              
@@ -16,21 +18,29 @@
             <Frame CornerRadius="5" Padding="8" BackgroundColor="#DEFDFF">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="16"/>
-                        <RowDefinition Height="16"/>
-                        <RowDefinition Height="16"/>
-                        <RowDefinition Height="16"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="4"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
                         <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="220"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Label x:Name="StudyPathLabel" Text="Diploma of Software Development" FontAttributes="Bold" Grid.Row="0"/>
-                    <Label x:Name="CoreLabel" Text="6 of 10 core units" Grid.Row="1"/>
-                    <Label x:Name="ElectiveLabel" Text="4 of 4 elective units" Grid.Row="2"/>
-                    <Label x:Name="ProgressLabel" Text="Progress: 10 of 16 units" Grid.Row="3"/>
-                    <Image x:Name="circleImage" Source="circle.png" Grid.Column="1" Grid.Row="0" Grid.RowSpan="5"/>
+                    <Label x:Name="StudyPathLabel" Text="Diploma of Software Development" HorizontalOptions="FillAndExpand" FontAttributes="Bold" Grid.Row="0"/>
+                    
+                    <Label x:Name="CoreLabel" Text="6 of 10 core units" Grid.Row="2"/>
+                    <Label x:Name="ElectiveLabel" Text="4 of 4 elective units" Grid.Row="3"/>
+                    <Label x:Name="ProgressLabel" Text="Progress: 10 of 16 units" Grid.Row="4"/>
+                    <!-- once databaase is here will update with binding at text and other places :D  -->
+                        <Label Text="62.5%" Grid.Column="1"  Grid.RowSpan="8" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <control:ProgressRing x:Name="ProgressRing" RingThickness="16" Progress=".625"  Scale=".9" RingBaseColor="Gray" RingProgressColor="#1CA5DE" Grid.Column="1" Grid.RowSpan="7" VerticalOptions="Center" InputTransparent="False" />
+ 
+
+                    <!--<Image x:Name="circleImage" Source="circle.png" Grid.Column="1" Grid.Row="0" Grid.RowSpan="5"/>-->
+
+
 
                 </Grid>
                 <!--<StackLayout Orientation="Horizontal" Margin="0,0,0,20" >
@@ -47,21 +57,24 @@
             <Frame CornerRadius="5" Padding="8" BackgroundColor="#DEFDFF">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="16"/>
-                        <RowDefinition Height="16"/>
-                        <RowDefinition Height="16"/>
-                        <RowDefinition Height="16"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="4"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
                         <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="220"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Label x:Name="StudyPathLabel1" Text="Certificate IV of Programming" FontAttributes="Bold" Grid.Row="0"/>
-                    <Label x:Name="CoreLabel1" Text="8 of 8 core units" Grid.Row="1"/>
-                    <Label x:Name="ElectiveLabel1" Text="4 of 4 elective units" Grid.Row="2"/>
-                    <Label x:Name="ProgressLabel1" Text="Progress: 12 of 12 units" Grid.Row="3"/>
-                    <Image x:Name="circleImage1" Source="circle2.png" Scale="0.90" Grid.Column="1" Grid.Row="0" Grid.RowSpan="5"/>
+                    <Label x:Name="StudyPathLabel1" Text="Certificate IV of Programming" FontAttributes="Bold" Grid.Row="0" HorizontalOptions="FillAndExpand"/>
+                    <Label x:Name="CoreLabel1" Text="8 of 8 core units" Grid.Row="2"/>
+                    <Label x:Name="ElectiveLabel1" Text="4 of 4 elective units" Grid.Row="3"/>
+                    <Label x:Name="ProgressLabel1" Text="Progress: 12 of 12 units" Grid.Row="4"/>
+                    <control:ProgressRing x:Name="ProgressRing2" RingThickness="16" Progress="1"  Scale=".9" RingBaseColor="Gray" RingProgressColor="#1CA5DE" Grid.Column="1" Grid.RowSpan="7" BindingContext="29%"/>
+                    <Label Text="100%" Grid.Column="1"  Grid.RowSpan="7" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                    <!--<Image x:Name="circleImage1" Source="circle2.png" Scale="0.90" Grid.Column="1" Grid.Row="0" Grid.RowSpan="5"/>-->
                 </Grid>
             </Frame>
 

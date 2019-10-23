@@ -107,8 +107,8 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Comment to reset</note>
         </trans-unit>
         <trans-unit id="TranslationHome" translate="yes" xml:space="preserve">
-          <source>Home</source>
-          <target state="new">Home</target>
+          <source>Welcome Home </source>
+          <target state="new">Welcome Home </target>
         </trans-unit>
         <trans-unit id="TranslationLogOut" translate="yes" xml:space="preserve">
           <source>Log-Out</source>

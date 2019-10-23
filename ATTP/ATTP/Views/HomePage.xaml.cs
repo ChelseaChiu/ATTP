@@ -17,6 +17,9 @@ using ATTP.Resources;
 using Plugin.Multilingual;
 using System.Globalization;
 using System.Windows.Input;
+using ProgressRingControl.Forms.Plugin;
+using SkiaSharp;
+
 
 namespace ATTP.Views
 {
@@ -27,9 +30,23 @@ namespace ATTP.Views
         public HomePage()
         {
             InitializeComponent();
+            var progressRing = new ProgressRing { RingThickness = 5, Progress = 0.34f, RingBaseColor = Color.Gray, RingProgressColor = Color.Blue, Scale = 10 };
+
             ParchmentButton.Text = AppResources.TranslationApplyforParchment;
 
         }
+
+        //void switchToggledAsync(object sender , System.ComponentModel.PropertyChangedEventArgs e)
+        //{
+        //    initateProgressUpdate();
+        //}
+
+
+
+
+
+
+
         //async void OnAlertYesNoClicked(object sender, EventArgs e)
         //{
         //    await DisplayAlert("IMPORTANT", "Have you done your orientation?","OK");

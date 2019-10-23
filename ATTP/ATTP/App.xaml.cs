@@ -47,9 +47,10 @@ namespace ATTP
 
 
             MainPage = new ATTP.Views.LoginPage();
-            
+            //MainPage = new ATTP.Views.HomePage();
 
-            
+
+
         }
 
         protected override void OnStart()

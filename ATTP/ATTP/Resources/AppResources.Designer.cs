@@ -124,7 +124,7 @@ namespace ATTP.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Home.
+        ///   Looks up a localized string similar to Welcome Home .
         /// </summary>
         internal static string TranslationHome {
             get {

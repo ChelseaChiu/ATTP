@@ -143,7 +143,7 @@
     <comment>Comment Forget Password</comment>
   </data>
   <data name="TranslationHome" xml:space="preserve">
-    <value>Home</value>
+    <value>Welcome Home </value>
   </data>
   <data name="TranslationIDlbl" xml:space="preserve">
     <value>Student ID</value>

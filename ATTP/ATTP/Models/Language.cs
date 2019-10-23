@@ -23,7 +23,16 @@ namespace ATTP.Models
                  set;
 
              }
+
+        public string CircleName
+        {
+            get;
+            set;
+
         }
+
+
+    }
     }
 
 
