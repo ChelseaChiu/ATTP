@@ -18,7 +18,7 @@
             <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="True"/>
 
             <Label x:Name="TranslationUsernameLabel" Text="{i18n:Translate TranslationUsername}" Margin="6" />
-            <Entry x:Name="Entry_Username" Placeholder="{i18n:Translate TranslationLogin}" Margin="6"/>
+            <Entry x:Name="Entry_Username" Placeholder="{i18n:Translate TranslationLogin}" Margin="6" Text="000724247"/>
             <Label x:Name="TranslationPasswordLabel" Text="{i18n:Translate TranslationPassword}" Margin="6" />
             <Entry x:Name="Entry_Password" Placeholder="{i18n:Translate TranslationPassword}" Margin="6"/>
             <Label x:Name="languageLabel" Text="{i18n:Translate TranslationSelectLanguage}" Margin="6" />

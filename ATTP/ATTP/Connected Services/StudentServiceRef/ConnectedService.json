@@ -1,0 +1,44 @@
+﻿{
+  "ProviderId": "Microsoft.VisualStudio.ConnectedService.Wcf",
+  "Version": "15.0.30730.948",
+  "GettingStartedDocument": {
+    "Uri": "https://go.microsoft.com/fwlink/?linkid=858517"
+  },
+  "ExtendedData": {
+    "inputs": [
+      "https://srvwcfservice.azurewebsites.net/services/StudentService.svc?wsdl"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "namespaceMappings": [
+      "*, StudentServiceRef"
+    ],
+    "references": [
+      "Newtonsoft.Json, {Newtonsoft.Json, 12.0.2}",
+      "Plugin.Multilingual, {Plugin.Multilingual, 1.0.2}",
+      "Plugin.Multilingual.Abstractions, {Plugin.Multilingual, 1.0.2}",
+      "ProgressRing.Forms.Plugin, {Xam.Plugins.Forms.ProgressRing, 0.1.2}",
+      "SkiaSharp, {SkiaSharp, 1.68.0}",
+      "SkiaSharp.Extended, {SkiaSharp.Extended, 1.60.0}",
+      "SkiaSharp.Views.Forms, {SkiaSharp.Views.Forms, 1.68.0}",
+      "SQLite-net, {sqlite-net-pcl, 1.5.231}",
+      "SQLitePCLRaw.batteries_green, {SQLitePCLRaw.bundle_green, 1.1.11}",
+      "SQLitePCLRaw.batteries_v2, {SQLitePCLRaw.bundle_green, 1.1.11}",
+      "SQLitePCLRaw.core, {SQLitePCLRaw.core, 1.1.11}",
+      "System.ServiceModel, {System.ServiceModel.Primitives, 4.4.4}",
+      "System.ServiceModel.Duplex, {System.ServiceModel.Duplex, 4.4.4}",
+      "System.ServiceModel.Http, {System.ServiceModel.Http, 4.4.4}",
+      "System.ServiceModel.NetTcp, {System.ServiceModel.NetTcp, 4.4.4}",
+      "System.ServiceModel.Primitives, {System.ServiceModel.Primitives, 4.4.4}",
+      "System.ServiceModel.Security, {System.ServiceModel.Security, 4.4.4}",
+      "Xamarin.Forms.Core, {Xamarin.Forms, 3.3.0.912540}",
+      "Xamarin.Forms.Platform, {Xamarin.Forms, 3.3.0.912540}",
+      "Xamarin.Forms.Xaml, {Xamarin.Forms, 3.3.0.912540}"
+    ],
+    "sync": true,
+    "targetFramework": "netstandard2.0",
+    "typeReuseMode": "All"
+  }
+}

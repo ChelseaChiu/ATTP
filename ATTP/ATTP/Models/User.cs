@@ -3,29 +3,38 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 using SQLite;
+using StudentServiceRef;
 
 namespace ATTP.Models
 {
     public class User
     {
         [PrimaryKey]
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
 
         public User() { }
-        public User(String Username, string Password)
+        public User(string id, string password)
         {
-            this.Username = Username;
-            this.Password = Password;
+            this.Id = id;
+            this.Password = password;
         }
 
-        public bool Valdation()
+        
+        public bool Valdation(string id, string password)
         {
-            if (!string.IsNullOrWhiteSpace(this.Username) && !string.IsNullOrWhiteSpace(this.Password) && this.Username=="001096907")
+            
+
+            if(Proxy.login(id))
             {
                 return true;
             }
+
+ //           if (!string.IsNullOrWhiteSpace(this.Username) && !string.IsNullOrWhiteSpace(this.Password) && this.Username=="001096907")
+ //           {
+ //               return true;
+ //           }
 
 
             //else if (this.Username = "001083886")

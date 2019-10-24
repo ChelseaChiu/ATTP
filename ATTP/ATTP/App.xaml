@@ -28,8 +28,8 @@
                         <Image x:Name="headerLogo" Source="HeaderLogo.png" Grid.RowSpan="2" Aspect="AspectFill"/>
                         <Label x:Name="studentNameLbl" Text="{i18n:Translate TranslationstudentNameLbl }" Grid.Column="1" TextColor="Red" VerticalOptions="Center"/>
                         <Label x:Name="IDlbl" Text="{i18n:Translate TranslationIDlbl }" Grid.Column="1" Grid.Row="1" TextColor="Red" VerticalOptions="Center"/>
-                        <Label x:Name="NameLbl" Text="Astrid Suhartono" FontSize="22" Grid.Column="2" TextColor="Red" VerticalOptions="Center"/>
-                        <Label x:Name="IdLbl" Text="001096907" FontSize="22" Grid.Column="2" Grid.Row="1" TextColor="Red" VerticalOptions="Center"/>
+                        <Label x:Name="NameLbl" Text="{Binding userName}" FontSize="22" Grid.Column="2" TextColor="Red" VerticalOptions="Center"/>
+                        <Label x:Name="IdLbl" Text="{Binding id}" FontSize="22" Grid.Column="2" Grid.Row="1" TextColor="Red" VerticalOptions="Center"/>
                     </Grid>
                     <ContentPresenter />
                 </StackLayout>

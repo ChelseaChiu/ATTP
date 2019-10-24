@@ -21,6 +21,17 @@
     <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
   </Target>
   <ItemGroup>
+    <Compile Remove="Connected Services\Microsoft WCF Web Service Reference Provider\**" />
+    <Compile Remove="Connected Services\StudentServiceRef\**" />
+    <EmbeddedResource Remove="Connected Services\Microsoft WCF Web Service Reference Provider\**" />
+    <EmbeddedResource Remove="Connected Services\StudentServiceRef\**" />
+    <None Remove="Connected Services\Microsoft WCF Web Service Reference Provider\**" />
+    <None Remove="Connected Services\StudentServiceRef\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Data\UserDatabaseController.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="Assets\Calendar.png" />
     <None Remove="Assets\circle.png" />
     <None Remove="Assets\circle2.png" />
@@ -44,6 +55,9 @@
     <None Remove="MultilingualResources\ATTP.zh-TW.xlf" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\StudentServiceRef\Reference.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Assets\Calendar.png" />
     <Content Include="Assets\circle.png" />
     <Content Include="Assets\circle2.png" />
@@ -54,6 +68,7 @@
     <Content Include="Assets\Result.png" />
     <Content Include="Assets\Transcript.png" />
     <Content Include="Assets\WLogo.png" />
+    <Content Include="Connected Services\StudentServiceRef\ConnectedService.json" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Bcl.Build" Version="1.0.14" />
@@ -62,6 +77,10 @@
     <PackageReference Include="SkiaSharp.Extended" Version="1.60.0" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.0" />
     <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Security" Version="4.4.*" />
     <PackageReference Include="Xam.Plugins.Forms.ProgressRing" Version="0.1.2" />
     <PackageReference Include="Xamarin.Forms" Version="3.3.0.912540" />
   </ItemGroup>
@@ -117,5 +136,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
   </ItemGroup>
 </Project>

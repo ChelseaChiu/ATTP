@@ -40,11 +40,11 @@ namespace ATTP.Data
 
         }
 
-        public int SaveUser(User user)
+        public string SaveUser(User user)
         {
             lock (locker)
             {
-                if (user.Id != 0)
+                if (user.Id != null)
                 {
                     database.Update(user);
                     return user.Id;

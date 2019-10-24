@@ -104,8 +104,9 @@ namespace ATTP.Views
 
             var language = Languages[PickerLanguages.SelectedIndex];
 
+
             User user = new User(Entry_Username.Text, Entry_Password.Text);
-            if (user.Valdation())
+            if (user.Valdation(user.Id,user.Password))
             {
 
                 switch (language.ShortName)
@@ -175,6 +176,8 @@ namespace ATTP.Views
                         
                 }
                 Navigation.PushModalAsync(new MainPage());
+                App.user.Id = user.Id;
+                
 
             }
             else

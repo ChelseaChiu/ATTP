@@ -4,12 +4,86 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+              ControlTemplate="{StaticResource MainPageTemplate}"
              x:Class="ATTP.Views.ResultPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Result Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="White" Margin="10,10,10,10">
+            <Label x:Name="ResultLbl" Text="Result" FontSize="30" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" />
+            <Label x:Name="StudyLbl" Text="Study Path" FontAttributes="Bold" FontSize="Medium"/>
+            <Picker x:Name="StudyPicker" Title="Please select your study path" ItemsSource="{Binding StudyPaths}" ItemDisplayBinding="{Binding StudyPathName}" />
+            <Label x:Name="CompleteLbl" Text="Completed" FontAttributes="Bold"/>
+
+            <ListView x:Name="CompleteCourseList" SelectionMode="None">
+                <ListView.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.35*"/>
+                            <ColumnDefinition Width="0.35*"/>
+                            <ColumnDefinition Width="0.3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="2"/>
+                        </Grid.RowDefinitions>
+                        <Label x:Name="SubjectCLbl" Text="Subject Code" Grid.Column="0" Grid.Row="0"/>
+                        <Label x:Name="NatCLbl" Text="National Code" Grid.Column="1"  Grid.Row="0"/>
+                        <Label x:Name="GradeCLbl" Text="Grade" Grid.Column="2"  Grid.Row="0"/>
+                        <BoxView Grid.Row="1" Grid.ColumnSpan="3" Color="Gray" HorizontalOptions="Fill"/>
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.3*"/>
+                                    <ColumnDefinition Width="0.5*"/>
+                                    <ColumnDefinition Width="0.2*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding SubjectCode}"/>
+                                <Label Grid.Column="1" Text="{Binding NationalCode}"/>
+                                <Label Grid.Column="2" Text="{Binding Grade}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Label x:Name="ProgressLbl" Text="In Progress" FontAttributes="Bold"/>
+            <ListView x:Name="ProgressCourseList" SelectionMode="None">
+                <ListView.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.35*"/>
+                            <ColumnDefinition Width="0.35*"/>
+                            <ColumnDefinition Width="0.3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="2"/>
+                        </Grid.RowDefinitions>
+                        <Label x:Name="SubjectPLbl" Text="Subject Code" Grid.Column="0" Grid.Row="0"/>
+                        <Label x:Name="NatPLbl" Text="National Code" Grid.Column="1"  Grid.Row="0"/>
+                        <Label x:Name="GradePLbl" Text="Grade" Grid.Column="2"  Grid.Row="0"/>
+                        <BoxView Grid.Row="1" Grid.ColumnSpan="3" Color="Gray" HorizontalOptions="Fill"/>
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.3*"/>
+                                    <ColumnDefinition Width="0.5*"/>
+                                    <ColumnDefinition Width="0.2*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding SubjectCode}"/>
+                                <Label Grid.Column="1" Text="{Binding NationalCode}"/>
+                                <Label Grid.Column="2" Text="{Binding Grade}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

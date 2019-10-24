@@ -31,8 +31,9 @@ namespace ATTP
     {
 
         static TokenDatabaseController tokenDatabase;
-        static UserDatabaseController userDatabase;
         static RestService restService;
+
+        public static User user = new User();
 
 
 
@@ -48,10 +49,12 @@ namespace ATTP
 
             MainPage = new ATTP.Views.LoginPage();
             //MainPage = new ATTP.Views.HomePage();
+            //string id = user.Id;
+            //string userName = Proxy.getStudentBuId(id).Username;
 
 
 
-        }
+    }
 
         protected override void OnStart()
         {
@@ -70,19 +73,6 @@ namespace ATTP
         }
 
 
-        public static UserDatabaseController UserDatabase
-        {
-            get
-            {
-                if (userDatabase == null)
-                {
-                    userDatabase = new UserDatabaseController();
-                }
-                return userDatabase;
-
-            }
-
-        }
 
 
 
