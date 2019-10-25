@@ -33,8 +33,6 @@ namespace ATTP
         static TokenDatabaseController tokenDatabase;
         static RestService restService;
 
-        public static User user = new User();
-
 
 
 
@@ -107,6 +105,10 @@ public static TokenDatabaseController TokenDatabase
         }
 
         public static string _language { get; set; }
+
+        public static string _Username { get; set; }
+
+        public static string _Id { get; set; }
 
 
 
