@@ -16,6 +16,7 @@ namespace ATTP.Views
     {
         public ObservableCollection<Course> CompleteCourses { get; set; }
         public ObservableCollection<Course> InProgressCourses { get; set; }
+        public ObservableCollection<Course> ToBeDoneCourses { get; set; }
         public ObservableCollection<StudyPath> StudyPaths { get; }
         public ResultPage()
         {
@@ -34,17 +35,6 @@ namespace ATTP.Views
         {
             var studyPath = StudyPaths[StudyPicker.SelectedIndex];
 
-            //CompleteCourses = new ObservableCollection<Course>();
-            //CompleteCourses.Add(new Course
-            //{
-            //    SubjectCode = "QQQQ",
-
-            //    NationalCode = "EEEE",
-
-            //    Grade = "pass"
-            //});
-            //CompleteCourseList.ItemsSource = CompleteCourses;
-            //BindingContext = this;
             switch (studyPath.CourseCode)
             {
                 case "ICT50718":
@@ -52,14 +42,13 @@ namespace ATTP.Views
 
                         CompleteCourses = new ObservableCollection<Course>();
                         InProgressCourses = new ObservableCollection<Course>();
+                        ToBeDoneCourses = new ObservableCollection<Course>();
 
                         //Add Completed courses here
                         CompleteCourses.Add(new Course
                         {
                             SubjectCode = "QQQQ",
-
                             NationalCode = "EEEE",
-
                             Grade = "pass"
                         });
                         CompleteCourses.Add(new Course
@@ -74,19 +63,49 @@ namespace ATTP.Views
                             NationalCode = "CCFGCC",
                             Grade = "Fail"
                         });
+                        CompleteCourses.Add(new Course
+                        {
+                            SubjectCode = "QQQQ",
+                            NationalCode = "EEEE",
+                            Grade = "pass"
+                        });
+                        CompleteCourses.Add(new Course
+                        {
+                            SubjectCode = "QQQQ",
+                            NationalCode = "EEEE",
+                            Grade = "pass"
+                        });
+                        CompleteCourses.Add(new Course
+                        {
+                            SubjectCode = "QQQQ",
+                            NationalCode = "EEEE",
+                            Grade = "pass"
+                        });
+                        CompleteCourses.Add(new Course
+                        {
+                            SubjectCode = "QQQQ",
+                            NationalCode = "EEEE",
+                            Grade = "pass"
+                        });
                         //Add in progress courses here
                         InProgressCourses.Add(new Course
                         {
                             SubjectCode = "QQQQ",
-                            TafeCode = "SssSS",
                             NationalCode = "EEEE",
-                            CompetencyName = "asdas",
                             Grade = "pass"
                         });
 
                         //Add to be done courses here
+                        ToBeDoneCourses.Add(new Course
+                        {
+                            SubjectCode = "11111",
+                            NationalCode = "22222",
+                            Grade = "N/A"
+                        });
 
                         CompleteCourseList.ItemsSource = CompleteCourses;
+                        InProgressCourseList.ItemsSource = InProgressCourses;
+                        ToBeDoneCourseList.ItemsSource = ToBeDoneCourses;
                         BindingContext = this;
 
                         break;
@@ -95,6 +114,7 @@ namespace ATTP.Views
                     {
                         CompleteCourses = new ObservableCollection<Course>();
                         InProgressCourses = new ObservableCollection<Course>();
+                        ToBeDoneCourses = new ObservableCollection<Course>();
 
                         //Add Completed courses here
                         CompleteCourses.Add(new Course
@@ -111,19 +131,33 @@ namespace ATTP.Views
                             NationalCode = "CCCC",
                             Grade = "Fail"
                         });
+                        CompleteCourses.Add(new Course
+                        {
+                            SubjectCode = "AAAA",
+                            NationalCode = "CCCC",
+                            Grade = "Fail"
+                        });
 
                         //Add in progress courses here
                         InProgressCourses.Add(new Course
                         {
-                            SubjectCode = "BBBB",
-                            NationalCode = "ADFF",
+                            SubjectCode = "N/A",
+                            NationalCode = "N/A",
                             Grade = "N/A"
                         });
 
                         //Add to be done courses here
+                        ToBeDoneCourses.Add(new Course
+                        {
+                            SubjectCode = "N/A",
+                            NationalCode = "N/A",
+                            Grade = "N/A"
+                        });
 
                         CompleteCourseList.ItemsSource = CompleteCourses;
-
+                        InProgressCourseList.ItemsSource = InProgressCourses;
+                        ToBeDoneCourseList.ItemsSource = ToBeDoneCourses;
+                        
                         BindingContext = this;
 
                         break;
