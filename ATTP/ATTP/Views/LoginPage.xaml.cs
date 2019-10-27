@@ -13,6 +13,7 @@ using ATTP.Resources;
 using Plugin.Multilingual;
 using System.Globalization;
 using System.Windows.Input;
+using System.Diagnostics;
 
 namespace ATTP.Views
 {
@@ -47,6 +48,8 @@ namespace ATTP.Views
 
             BindingContext = this;
             PickerLanguages.SelectedIndexChanged += PickerLanguages_SelectedIndexChanged;
+            App._Id = null;
+            App._Username = null;
 
             Init();
 
@@ -173,11 +176,17 @@ namespace ATTP.Views
                         }
                         //App.UserDatabase.SaveUser(user);
 
-                        
+
                 }
+
+                App._Id = user.Id;
+                App._Username = Proxy.getStudentById(user.Id).Username;
+                // Debug.WriteLine(App._Id);
                 Navigation.PushModalAsync(new MainPage());
-                App.user.Id = user.Id;
-                
+
+
+
+
 
             }
             else

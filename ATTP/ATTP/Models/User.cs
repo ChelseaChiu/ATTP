@@ -14,6 +14,8 @@ namespace ATTP.Models
         public string Username { get; set; }
         public string Password { get; set; }
 
+       // public string Dob { get; set; }
+
         public User() { }
         public User(string id, string password)
         {
@@ -22,12 +24,13 @@ namespace ATTP.Models
         }
 
         
-        public bool Valdation(string id, string password)
+         public bool Valdation(string id, string password)
         {
             
 
             if(Proxy.login(id))
             {
+   
                 return true;
             }
 
@@ -51,6 +54,7 @@ namespace ATTP.Models
 
 
         }
+
 
 
 

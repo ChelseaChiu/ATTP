@@ -30,6 +30,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Data\UserDatabaseController.cs" />
+    <Compile Remove="Views\StaticResource.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\StaticResource.xaml" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Assets\Calendar.png" />
@@ -102,9 +106,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ResultPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\StaticResource.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\TimetablePage.xaml">
