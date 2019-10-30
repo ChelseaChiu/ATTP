@@ -14,7 +14,7 @@ namespace StudentServiceRef
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Student", Namespace="http://schemas.datacontract.org/2004/07/SRV_WcfService.Models")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Student", Namespace="http://schemas.datacontract.org/2004/07/SRV_WcfService")]
     public partial class Student : object
     {
         
@@ -96,13 +96,21 @@ namespace StudentServiceRef
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Qualification", Namespace="http://schemas.datacontract.org/2004/07/SRV_WcfService.Models")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Qualification", Namespace="http://schemas.datacontract.org/2004/07/SRV_WcfService")]
     public partial class Qualification : object
     {
         
         private StudentServiceRef.Competency[] CompetenciesField;
         
         private int CoreUnitsField;
+        
+        private int DoneCField;
+        
+        private int DoneEField;
+        
+        private int DoneLEField;
+        
+        private int DoneTotalField;
         
         private int ElectedUnitsField;
         
@@ -141,6 +149,58 @@ namespace StudentServiceRef
             set
             {
                 this.CoreUnitsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int DoneC
+        {
+            get
+            {
+                return this.DoneCField;
+            }
+            set
+            {
+                this.DoneCField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int DoneE
+        {
+            get
+            {
+                return this.DoneEField;
+            }
+            set
+            {
+                this.DoneEField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int DoneLE
+        {
+            get
+            {
+                return this.DoneLEField;
+            }
+            set
+            {
+                this.DoneLEField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int DoneTotal
+        {
+            get
+            {
+                return this.DoneTotalField;
+            }
+            set
+            {
+                this.DoneTotalField = value;
             }
         }
         
@@ -238,7 +298,7 @@ namespace StudentServiceRef
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Competency", Namespace="http://schemas.datacontract.org/2004/07/SRV_WcfService.Models")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Competency", Namespace="http://schemas.datacontract.org/2004/07/SRV_WcfService")]
     public partial class Competency : object
     {
         
@@ -410,11 +470,11 @@ namespace StudentServiceRef
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/Login", ReplyAction="http://tempuri.org/IStudentService/LoginResponse")]
         System.Threading.Tasks.Task<bool> LoginAsync(string inUserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/IsQualCompleted", ReplyAction="http://tempuri.org/IStudentService/IsQualCompletedResponse")]
-        bool IsQualCompleted(StudentServiceRef.Qualification sQual);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/CalQualProgress", ReplyAction="http://tempuri.org/IStudentService/CalQualProgressResponse")]
+        double CalQualProgress(string studentID, string qualCode);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/IsQualCompleted", ReplyAction="http://tempuri.org/IStudentService/IsQualCompletedResponse")]
-        System.Threading.Tasks.Task<bool> IsQualCompletedAsync(StudentServiceRef.Qualification sQual);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/CalQualProgress", ReplyAction="http://tempuri.org/IStudentService/CalQualProgressResponse")]
+        System.Threading.Tasks.Task<double> CalQualProgressAsync(string studentID, string qualCode);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetQualificationList", ReplyAction="http://tempuri.org/IStudentService/GetQualificationListResponse")]
         StudentServiceRef.Qualification[] GetQualificationList(string studentID);
@@ -427,6 +487,12 @@ namespace StudentServiceRef
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetCompetencyList", ReplyAction="http://tempuri.org/IStudentService/GetCompetencyListResponse")]
         System.Threading.Tasks.Task<StudentServiceRef.Competency[]> GetCompetencyListAsync(string studentID, string qualificationID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetQualification", ReplyAction="http://tempuri.org/IStudentService/GetQualificationResponse")]
+        StudentServiceRef.Qualification GetQualification(string qualCode);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetQualification", ReplyAction="http://tempuri.org/IStudentService/GetQualificationResponse")]
+        System.Threading.Tasks.Task<StudentServiceRef.Qualification> GetQualificationAsync(string qualCode);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
@@ -492,14 +558,14 @@ namespace StudentServiceRef
             return base.Channel.LoginAsync(inUserId);
         }
         
-        public bool IsQualCompleted(StudentServiceRef.Qualification sQual)
+        public double CalQualProgress(string studentID, string qualCode)
         {
-            return base.Channel.IsQualCompleted(sQual);
+            return base.Channel.CalQualProgress(studentID, qualCode);
         }
         
-        public System.Threading.Tasks.Task<bool> IsQualCompletedAsync(StudentServiceRef.Qualification sQual)
+        public System.Threading.Tasks.Task<double> CalQualProgressAsync(string studentID, string qualCode)
         {
-            return base.Channel.IsQualCompletedAsync(sQual);
+            return base.Channel.CalQualProgressAsync(studentID, qualCode);
         }
         
         public StudentServiceRef.Qualification[] GetQualificationList(string studentID)
@@ -520,6 +586,16 @@ namespace StudentServiceRef
         public System.Threading.Tasks.Task<StudentServiceRef.Competency[]> GetCompetencyListAsync(string studentID, string qualificationID)
         {
             return base.Channel.GetCompetencyListAsync(studentID, qualificationID);
+        }
+        
+        public StudentServiceRef.Qualification GetQualification(string qualCode)
+        {
+            return base.Channel.GetQualification(qualCode);
+        }
+        
+        public System.Threading.Tasks.Task<StudentServiceRef.Qualification> GetQualificationAsync(string qualCode)
+        {
+            return base.Channel.GetQualificationAsync(qualCode);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

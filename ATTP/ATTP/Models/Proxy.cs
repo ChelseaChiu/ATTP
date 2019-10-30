@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Text;
 
 namespace ATTP.Models
@@ -18,33 +19,57 @@ namespace ATTP.Models
                 return true;
             }
             else return false;
-            
+
         }
 
         public static User getStudentById(string id)
         {
-            
+
             proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
             User user = new User();
             var s = proxy.GetStudentById(id);
 
-            
-            if (s!=null)
+
+            if (s != null)
             {
                 user.Username = String.Format(s.GivenName + "  " + s.LastName);
                 user.Id = s.StudentID;
-               // Debug.WriteLine(user.Username);
-               // Debug.WriteLine(user.Id);
-
-              // App._language = user.Username;
-              //  App._language = user.Id;
-                // user.Password = "AA" + s.;
                 return user;
-                
+
             }
             else return null;
         }
 
+        public static List<Qualification> GetQualifications(string studentId)
+        {
+            proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
+            List<Qualification> qualifications = new List<Qualification>();
+            var qList =proxy.GetQualificationList(studentId);
+            for (int i = 0; i < qList.Length; i++)
+            {
+                Qualification qual = new Qualification();
+                qual.QualCode = qList[i].QualCode;
+                qual.QualName = qList[i].QualName;
+                qual.CoreUnits = qList[i].CoreUnits;
+                qual.TafeQualCode = qList[i].TafeQualCode;
+                qual.NationaQualCode = qList[i].NationalQualCode;
+                qual.TotalUnits = qList[i].TotalUnits;
+                qual.ElectedUnits = qList[i].ElectedUnits;
+                qual.ReqListedElectedUnits = qList[i].ReqListedElectedUnits;
+                qualifications.Add(qual);
+            }
+            return qualifications;
+           
+        }
 
-    }
+        public static double CalQualProgress(string studentId, string qualCode)
+        {
+            proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
+            double progress = 0.00d;
+            progress = proxy.CalQualProgress(studentId, qualCode);
+            return progress;
+        }
+
+
+    }   
 }

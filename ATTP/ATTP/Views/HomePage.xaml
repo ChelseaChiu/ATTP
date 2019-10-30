@@ -15,35 +15,38 @@
             <Label x:Name="HomeLbl" Text="{i18n:Translate TranslationHome}" FontSize="30"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="Start" />
-            <Frame CornerRadius="5" Padding="8" BackgroundColor="#DEFDFF">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="20"/>
-                        <RowDefinition Height="4"/>
-                        <RowDefinition Height="20"/>
-                        <RowDefinition Height="20"/>
-                        <RowDefinition Height="50"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="220"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Label x:Name="StudyPathLabel" Text="Diploma of Software Development" HorizontalOptions="FillAndExpand" FontAttributes="Bold" Grid.Row="0"/>
-                    
-                    <Label x:Name="CoreLabel" Text="6 of 10 core units" Grid.Row="2"/>
-                    <Label x:Name="ElectiveLabel" Text="4 of 4 elective units" Grid.Row="3"/>
-                    <Label x:Name="ProgressLabel" Text="Progress: 10 of 16 units" Grid.Row="4"/>
-                    <!-- once databaase is here will update with binding at text and other places :D  -->
-                        <Label Text="62.5%" Grid.Column="1"  Grid.RowSpan="8" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                    <control:ProgressRing x:Name="ProgressRing" RingThickness="16" Progress=".625"  Scale=".9" RingBaseColor="Gray" RingProgressColor="#1CA5DE" Grid.Column="1" Grid.RowSpan="7" VerticalOptions="Center" InputTransparent="False" />
- 
+            <ListView ItemsSource="{Binding Qualifications}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="5" Padding="8" BackgroundColor="#DEFDFF">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="4"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="220"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="StudyPathLabel" Text="{Binding QualName}" HorizontalOptions="FillAndExpand" FontAttributes="Bold" Grid.Row="0"/>
 
-                    <!--<Image x:Name="circleImage" Source="circle.png" Grid.Column="1" Grid.Row="0" Grid.RowSpan="5"/>-->
+                                <Label x:Name="CoreLabel" Text="{Binding CoreResult}" Grid.Row="2"/>
+                                <Label x:Name="ElectiveLabel" Text="{Binding ElectiveResult}" Grid.Row="3"/>
+                                <Label x:Name="ProgressLabel" Text="{Binding TotalResult}" Grid.Row="4"/>
+                                <!-- once databaase is here will update with binding at text and other places :D  -->
+                                <Label Text="{Binding stringProgress}" Grid.Column="1"  Grid.RowSpan="8" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                <control:ProgressRing x:Name="ProgressRing" RingThickness="16" Progress="{Binding Progress}"  Scale=".9" RingBaseColor="Gray" RingProgressColor="#1CA5DE" Grid.Column="1" Grid.RowSpan="7" VerticalOptions="Center" InputTransparent="False" />
+
+
+                                <!--<Image x:Name="circleImage" Source="circle.png" Grid.Column="1" Grid.Row="0" Grid.RowSpan="5"/>-->
 
 
 
-                </Grid>
-                <!--<StackLayout Orientation="Horizontal" Margin="0,0,0,20" >
+                            </Grid>
+                            <!--<StackLayout Orientation="Horizontal" Margin="0,0,0,20" >
                     <StackLayout BackgroundColor="#DEFDFF">
                         <Label x:Name="StudyPathLabel" Text="Diploma of Software Development" FontAttributes="Bold" />
                         <Label x:Name="CoreLabel" Text="6 of 10 core units"/>
@@ -53,31 +56,33 @@
                     </StackLayout>
                     <Image x:Name="circleImage" Source="circle.png" Scale="0.5"/>
                 </StackLayout>-->
-            </Frame>
-            <Frame CornerRadius="5" Padding="8" BackgroundColor="#DEFDFF">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="20"/>
-                        <RowDefinition Height="4"/>
-                        <RowDefinition Height="20"/>
-                        <RowDefinition Height="20"/>
-                        <RowDefinition Height="50"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="220"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Label x:Name="StudyPathLabel1" Text="Certificate IV of Programming" FontAttributes="Bold" Grid.Row="0" HorizontalOptions="FillAndExpand"/>
-                    <Label x:Name="CoreLabel1" Text="8 of 8 core units" Grid.Row="2"/>
-                    <Label x:Name="ElectiveLabel1" Text="4 of 4 elective units" Grid.Row="3"/>
-                    <Label x:Name="ProgressLabel1" Text="Progress: 12 of 12 units" Grid.Row="4"/>
-                    <control:ProgressRing x:Name="ProgressRing2" RingThickness="16" Progress="1"  Scale=".9" RingBaseColor="Gray" RingProgressColor="#1CA5DE" Grid.Column="1" Grid.RowSpan="7" BindingContext="29%"/>
-                    <Label Text="100%" Grid.Column="1"  Grid.RowSpan="7" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        </Frame>
+                    </DataTemplate>
+                    <!--                   <Frame CornerRadius="5" Padding="8" BackgroundColor="#DEFDFF">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="4"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="220"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label x:Name="StudyPathLabel1" Text="Certificate IV of Programming" FontAttributes="Bold" Grid.Row="0" HorizontalOptions="FillAndExpand"/>
+                        <Label x:Name="CoreLabel1" Text="8 of 8 core units" Grid.Row="2"/>
+                        <Label x:Name="ElectiveLabel1" Text="4 of 4 elective units" Grid.Row="3"/>
+                        <Label x:Name="ProgressLabel1" Text="Progress: 12 of 12 units" Grid.Row="4"/>
+                        <control:ProgressRing x:Name="ProgressRing2" RingThickness="16" Progress="1"  Scale=".9" RingBaseColor="Gray" RingProgressColor="#1CA5DE" Grid.Column="1" Grid.RowSpan="7" BindingContext="29%"/>
+                        <Label Text="100%" Grid.Column="1"  Grid.RowSpan="7" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
-                    <!--<Image x:Name="circleImage1" Source="circle2.png" Scale="0.90" Grid.Column="1" Grid.Row="0" Grid.RowSpan="5"/>-->
-                </Grid>
-            </Frame>
-
+                        <!--<Image x:Name="circleImage1" Source="circle2.png" Scale="0.90" Grid.Column="1" Grid.Row="0" Grid.RowSpan="5"/>-->
+                    <!--               </Grid>
+                    </Frame> -->
+                </ListView.ItemTemplate>
+            </ListView>
             <Button x:Name="ParchmentButton" Text="{i18n:Translate TranslationApplyforParchment}" BackgroundColor="#A6E4F7" FontAttributes="Bold" HorizontalOptions="Center" Clicked="ParchmentBtnClicked"/>
             <!--<ListView ItemsSource="">
                     <ListView.ItemTemplate>

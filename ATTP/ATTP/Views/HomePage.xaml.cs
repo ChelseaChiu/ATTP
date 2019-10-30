@@ -26,13 +26,15 @@ namespace ATTP.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : ContentPage
     {
-   
+         
         public HomePage()
         {
             InitializeComponent();
             var progressRing = new ProgressRing { RingThickness = 5, Progress = 0.34f, RingBaseColor = Color.Gray, RingProgressColor = Color.Blue, Scale = 10 };
 
             ParchmentButton.Text = AppResources.TranslationApplyforParchment;
+            List<Qualification> Qualifications = Proxy.GetQualifications(App._Id);
+
 
         }
 
@@ -54,5 +56,7 @@ namespace ATTP.Views
         protected void ParchmentBtnClicked(object sender, EventArgs e) {
             Device.OpenUri(new Uri("https://www.tafesa.edu.au/services/parchments-results/request-parchment"));
         }
+
+
     }
 }
