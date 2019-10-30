@@ -12,6 +12,8 @@ namespace ATTP.Models
         public string TafeCode { get; set; }
         public string NationalCode { get; set; }
         public string CompetencyName { get; set; }
+        public string Semester { get; set; }
+        public string Year { get; set; }
         public string Grade { get; set; }
     }
 }

@@ -7,42 +7,54 @@
               ControlTemplate="{StaticResource MainPageTemplate}"
              x:Class="ATTP.Views.ResultPage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="White" Margin="10,10,10,10">
-            <Label x:Name="ResultLbl" Text="Result" FontSize="30" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" />
+        <StackLayout BackgroundColor="White" Margin="20,10,20,20">
+            <Label x:Name="ResultLbl" Text="Result" FontSize="30" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" />
             <Label x:Name="StudyLbl" Text="Study Path" FontAttributes="Bold" FontSize="14"/>
             <Picker x:Name="StudyPicker" Title="Please select your study path" ItemsSource="{Binding StudyPaths}" ItemDisplayBinding="{Binding StudyPathName}" FontSize="14" />
 
             <Label x:Name="CompleteLbl" Text="Completed" FontAttributes="Bold" FontSize="12"/>
-            <ListView x:Name="CompleteCourseList" SelectionMode="None" HasUnevenRows="True">
-                <ListView.Header>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.35*"/>
-                            <ColumnDefinition Width="0.35*"/>
-                            <ColumnDefinition Width="0.3*"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="2"/>
-                        </Grid.RowDefinitions>
-                        <Label x:Name="SubjectCLbl" Text="Subject Code" Grid.Column="0" Grid.Row="0" FontSize="12"/>
-                        <Label x:Name="NatCLbl" Text="National Code" Grid.Column="1"  Grid.Row="0" FontSize="12"/>
-                        <Label x:Name="GradeCLbl" Text="Grade" Grid.Column="2"  Grid.Row="0" FontSize="12"/>
-                        <BoxView Grid.Row="1" Grid.ColumnSpan="3" Color="Gray" HorizontalOptions="Fill"/>
-                    </Grid>
-                </ListView.Header>
+            <Grid BackgroundColor="#DE1616" RowSpacing="3" ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.18*"/>
+                    <ColumnDefinition Width="0.18*"/>
+                    <ColumnDefinition Width="0.23*"/>
+                    <ColumnDefinition Width="0.12*"/>
+                    <ColumnDefinition Width="0.15*"/>
+                    <ColumnDefinition Width="0.14*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="2"/>
+                </Grid.RowDefinitions>
+                <BoxView Grid.Row="0" Grid.ColumnSpan="6" Color="#8F0000" HorizontalOptions="Fill"/>
+                <Label x:Name="SubjectCLbl" Text="Subject Code" Grid.Column="0" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="TafeCLbl" Text="Tafe Code" Grid.Column="1" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="NatCTbl" Text="National Code" Grid.Column="2"  Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="SemCLbl" Text="Semester" Grid.Column="3" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="YearCLbl" Text="Year" Grid.Column="4" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="GradeCLbl" Text="Grade" Grid.Column="5"  Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <BoxView Grid.Row="2" Grid.ColumnSpan="6" Color="#8F0000" HorizontalOptions="Fill"/>
+            </Grid>
+            <ListView x:Name="CompleteCourseList" SelectionMode="None" HasUnevenRows="True" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid>
+                            <Grid ColumnSpacing="10">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="0.3*"/>
-                                    <ColumnDefinition Width="0.5*"/>
-                                    <ColumnDefinition Width="0.2*"/>
+                                    <ColumnDefinition Width="0.18*"/>
+                                    <ColumnDefinition Width="0.18*"/>
+                                    <ColumnDefinition Width="0.23*"/>
+                                    <ColumnDefinition Width="0.12*"/>
+                                    <ColumnDefinition Width="0.15*"/>
+                                    <ColumnDefinition Width="0.14*"/>
                                 </Grid.ColumnDefinitions>
                                 <Label Text="{Binding SubjectCode}" FontSize="12"/>
-                                <Label Grid.Column="1" Text="{Binding NationalCode}" FontSize="12"/>
-                                <Label Grid.Column="2" Text="{Binding Grade}" FontSize="12"/>
+                                <Label Grid.Column="1" Text="{Binding TafeCode}" FontSize="12"/>
+                                <Label Grid.Column="2" Text="{Binding NationalCode}" FontSize="12"/>
+                                <Label Grid.Column="3" Text="{Binding Semester}" FontSize="12"/>
+                                <Label Grid.Column="4" Text="{Binding Year}" FontSize="12"/>
+                                <Label Grid.Column="5" Text="{Binding Grade}" FontSize="12"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
@@ -50,36 +62,48 @@
             </ListView>
 
             <Label x:Name="ProgressLbl" Text="In Progress" FontAttributes="Bold" FontSize="12"/>
+            <Grid BackgroundColor="#DE1616" RowSpacing="3" ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.18*"/>
+                    <ColumnDefinition Width="0.18*"/>
+                    <ColumnDefinition Width="0.23*"/>
+                    <ColumnDefinition Width="0.12*"/>
+                    <ColumnDefinition Width="0.15*"/>
+                    <ColumnDefinition Width="0.14*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="2"/>
+                </Grid.RowDefinitions>
+                <BoxView Grid.Row="0" Grid.ColumnSpan="6" Color="#8F0000" HorizontalOptions="Fill"/>
+                <Label x:Name="SubjectPLbl" Text="Subject Code" Grid.Column="0" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="TafeCPLbl" Text="Tafe Code" Grid.Column="1" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="NatPTbl" Text="National Code" Grid.Column="2"  Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="SemPLbl" Text="Semester" Grid.Column="3" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="YearPLbl" Text="Year" Grid.Column="4" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="GradePLbl" Text="Grade" Grid.Column="5"  Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <BoxView Grid.Row="2" Grid.ColumnSpan="6" Color="#8F0000" HorizontalOptions="Fill"/>
+            </Grid>
             <ListView x:Name="InProgressCourseList" SelectionMode="None" HasUnevenRows="True">
-                <ListView.Header>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.35*"/>
-                            <ColumnDefinition Width="0.35*"/>
-                            <ColumnDefinition Width="0.3*"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="2"/>
-                        </Grid.RowDefinitions>
-                        <Label x:Name="SubjectPLbl" Text="Subject Code" Grid.Column="0" Grid.Row="0" FontSize="12"/>
-                        <Label x:Name="NatPLbl" Text="National Code" Grid.Column="1"  Grid.Row="0" FontSize="12"/>
-                        <Label x:Name="GradePLbl" Text="Grade" Grid.Column="2"  Grid.Row="0" FontSize="12"/>
-                        <BoxView Grid.Row="1" Grid.ColumnSpan="3" Color="Gray" HorizontalOptions="Fill"/>
-                    </Grid>
-                </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid>
+                            <Grid ColumnSpacing="10">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="0.3*"/>
-                                    <ColumnDefinition Width="0.5*"/>
-                                    <ColumnDefinition Width="0.2*"/>
+                                    <ColumnDefinition Width="0.18*"/>
+                                    <ColumnDefinition Width="0.18*"/>
+                                    <ColumnDefinition Width="0.23*"/>
+                                    <ColumnDefinition Width="0.12*"/>
+                                    <ColumnDefinition Width="0.15*"/>
+                                    <ColumnDefinition Width="0.14*"/>
                                 </Grid.ColumnDefinitions>
                                 <Label Text="{Binding SubjectCode}" FontSize="12"/>
-                                <Label Grid.Column="1" Text="{Binding NationalCode}" FontSize="12"/>
-                                <Label Grid.Column="2" Text="{Binding Grade}" FontSize="12"/>
+                                <Label Grid.Column="1" Text="{Binding TafeCode}" FontSize="12"/>
+                                <Label Grid.Column="2" Text="{Binding NationalCode}" FontSize="12"/>
+                                <Label Grid.Column="3" Text="{Binding Semester}" FontSize="12"/>
+                                <Label Grid.Column="4" Text="{Binding Year}" FontSize="12"/>
+                                <Label Grid.Column="5" Text="{Binding Grade}" FontSize="12"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
@@ -87,36 +111,48 @@
             </ListView>
 
             <Label x:Name="ToBeDoneLbl" Text="To Be Done" FontAttributes="Bold" FontSize="12"/>
+            <Grid BackgroundColor="#DE1616" RowSpacing="3" ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.18*"/>
+                    <ColumnDefinition Width="0.18*"/>
+                    <ColumnDefinition Width="0.23*"/>
+                    <ColumnDefinition Width="0.12*"/>
+                    <ColumnDefinition Width="0.15*"/>
+                    <ColumnDefinition Width="0.14*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="2"/>
+                </Grid.RowDefinitions>
+                <BoxView Grid.Row="0" Grid.ColumnSpan="6" Color="#8F0000" HorizontalOptions="Fill"/>
+                <Label x:Name="SubjectTLbl" Text="Subject Code" Grid.Column="0" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="TafeTLbl" Text="Tafe Code" Grid.Column="1" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="NatTLbl" Text="National Code" Grid.Column="2"  Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="SemTLbl" Text="Semester" Grid.Column="3" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="YearTLbl" Text="Year" Grid.Column="4" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="GradeTLbl" Text="Grade" Grid.Column="5"  Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <BoxView Grid.Row="2" Grid.ColumnSpan="6" Color="#8F0000" HorizontalOptions="Fill"/>
+            </Grid>
             <ListView x:Name="ToBeDoneCourseList" SelectionMode="None" HasUnevenRows="True">
-                <ListView.Header>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.35*"/>
-                            <ColumnDefinition Width="0.35*"/>
-                            <ColumnDefinition Width="0.3*"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="2"/>
-                        </Grid.RowDefinitions>
-                        <Label x:Name="SubjectTLbl" Text="Subject Code" Grid.Column="0" Grid.Row="0" FontSize="12"/>
-                        <Label x:Name="NatTLbl" Text="National Code" Grid.Column="1"  Grid.Row="0" FontSize="12"/>
-                        <Label x:Name="GradeTLbl" Text="Grade" Grid.Column="2"  Grid.Row="0" FontSize="12"/>
-                        <BoxView Grid.Row="1" Grid.ColumnSpan="3" Color="Gray" HorizontalOptions="Fill"/>
-                    </Grid>
-                </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid>
+                            <Grid ColumnSpacing="10">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="0.3*"/>
-                                    <ColumnDefinition Width="0.5*"/>
-                                    <ColumnDefinition Width="0.2*"/>
+                                    <ColumnDefinition Width="0.18*"/>
+                                    <ColumnDefinition Width="0.18*"/>
+                                    <ColumnDefinition Width="0.23*"/>
+                                    <ColumnDefinition Width="0.12*"/>
+                                    <ColumnDefinition Width="0.15*"/>
+                                    <ColumnDefinition Width="0.14*"/>
                                 </Grid.ColumnDefinitions>
-                                <Label Text="{Binding SubjectCode}"/>
-                                <Label Grid.Column="1" Text="{Binding NationalCode}" FontSize="12"/>
-                                <Label Grid.Column="2" Text="{Binding Grade}" FontSize="12"/>
+                                <Label Text="{Binding SubjectCode}" FontSize="12"/>
+                                <Label Grid.Column="1" Text="{Binding TafeCode}" FontSize="12"/>
+                                <Label Grid.Column="2" Text="{Binding NationalCode}" FontSize="12"/>
+                                <Label Grid.Column="3" Text="{Binding Semester}" FontSize="12"/>
+                                <Label Grid.Column="4" Text="{Binding Year}" FontSize="12"/>
+                                <Label Grid.Column="5" Text="{Binding Grade}" FontSize="12"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
