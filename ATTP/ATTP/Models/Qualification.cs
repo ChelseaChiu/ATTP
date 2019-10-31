@@ -24,39 +24,16 @@ namespace ATTP.Models
 
         public double Progress { get; set; }
 
-        private string stringProgress;
-        public string StringProgress
-        {
-            get { return stringProgress; }
-            set { stringProgress= String.Format(Progress*100+" %"); }
-        }
+        public string StringProgress { get; set; }
 
-        private string stringCoreResult;
-        public string StringCoreResult
-        {
-            get { return stringCoreResult; }
-            set { stringCoreResult = String.Format("Core Units: {0} of {1}",DoneC,CoreUnits); }
-        }
+        public string StringCoreResult { get; set; }
 
-        private string stringElectiveResult;
-        public string StringElectiveResult
-        {
-            get { return stringElectiveResult; }
-            set { stringElectiveResult = String.Format("Elective Units: {0} of {1}",DoneE,ElectedUnits); }
-        }
+        public string StringElectiveResult { get; set; }
 
-        private string stringLEResult;
-        public string StringLEResult
-        {
-            get { return stringLEResult; }
-            set { stringLEResult = String.Format("ReqListedElectedUnits Elective Units: {0} of {1}", DoneLE, ElectedUnits); }
-        }
+        public string StringLEResult { get; set; }
 
-        private string stringTotalResult;
-        public string StringTotalResult
-        {
-            get { return stringTotalResult; }
-            set { stringTotalResult = String.Format("Total Units: {0} of {1}",DoneTotal,TotalUnits); }
-        }
+
+        public string StringTotalResult { get; set; }
+
     }
 }

@@ -19,7 +19,8 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame CornerRadius="5" Padding="8" BackgroundColor="#DEFDFF">
+                            <!--The design of the home page need to be enhance-->
+                                <Frame CornerRadius="5" Padding="8" BackgroundColor="#DEFDFF"  HeightRequest="300">
                                 <StackLayout Orientation="Horizontal">
                                     <StackLayout Orientation="Vertical">
                                         <Label x:Name="StudyPathLabel" Text="{Binding QualName}" HorizontalOptions="FillAndExpand" FontAttributes="Bold" />
@@ -29,8 +30,8 @@
                                         <Label x:Name="LELabel" Text="{Binding StringLEResult}" />
                                         <Label x:Name="ProgressLabel" Text="{Binding StringTotalResult}" />
                                     </StackLayout>
-                                    <Label Text="{Binding stringProgress}" Grid.Column="1"  Grid.RowSpan="8" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                                    <control:ProgressRing x:Name="ProgressRing" RingThickness="16" Progress="{Binding Progress}"  Scale=".9" RingBaseColor="Gray" RingProgressColor="#1CA5DE" Grid.Column="1" Grid.RowSpan="7" VerticalOptions="Center" InputTransparent="False" />
+                                    <Label Text="{Binding stringProgress}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                    <control:ProgressRing x:Name="ProgressRing" RingThickness="16" Progress="{Binding Progress}"  Scale=".9" RingBaseColor="Gray" RingProgressColor="#1CA5DE"  VerticalOptions="Center" InputTransparent="False" />
                                 </StackLayout>
                             </Frame>
                         </ViewCell>
@@ -38,7 +39,7 @@
                    
                 </ListView.ItemTemplate>
             </ListView>
-            <Button x:Name="ParchmentButton" Text="{i18n:Translate TranslationApplyforParchment}" BackgroundColor="#A6E4F7" FontAttributes="Bold" HorizontalOptions="Center" Clicked="ParchmentBtnClicked"/>
+            <Button x:Name="ParchmentButton" Text="{i18n:Translate TranslationApplyforParchment}" BackgroundColor="#A6E4F7" FontAttributes="Bold" HorizontalOptions="Center" Clicked="ParchmentBtnClicked" IsEnabled="False"/>
 
         </StackLayout>
     </ContentPage.Content>

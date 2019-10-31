@@ -69,7 +69,11 @@ namespace ATTP.Models
             proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
             double progress = 0.00d;
             progress = proxy.CalQualProgress(studentId, qualCode);
-            return progress;
+            if (progress>=1)
+            {
+                return 1.00d;
+            }
+            else return progress;
         }
 
         public static List<Competency> GetCompetencies(string studentId, string qualCode)
@@ -83,7 +87,13 @@ namespace ATTP.Models
                 comp.TafeCompCode = cList[i].TafeCode;
                 comp.NationaCompCode = cList[i].NationalCode;
                 comp.CompetencyName = cList[i].CompetencyName;
+                comp.SubjectCode = cList[i].SubjectCode;
+                comp.CompTypeCode = cList[i].TrainingPakckageUsage;
+                comp.Results = cList[i].Results;
+                competencies.Add(comp);
+
             }
+            return competencies;
 
         }
 
