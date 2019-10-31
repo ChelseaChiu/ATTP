@@ -100,7 +100,7 @@ namespace StudentServiceRef
     public partial class Qualification : object
     {
         
-        private StudentServiceRef.Competency[] CompetenciesField;
+        private System.Collections.Generic.List<StudentServiceRef.Competency> CompetenciesField;
         
         private int CoreUnitsField;
         
@@ -127,7 +127,7 @@ namespace StudentServiceRef
         private int TotalUnitsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public StudentServiceRef.Competency[] Competencies
+        public System.Collections.Generic.List<StudentServiceRef.Competency> Competencies
         {
             get
             {
@@ -302,7 +302,7 @@ namespace StudentServiceRef
     public partial class Competency : object
     {
         
-        private StudentServiceRef.Competency[] CompetenciesField;
+        private System.Collections.Generic.List<StudentServiceRef.Competency> CompetenciesField;
         
         private string CompetencyNameField;
         
@@ -320,10 +320,10 @@ namespace StudentServiceRef
         
         private string TrainingPakckageUsageField;
         
-        private StudentServiceRef.Competency[] competenciesField;
+        private System.Collections.Generic.List<StudentServiceRef.Competency> competenciesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public StudentServiceRef.Competency[] Competencies
+        public System.Collections.Generic.List<StudentServiceRef.Competency> Competencies
         {
             get
             {
@@ -440,7 +440,7 @@ namespace StudentServiceRef
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public StudentServiceRef.Competency[] competencies
+        public System.Collections.Generic.List<StudentServiceRef.Competency> competencies
         {
             get
             {
@@ -477,16 +477,16 @@ namespace StudentServiceRef
         System.Threading.Tasks.Task<double> CalQualProgressAsync(string studentID, string qualCode);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetQualificationList", ReplyAction="http://tempuri.org/IStudentService/GetQualificationListResponse")]
-        StudentServiceRef.Qualification[] GetQualificationList(string studentID);
+        System.Collections.Generic.List<StudentServiceRef.Qualification> GetQualificationList(string studentID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetQualificationList", ReplyAction="http://tempuri.org/IStudentService/GetQualificationListResponse")]
-        System.Threading.Tasks.Task<StudentServiceRef.Qualification[]> GetQualificationListAsync(string studentID);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<StudentServiceRef.Qualification>> GetQualificationListAsync(string studentID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetCompetencyList", ReplyAction="http://tempuri.org/IStudentService/GetCompetencyListResponse")]
-        StudentServiceRef.Competency[] GetCompetencyList(string studentID, string qualificationID);
+        System.Collections.Generic.List<StudentServiceRef.Competency> GetCompetencyList(string studentID, string qualificationID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetCompetencyList", ReplyAction="http://tempuri.org/IStudentService/GetCompetencyListResponse")]
-        System.Threading.Tasks.Task<StudentServiceRef.Competency[]> GetCompetencyListAsync(string studentID, string qualificationID);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<StudentServiceRef.Competency>> GetCompetencyListAsync(string studentID, string qualificationID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetQualification", ReplyAction="http://tempuri.org/IStudentService/GetQualificationResponse")]
         StudentServiceRef.Qualification GetQualification(string qualCode);
@@ -568,22 +568,22 @@ namespace StudentServiceRef
             return base.Channel.CalQualProgressAsync(studentID, qualCode);
         }
         
-        public StudentServiceRef.Qualification[] GetQualificationList(string studentID)
+        public System.Collections.Generic.List<StudentServiceRef.Qualification> GetQualificationList(string studentID)
         {
             return base.Channel.GetQualificationList(studentID);
         }
         
-        public System.Threading.Tasks.Task<StudentServiceRef.Qualification[]> GetQualificationListAsync(string studentID)
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<StudentServiceRef.Qualification>> GetQualificationListAsync(string studentID)
         {
             return base.Channel.GetQualificationListAsync(studentID);
         }
         
-        public StudentServiceRef.Competency[] GetCompetencyList(string studentID, string qualificationID)
+        public System.Collections.Generic.List<StudentServiceRef.Competency> GetCompetencyList(string studentID, string qualificationID)
         {
             return base.Channel.GetCompetencyList(studentID, qualificationID);
         }
         
-        public System.Threading.Tasks.Task<StudentServiceRef.Competency[]> GetCompetencyListAsync(string studentID, string qualificationID)
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<StudentServiceRef.Competency>> GetCompetencyListAsync(string studentID, string qualificationID)
         {
             return base.Channel.GetCompetencyListAsync(studentID, qualificationID);
         }

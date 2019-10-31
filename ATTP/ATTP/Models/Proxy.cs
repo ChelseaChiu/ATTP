@@ -1,6 +1,7 @@
 ﻿using StudentServiceRef;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -45,7 +46,7 @@ namespace ATTP.Models
             proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
             List<Qualification> qualifications = new List<Qualification>();
             var qList =proxy.GetQualificationList(studentId);
-            for (int i = 0; i < qList.Length; i++)
+            for (int i = 0; i < qList.Count; i++)
             {
                 Qualification qual = new Qualification();
                 qual.QualCode = qList[i].QualCode;
@@ -56,6 +57,7 @@ namespace ATTP.Models
                 qual.TotalUnits = qList[i].TotalUnits;
                 qual.ElectedUnits = qList[i].ElectedUnits;
                 qual.ReqListedElectedUnits = qList[i].ReqListedElectedUnits;
+
                 qualifications.Add(qual);
             }
             return qualifications;
@@ -69,6 +71,23 @@ namespace ATTP.Models
             progress = proxy.CalQualProgress(studentId, qualCode);
             return progress;
         }
+
+        public static List<Competency> GetCompetencies(string studentId, string qualCode)
+        {
+            proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
+            List<Competency> competencies = new List<Competency>();
+            var cList = proxy.GetCompetencyList(studentId, qualCode);
+            for (int i = 0; i < cList.Count; i++)
+            {
+                Competency comp = new Competency();
+                comp.TafeCompCode = cList[i].TafeCode;
+                comp.NationaCompCode = cList[i].NationalCode;
+                comp.CompetencyName = cList[i].CompetencyName;
+            }
+
+        }
+
+
 
 
     }   

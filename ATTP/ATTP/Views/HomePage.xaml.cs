@@ -19,7 +19,7 @@ using System.Globalization;
 using System.Windows.Input;
 using ProgressRingControl.Forms.Plugin;
 using SkiaSharp;
-
+using System.ComponentModel;
 
 namespace ATTP.Views
 {
@@ -34,9 +34,14 @@ namespace ATTP.Views
 
             ParchmentButton.Text = AppResources.TranslationApplyforParchment;
             List<Qualification> Qualifications = Proxy.GetQualifications(App._Id);
-
+            foreach (Qualification q in Qualifications)
+            {
+                q.Progress = Proxy.CalQualProgress(App._Id, q.QualCode);
+                
+            }
 
         }
+
 
         //void switchToggledAsync(object sender , System.ComponentModel.PropertyChangedEventArgs e)
         //{
