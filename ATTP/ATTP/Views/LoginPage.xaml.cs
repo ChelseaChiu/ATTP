@@ -48,8 +48,6 @@ namespace ATTP.Views
 
             BindingContext = this;
             PickerLanguages.SelectedIndexChanged += PickerLanguages_SelectedIndexChanged;
-            App._Id = null;
-            App._Username = null;
 
             Init();
 

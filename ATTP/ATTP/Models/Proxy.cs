@@ -25,6 +25,7 @@ namespace ATTP.Models
 
         public static User getStudentById(string id)
         {
+            App._Username = null;
 
             proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
             User user = new User();

@@ -15,32 +15,77 @@
             <Label x:Name="HomeLbl" Text="{i18n:Translate TranslationHome}" FontSize="30"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="Start" />
-            <ListView x:Name="qualListView" ItemsSource="{Binding Qualifications}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <!--The design of the home page need to be enhance-->
-                                <Frame CornerRadius="5" Padding="8" BackgroundColor="#DEFDFF"  HeightRequest="300">
-                                <StackLayout Orientation="Horizontal">
-                                    <StackLayout Orientation="Vertical">
-                                        <Label x:Name="StudyPathLabel" Text="{Binding QualName}" HorizontalOptions="FillAndExpand" FontAttributes="Bold" />
+            <Frame CornerRadius="5" Padding="8" BackgroundColor="#DEFDFF">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="4"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="220"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="StudyPathLabel" Text="Diploma of Software Development" HorizontalOptions="FillAndExpand" FontAttributes="Bold" Grid.Row="0"/>
 
-                                        <Label x:Name="CoreLabel" Text="{Binding StringCoreResult}" />
-                                        <Label x:Name="ElectiveLabel" Text="{Binding stringElectiveResult}" />
-                                        <Label x:Name="LELabel" Text="{Binding StringLEResult}" />
-                                        <Label x:Name="ProgressLabel" Text="{Binding StringTotalResult}" />
-                                    </StackLayout>
-                                    <Label Text="{Binding stringProgress}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                                    <control:ProgressRing x:Name="ProgressRing" RingThickness="16" Progress="{Binding Progress}"  Scale=".9" RingBaseColor="Gray" RingProgressColor="#1CA5DE"  VerticalOptions="Center" InputTransparent="False" />
-                                </StackLayout>
-                            </Frame>
-                        </ViewCell>
-                    </DataTemplate>
-                   
-                </ListView.ItemTemplate>
-            </ListView>
-            <Button x:Name="ParchmentButton" Text="{i18n:Translate TranslationApplyforParchment}" BackgroundColor="#A6E4F7" FontAttributes="Bold" HorizontalOptions="Center" Clicked="ParchmentBtnClicked" IsEnabled="False"/>
+                    <Label x:Name="CoreLabel" Text="6 of 10 core units" Grid.Row="2"/>
+                    <Label x:Name="ElectiveLabel" Text="4 of 4 elective units" Grid.Row="3"/>
+                    <Label x:Name="ProgressLabel" Text="Progress: 10 of 16 units" Grid.Row="4"/>
+                    <!-- once databaase is here will update with binding at text and other places :D  -->
+                    <Label Text="62.5%" Grid.Column="1"  Grid.RowSpan="8" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <control:ProgressRing x:Name="ProgressRing" RingThickness="16" Progress=".625"  Scale=".9" RingBaseColor="Gray" RingProgressColor="#1CA5DE" Grid.Column="1" Grid.RowSpan="7" VerticalOptions="Center" InputTransparent="False" />
 
+
+                    <!--<Image x:Name="circleImage" Source="circle.png" Grid.Column="1" Grid.Row="0" Grid.RowSpan="5"/>-->
+
+
+
+                </Grid>
+                <!--<StackLayout Orientation="Horizontal" Margin="0,0,0,20" >
+                    <StackLayout BackgroundColor="#DEFDFF">
+                        <Label x:Name="StudyPathLabel" Text="Diploma of Software Development" FontAttributes="Bold" />
+                        <Label x:Name="CoreLabel" Text="6 of 10 core units"/>
+                        <Label x:Name="ElectiveLabel" Text="4 of 4 elective units"/>
+                        <Label x:Name="ProgressLabel" Text="Progress: 10 of 16 units"/>
+                        <Button x:Name="ParchmentButton" Text="Apply Parchment" BackgroundColor="#A6E4F7" BorderRadius="5" FontAttributes="Bold" HorizontalOptions="Start"/>
+                    </StackLayout>
+                    <Image x:Name="circleImage" Source="circle.png" Scale="0.5"/>
+                </StackLayout>-->
+            </Frame>
+            <Frame CornerRadius="5" Padding="8" BackgroundColor="#DEFDFF">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="4"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="220"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="StudyPathLabel1" Text="Certificate IV of Programming" FontAttributes="Bold" Grid.Row="0" HorizontalOptions="FillAndExpand"/>
+                    <Label x:Name="CoreLabel1" Text="8 of 8 core units" Grid.Row="2"/>
+                    <Label x:Name="ElectiveLabel1" Text="4 of 4 elective units" Grid.Row="3"/>
+                    <Label x:Name="ProgressLabel1" Text="Progress: 12 of 12 units" Grid.Row="4"/>
+                    <control:ProgressRing x:Name="ProgressRing2" RingThickness="16" Progress="1"  Scale=".9" RingBaseColor="Gray" RingProgressColor="#1CA5DE" Grid.Column="1" Grid.RowSpan="7" BindingContext="29%"/>
+                    <Label Text="100%" Grid.Column="1"  Grid.RowSpan="7" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                    <!--<Image x:Name="circleImage1" Source="circle2.png" Scale="0.90" Grid.Column="1" Grid.Row="0" Grid.RowSpan="5"/>-->
+                </Grid>
+            </Frame>
+
+            <Button x:Name="ParchmentButton" Text="{i18n:Translate TranslationApplyforParchment}" BackgroundColor="#A6E4F7" FontAttributes="Bold" HorizontalOptions="Center" Clicked="ParchmentBtnClicked"/>
+            <!--<ListView ItemsSource="">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
