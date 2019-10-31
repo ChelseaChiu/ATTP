@@ -34,6 +34,36 @@
                     <ContentPresenter />
                 </StackLayout>
             </ControlTemplate>
+
+            <Color x:Key="TimelineColor">#E4B6C3</Color>
+            <Color x:Key="HeaderTextColor">#3C3C3C</Color>
+            <Color x:Key="BodyTextColor">#869EAC</Color>
+            <Color x:Key="TimeColor">#A64C79</Color>
+
+            <Style x:Key="PageHeaderLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource HeaderTextColor}" />
+                <!--<Setter Property="Font" Value="{StaticResource HeaderFont}" />-->
+            </Style>
+
+            <Style x:Key="SubHeaderLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource BodyTextColor}" />
+                <!--<Setter Property="Font" Value="{StaticResource SubHeaderFont}" />-->
+            </Style>
+
+            <Style x:Key="ClassTimeLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource TimeColor}" />
+                <!--<Setter Property="Font" Value="{StaticResource TitleFont}" />-->
+            </Style>
+
+            <Style x:Key="ClassNameLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource HeaderTextColor}" />
+                <!--<Setter Property="Font" Value="{StaticResource TitleFont}" />-->
+            </Style>
+
+            <Style x:Key="ClassInstructorLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource BodyTextColor}" />
+                <!--<Setter Property="Font" Value="{StaticResource BodyFont}" />-->
+            </Style>
         </ResourceDictionary>
 
     </Application.Resources>

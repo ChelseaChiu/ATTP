@@ -3,13 +3,79 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i18n="clr-namespace:ATTP.Helpers;assembly=ATTP"
+             xmlns:local="clr-namespace:ATTP.Data"
              mc:Ignorable="d"
-             ControlTemplate="{StaticResource MainPageTemplate}"
+             
              x:Class="ATTP.Views.TimetablePage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:NotBooleanConverter x:Key="NotBooleanConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
-        <StackLayout BackgroundColor="White" Margin="10,10,10,10">
-            <Label x:Name="TimeLbl" Text="Timetable" FontSize="30" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" />
-            
-        </StackLayout>
+
+        <Grid>
+
+            <StackLayout HorizontalOptions="FillAndExpand">
+                <Picker x:Name="CRNDAYPicker" Title="Select the timetable day " Grid.Row="3" ItemsSource="{Binding CRNCourseDays}" ItemDisplayBinding="{Binding CRNCourseDayName}" />
+
+                <ListView x:Name="TimetableListView" RowHeight="75" ItemsSource="{Binding .}"  SelectionMode="None"  SeparatorVisibility="None"  >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid ColumnSpacing="0" RowSpacing="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100" />
+                                        <ColumnDefinition Width="30" />
+                                        <ColumnDefinition Width="auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+
+                                    <Label HorizontalOptions="Center" Style="{StaticResource ClassTimeLabel}" Text="{Binding StartTime, StringFormat='{0:H:mm}'}" />
+
+                                    <Label Grid.Column="2" Grid.Row="0" Margin="20,0" Style="{StaticResource ClassNameLabel}" Text="{Binding SubjectCode}" />
+                                    <Label Grid.Row="2" Grid.Column="2" Margin="20,0" Text="Lecturer" />
+                                    <Label Grid.Row="2" Grid.Column="3" Margin="20,0" Style="{StaticResource ClassInstructorLabel}" Text="{Binding Instructor}" />
+                                    <Label Grid.Row="3" Grid.Column="2" Margin="20,0" Text="Room" />
+                                    <Label Grid.Row="3" Grid.Column="3" Margin="20,0" Style="{StaticResource ClassInstructorLabel}" Text="{Binding Room}" />
+
+                                    <Label Grid.Column="3" Margin="20,0" Style="{StaticResource ClassInstructorLabel}" Text="{Binding Duration}" />
+
+
+                                    <BoxView Grid.RowSpan="4" Grid.Column="1" BackgroundColor="{StaticResource TimelineColor}" HorizontalOptions="Center" IsVisible="{Binding IsLast, Converter={local:NotBooleanConverter}}" VerticalOptions="Fill" WidthRequest="3" />
+
+                                    <Image Grid.Column="1" Source="Bullet.png" />
+
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <AbsoluteLayout VerticalOptions="End"  AbsoluteLayout.LayoutBounds=".5,1,.5,.1" AbsoluteLayout.LayoutFlags="All">
+
+                    <Grid RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="64" />
+                            <RowDefinition Height="100" />
+                        </Grid.RowDefinitions>
+                        <Image Grid.RowSpan="2" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Source="YogaImage.png" AbsoluteLayout.LayoutBounds=".5,1,.5,.1" AbsoluteLayout.LayoutFlags="All"  />
+                        <Image Aspect="Fill" Grid.RowSpan="2" HorizontalOptions="FillAndExpand" Source="FadeToWhite.png" AbsoluteLayout.LayoutBounds=".5,1,.5,.1" AbsoluteLayout.LayoutFlags="All" />
+                    </Grid>
+
+                </AbsoluteLayout>
+
+            </StackLayout>
+        </Grid>
+
+
     </ContentPage.Content>
 </ContentPage>
