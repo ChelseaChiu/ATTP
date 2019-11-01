@@ -26,18 +26,24 @@ namespace ATTP.Models
         
          public bool Valdation(string id, string password)
         {
-            
 
-            if(Proxy.login(id))
+            if ((!string.IsNullOrWhiteSpace(id) && !string.IsNullOrWhiteSpace(password) && password == "SRV"))
             {
-   
-                return true;
+                if (Proxy.login(id))
+                {
+
+                    return true;
+                }
+                else return false;
             }
 
- //           if (!string.IsNullOrWhiteSpace(this.Username) && !string.IsNullOrWhiteSpace(this.Password) && this.Username=="001096907")
- //           {
- //               return true;
- //           }
+
+
+
+            //           if (!string.IsNullOrWhiteSpace(this.Username) && !string.IsNullOrWhiteSpace(this.Password) && this.Password=="001096907")
+            //           {
+            //               return true;
+            //           }
 
 
             //else if (this.Username = "001083886")

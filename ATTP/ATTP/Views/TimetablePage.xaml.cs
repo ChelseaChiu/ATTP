@@ -14,6 +14,7 @@ namespace ATTP.Views
     public partial class TimetablePage : ContentPage
     {
 
+
         private static DateTime TodayAt(int hour, int minute)
         {
             return new DateTime(DateTime.Now.Year,
@@ -28,9 +29,10 @@ namespace ATTP.Views
 
         public TimetablePage()
         {
+            CRNDAYPicker.SelectedIndex = 0;
             //BindingContext = Dummydata.Classes;
             InitializeComponent();
-            CRNDAYPicker.SelectedIndex = 1;
+
             CRNCourseDays = new ObservableCollection<CRNCourseDay>
             {
                 new CRNCourseDay{ CRNCourseDayName ="Monday", CRNCourseDayNumber="1" },
@@ -61,10 +63,10 @@ namespace ATTP.Views
 
                             Classes.Add(new CrnSessionTimetable
                             {
-                                SubjectCode = "UWU",
+                                SubjectCode = "3PRB",
                                 Duration = "9:00 ~ 13:00",
                                 Room = "A.A116",
-                                Instructor = "Western Smith",
+                                Instructor = "Tervor Leary",
                                 CampusCode = "Adelaide",
                                 StartTime = TodayAt(9, 00)
 
@@ -73,18 +75,18 @@ namespace ATTP.Views
                             {
                                 SubjectCode = "5SDA",
                                 Duration = "9:00 ~ 13:00",
-                                Room = "A.A116",
-                                Instructor = "Western Smith",
+                                Room = "B.002",
+                                Instructor = "KT LAU",
                                 CampusCode = "Adelaide",
                                 StartTime = TodayAt(9, 00)
 
                             });
                             Classes.Add(new CrnSessionTimetable
                             {
-                                SubjectCode = "5SDA",
+                                SubjectCode = "5SDA Prac",
                                 Duration = "9:00 ~ 13:00",
                                 Room = "A.A116",
-                                Instructor = "Western Smith",
+                                Instructor = "KT LAU",
                                 CampusCode = "Adelaide",
                                 StartTime = TodayAt(9, 00)
 
@@ -94,7 +96,7 @@ namespace ATTP.Views
                                 SubjectCode = "5JAW",
                                 Duration = "16:00 ~ 18:00",
                                 Room = "A.A156",
-                                Instructor = "Western Smith",
+                                Instructor = "Dale Van Heer ",
                                 CampusCode = "Adelaide",
                                 StartTime = TodayAt(16, 00),
                                 IsLast = true,
@@ -114,7 +116,27 @@ namespace ATTP.Views
 
                             Classes.Add(new CrnSessionTimetable
                             {
-                                SubjectCode = "5SDA",
+                                SubjectCode = "5JAW PRAC",
+                                Duration = "9:00 ~ 13:00",
+                                Room = "A.A116",
+                                Instructor = "Dale Van Heer",
+                                CampusCode = "Adelaide",
+                                StartTime = TodayAt(9, 00)
+
+                            });
+                            Classes.Add(new CrnSessionTimetable
+                            {
+                                SubjectCode = "PRAC",
+                                Duration = "9:00 ~ 13:00",
+                                Room = "A.A116",
+                                Instructor = "Dale Van Heer",
+                                CampusCode = "Adelaide",
+                                StartTime = TodayAt(9, 00)
+
+                            });
+                            Classes.Add(new CrnSessionTimetable
+                            {
+                                SubjectCode = "6MITP",
                                 Duration = "9:00 ~ 13:00",
                                 Room = "A.A116",
                                 Instructor = "Western Smith",
@@ -124,30 +146,10 @@ namespace ATTP.Views
                             });
                             Classes.Add(new CrnSessionTimetable
                             {
-                                SubjectCode = "5SDA",
-                                Duration = "9:00 ~ 13:00",
-                                Room = "A.A116",
-                                Instructor = "Western Smith",
-                                CampusCode = "Adelaide",
-                                StartTime = TodayAt(9, 00)
-
-                            });
-                            Classes.Add(new CrnSessionTimetable
-                            {
-                                SubjectCode = "5SDA",
-                                Duration = "9:00 ~ 13:00",
-                                Room = "A.A116",
-                                Instructor = "Western Smith",
-                                CampusCode = "Adelaide",
-                                StartTime = TodayAt(9, 00)
-
-                            });
-                            Classes.Add(new CrnSessionTimetable
-                            {
-                                SubjectCode = "5JAW",
+                                SubjectCode = "5WHSM",
                                 Duration = "16:00 ~ 18:00",
                                 Room = "A.A156",
-                                Instructor = "Western Smith",
+                                Instructor = "Keven Smith",
                                 CampusCode = "Adelaide",
                                 StartTime = TodayAt(16, 00),
                                 IsLast = true,
@@ -172,37 +174,18 @@ namespace ATTP.Views
                                 SubjectCode = "5SDA",
                                 Duration = "9:00 ~ 13:00",
                                 Room = "A.A116",
-                                Instructor = "Western Smith",
+                                Instructor = "KT Lau",
                                 CampusCode = "Adelaide",
                                 StartTime = TodayAt(9, 00)
 
                             });
-                            Classes.Add(new CrnSessionTimetable
-                            {
-                                SubjectCode = "5SDA",
-                                Duration = "9:00 ~ 13:00",
-                                Room = "A.A116",
-                                Instructor = "Western Smith",
-                                CampusCode = "Adelaide",
-                                StartTime = TodayAt(9, 00)
 
-                            });
-                            Classes.Add(new CrnSessionTimetable
-                            {
-                                SubjectCode = "5SDA",
-                                Duration = "9:00 ~ 13:00",
-                                Room = "A.A116",
-                                Instructor = "Western Smith",
-                                CampusCode = "Adelaide",
-                                StartTime = TodayAt(9, 00)
-
-                            });
                             Classes.Add(new CrnSessionTimetable
                             {
                                 SubjectCode = "5JAW",
                                 Duration = "16:00 ~ 18:00",
                                 Room = "A.A156",
-                                Instructor = "Western Smith",
+                                Instructor = "Julie Ruiz",
                                 CampusCode = "Adelaide",
                                 StartTime = TodayAt(16, 00),
                                 IsLast = true,
@@ -223,40 +206,31 @@ namespace ATTP.Views
 
                             Classes.Add(new CrnSessionTimetable
                             {
-                                SubjectCode = "5SDA",
+                                SubjectCode = "5MWD",
                                 Duration = "9:00 ~ 13:00",
                                 Room = "A.A116",
-                                Instructor = "Western Smith",
+                                Instructor = "Santi Lee",
+                                CampusCode = "Adelaide",
+                                StartTime = TodayAt(9, 00)
+
+                            });
+
+                            Classes.Add(new CrnSessionTimetable
+                            {
+                                SubjectCode = "5MWD Prac",
+                                Duration = "9:00 ~ 13:00",
+                                Room = "A.A116",
+                                Instructor = "Santi Lee",
                                 CampusCode = "Adelaide",
                                 StartTime = TodayAt(9, 00)
 
                             });
                             Classes.Add(new CrnSessionTimetable
                             {
-                                SubjectCode = "5SDA",
-                                Duration = "9:00 ~ 13:00",
-                                Room = "A.A116",
-                                Instructor = "Western Smith",
-                                CampusCode = "Adelaide",
-                                StartTime = TodayAt(9, 00)
-
-                            });
-                            Classes.Add(new CrnSessionTimetable
-                            {
-                                SubjectCode = "5SDA",
-                                Duration = "9:00 ~ 13:00",
-                                Room = "A.A116",
-                                Instructor = "Western Smith",
-                                CampusCode = "Adelaide",
-                                StartTime = TodayAt(9, 00)
-
-                            });
-                            Classes.Add(new CrnSessionTimetable
-                            {
-                                SubjectCode = "5JAW",
+                                SubjectCode = "5IUOS",
                                 Duration = "16:00 ~ 18:00",
                                 Room = "A.A156",
-                                Instructor = "Western Smith",
+                                Instructor = "Kai Nyugen",
                                 CampusCode = "Adelaide",
                                 StartTime = TodayAt(16, 00),
                                 IsLast = true,
@@ -278,10 +252,10 @@ namespace ATTP.Views
 
                             Classes.Add(new CrnSessionTimetable
                             {
-                                SubjectCode = "5SDA",
+                                SubjectCode = "5IUOS Prac",
                                 Duration = "9:00 ~ 13:00",
                                 Room = "A.A116",
-                                Instructor = "Western Smith",
+                                Instructor = "Kai Nyugen",
                                 CampusCode = "Adelaide",
                                 StartTime = TodayAt(9, 00)
 
@@ -291,31 +265,23 @@ namespace ATTP.Views
                                 SubjectCode = "5SDA",
                                 Duration = "9:00 ~ 13:00",
                                 Room = "A.A116",
-                                Instructor = "Western Smith",
+                                Instructor = "KT Lau",
                                 CampusCode = "Adelaide",
                                 StartTime = TodayAt(9, 00)
 
                             });
                             Classes.Add(new CrnSessionTimetable
                             {
-                                SubjectCode = "5SDA",
+                                SubjectCode = "5ICW",
                                 Duration = "9:00 ~ 13:00",
                                 Room = "A.A116",
-                                Instructor = "Western Smith",
+                                Instructor = "Jessi Lee",
                                 CampusCode = "Adelaide",
-                                StartTime = TodayAt(9, 00)
-
-                            });
-                            Classes.Add(new CrnSessionTimetable
-                            {
-                                SubjectCode = "5JAW",
-                                Duration = "16:00 ~ 18:00",
-                                Room = "A.A156",
-                                Instructor = "Western Smith",
-                                CampusCode = "Adelaide",
-                                StartTime = TodayAt(16, 00),
+                                StartTime = TodayAt(9, 00),
                                 IsLast = true,
+
                             });
+
                         };
                         TimetableListView.ItemsSource = Classes;
                         BindingContext = this;

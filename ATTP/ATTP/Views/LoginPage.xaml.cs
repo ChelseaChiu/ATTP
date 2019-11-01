@@ -21,17 +21,7 @@ namespace ATTP.Views
     public partial class LoginPage : ContentPage
     {
         public ObservableCollection<Language> Languages { get; }
-        public ICommand TapCommand => new Command<string>(OpenBrowser);
-        public LoginPage()
-        {
-
-
-            InitializeComponent();
-
-
-
-
-            Languages = new ObservableCollection<Language>()
+        = new ObservableCollection<Language>()
             {
                 new Language { DisplayName =  "中文 - Chinese (simplified)", ShortName = "zh-Hans" },
                 new Language { DisplayName =  "Chinese(Traditional)", ShortName = "zh-Hant" },
@@ -45,9 +35,23 @@ namespace ATTP.Views
                 new Language { DisplayName =  "한국어 - Korean", ShortName = "ko" },
                 new Language { DisplayName =  "Русский - Russian", ShortName = "ru" }
             };
+        public ICommand TapCommand => new Command<string>(OpenBrowser);
+        public LoginPage()
+        {
+
+
+            InitializeComponent();
+
+
+            App._Id = null;
+            App._Username = null;
+            //App._language = null;
+
+
 
             BindingContext = this;
             PickerLanguages.SelectedIndexChanged += PickerLanguages_SelectedIndexChanged;
+
 
             Init();
 
@@ -107,9 +111,10 @@ namespace ATTP.Views
 
 
             User user = new User(Entry_Username.Text, Entry_Password.Text);
-            if (user.Valdation(user.Id,user.Password))
+            if (user.Valdation(user.Id, user.Password))
             {
-
+                App._Id = user.Id;
+                App._Username = Proxy.getStudentById(user.Id).Username;
                 switch (language.ShortName)
                 {
                     // Im aware this is the lazy method that requires alot more work but im tired and lazy rn Kimi
@@ -177,8 +182,7 @@ namespace ATTP.Views
 
                 }
 
-                App._Id = user.Id;
-                App._Username = Proxy.getStudentById(user.Id).Username;
+
                 // Debug.WriteLine(App._Id);
                 Navigation.PushModalAsync(new MainPage());
 
@@ -253,7 +257,7 @@ namespace ATTP.Views
 
                 }
             }
-            
+
 
 
         }
