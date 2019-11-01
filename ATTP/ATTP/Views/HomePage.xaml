@@ -15,24 +15,27 @@
             <Label x:Name="HomeLbl" Text="{i18n:Translate TranslationHome}" FontSize="30"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="Start" />
-            <ListView x:Name="qualListView" ItemsSource="{Binding Qualifications}">
+            <ListView x:Name="qualListView" ItemsSource="{Binding Qualifications}" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <!--The design of the home page need to be enhance-->
-                                <Frame CornerRadius="5" Padding="8" BackgroundColor="#DEFDFF"  HeightRequest="300">
-                                <StackLayout Orientation="Horizontal">
-                                    <StackLayout Orientation="Vertical">
+                                <Frame CornerRadius="5" Padding="8" BackgroundColor="#DEFDFF">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.7*"/>
+                                        <ColumnDefinition Width="0.3*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="0" Orientation="Vertical">
                                         <Label x:Name="StudyPathLabel" Text="{Binding QualName}" HorizontalOptions="FillAndExpand" FontAttributes="Bold" />
-
                                         <Label x:Name="CoreLabel" Text="{Binding StringCoreResult}" />
-                                        <Label x:Name="ElectiveLabel" Text="{Binding stringElectiveResult}" />
+                                        <Label x:Name="ElectiveLabel" Text="{Binding StringElectiveResult}" />
                                         <Label x:Name="LELabel" Text="{Binding StringLEResult}" />
                                         <Label x:Name="ProgressLabel" Text="{Binding StringTotalResult}" />
                                     </StackLayout>
-                                    <Label Text="{Binding stringProgress}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                                    <control:ProgressRing x:Name="ProgressRing" RingThickness="16" Progress="{Binding Progress}"  Scale=".9" RingBaseColor="Gray" RingProgressColor="#1CA5DE"  VerticalOptions="Center" InputTransparent="False" />
-                                </StackLayout>
+                                    <Label Grid.Column="1" Text="{Binding stringProgress}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                    <control:ProgressRing Grid.Column="1" x:Name="ProgressRing" RingThickness="16" Progress="{Binding Progress}"  Scale=".9" RingBaseColor="Gray" RingProgressColor="#1CA5DE"  VerticalOptions="Center" InputTransparent="False" />
+                                </Grid>
                             </Frame>
                         </ViewCell>
                     </DataTemplate>
