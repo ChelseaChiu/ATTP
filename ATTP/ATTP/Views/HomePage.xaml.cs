@@ -51,11 +51,11 @@ namespace ATTP.Views
                 {
                     q.DoneTotal = q.DoneC + q.DoneE + q.DoneLE;
                 }
-                q.StringCoreResult= String.Format("Core Units: {0} of {1}", q.DoneC, q.CoreUnits);
-                q.StringElectiveResult = String.Format("Elective Units: {0} of {1}", q.DoneE, q.ElectedUnits);
-                q.StringLEResult = String.Format("Listed Elective Units: {0} of {1}", q.DoneLE, q.ReqListedElectedUnits);
-                q.StringTotalResult= String.Format("Total Units: {0} of {1}", q.DoneTotal, q.TotalUnits);
-                q.StringProgress = String.Format(q.Progress * 100 + " %");
+                q.StringCoreResult= string.Format("Core Units: {0} of {1}", q.DoneC, q.CoreUnits);
+                q.StringElectiveResult = string.Format("Elective Units: {0} of {1}", q.DoneE, q.ElectedUnits);
+                q.StringLEResult = string.Format("Listed Elective Units: {0} of {1}", q.DoneLE, q.ReqListedElectedUnits);
+                q.StringTotalResult= string.Format("Total Units: {0} of {1}", q.DoneTotal, q.TotalUnits);
+                q.StringProgress = string.Format( q.Progress * 100 + " %" );
             }
 
         }
