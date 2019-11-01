@@ -33,12 +33,11 @@ namespace ATTP.Views
             var progressRing = new ProgressRing { RingThickness = 5, Progress = 0.34f, RingBaseColor = Color.Gray, RingProgressColor = Color.Blue, Scale = 10 };
 
             ParchmentButton.Text = AppResources.TranslationApplyforParchment;
-            List<Qualification> Qualifications = Proxy.GetQualifications(App._Id);
+/*            List<Qualification> Qualifications = Proxy.GetQualifications(App._Id);
             qualListView.ItemsSource = Qualifications;
             List<Competency> compList = new List<Competency>();
             foreach (Qualification q in Qualifications)
-            {
-                q.Progress = Proxy.CalQualProgress(App._Id, q.QualCode);
+            {                q.Progress = Proxy.CalQualProgress(App._Id, q.QualCode);
                 compList = Proxy.GetCompetencies(App._Id, q.QualCode);
                 q.DoneC = compList.Where(c => c.Results == "PA").Count(c => c.CompTypeCode == "C");
                 q.DoneE = compList.Where(c => c.Results == "PA").Count(c => c.CompTypeCode == "E");
@@ -58,7 +57,7 @@ namespace ATTP.Views
                 q.StringTotalResult= String.Format("Total Units: {0} of {1}", q.DoneTotal, q.TotalUnits);
                 q.StringProgress = String.Format(q.Progress * 100 + " %");
             }
-
+*/
         }
 
 
