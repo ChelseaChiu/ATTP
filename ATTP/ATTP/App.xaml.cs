@@ -45,7 +45,7 @@ namespace ATTP
             AppResources.Culture = culture;
 
 
-            MainPage = new ATTP.Views.LoginPage();
+            MainPage = new ATTP.Views.TransciptPage();
             //MainPage = new ATTP.Views.HomePage();
             //string id = user.Id;
             //string userName = Proxy.getStudentBuId(id).Username;
