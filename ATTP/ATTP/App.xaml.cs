@@ -110,6 +110,8 @@ public static TokenDatabaseController TokenDatabase
 
         public static string _Id { get; set; }
 
+        public static string _UwUnotification { get; set; }
+
 
 
 

@@ -29,7 +29,9 @@ namespace ATTP.Views
 
         public TimetablePage()
         {
-            CRNDAYPicker.SelectedIndex = 0;
+
+
+
             //BindingContext = Dummydata.Classes;
             InitializeComponent();
 
@@ -47,6 +49,15 @@ namespace ATTP.Views
 
             BindingContext = this;
             CRNDAYPicker.SelectedIndexChanged += CRNDAYPicker_SelectedIndexChanged;
+        }
+
+        protected override void OnAppearing()
+        {
+
+            Application.Current.MainPage.DisplayAlert("IMPORTANT", "Please click on 'Select the timetable day' to select the day : ", "OK");
+
+            base.OnAppearing();
+
         }
 
         public void CRNDAYPicker_SelectedIndexChanged(object sender, EventArgs e)

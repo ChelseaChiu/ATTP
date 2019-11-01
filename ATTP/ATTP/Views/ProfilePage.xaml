@@ -22,7 +22,7 @@
                 </Grid.RowDefinitions>
                 <Frame  Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Margin="10" BorderColor="Black" CornerRadius="50" HeightRequest="30" WidthRequest="30" 
                         IsClippedToBounds="True" HorizontalOptions="Center" VerticalOptions="Center">
-                    <Image x:Name="profileImg" Source="profileImg.png" Aspect="AspectFill" Margin="-20" HeightRequest="60" WidthRequest="60" />
+                    <Image x:Name="profileImg" Source="profilepicture.png" Aspect="AspectFill" Margin="-20" HeightRequest="60" WidthRequest="60" />
                 </Frame>
                 <Label x:Name="nameLbl" Text="Binding student name" Grid.Column="1" Grid.Row="0"/>
                 <Label x:Name="StudentNumLbl" Text="Binding student number" Grid.Column="1" Grid.Row="1"/>
@@ -49,26 +49,33 @@
                 <Label x:Name="PhoneLbl" Text="{i18n:Translate TranslationPhoneLbl}" Grid.Row="5"/>
                 <Label x:Name="EmailLbl" Text="{i18n:Translate TranslationEmailLbl}" Grid.Row="6"/>
                 <Frame BorderColor="Gray" Padding="4" Grid.Column="1" Grid.Row="0">
-                    <Label x:Name="StreetContLbl" Text="Binding street name"/>
+                    <Label x:Name="StreetContLbl" Text="86 Gage Street Firle"/> <!--{Binding  streetname}-->
                 </Frame>
+                
                 <Frame BorderColor="Gray" Padding="4" Grid.Column="1" Grid.Row="1">
-                    <Label x:Name="Street1ContLbl" Text="Binding street name 2"/>
+                    <Label x:Name="Street1ContLbl" Text="86A Gage Street Firle"/> <!--{Binding streetname2 }-->
                 </Frame>
+                
                 <Frame BorderColor="Gray" Padding="4" Grid.Column="1" Grid.Row="2">
-                    <Label x:Name="CityContLbl" Text="Binding city"/>
+                    <Label x:Name="CityContLbl" Text="Adelaide"/> <!--{Binding city}-->
                 </Frame>
+                
                 <Frame BorderColor="Gray" Padding="4" Grid.Column="1" Grid.Row="3">
-                    <Label x:Name="StateContLbl" Text="Binding state"/>
+                    <Label x:Name="StateContLbl" Text="SA"/> <!--{Binding state}-->
                 </Frame>
+                
                 <Frame BorderColor="Gray" Padding="4" Grid.Column="1" Grid.Row="4">
-                    <Label x:Name="PostcodeContLbl" Text="Binding postcode"/>
+                    <Label x:Name="PostcodeContLbl" Text="5000"/> <!--{Binding postcode}-->
                 </Frame>
+                
                 <Frame BorderColor="Gray" Padding="4" Grid.Column="1" Grid.Row="5">
-                    <Label x:Name="PhoneContLbl" Text="Binding phone"/>
+                    <Label x:Name="PhoneContLbl" Text="0428129877"/> <!--{Binding phone}-->
                 </Frame>
+                
                 <Frame BorderColor="Gray" Padding="4" Grid.Column="1" Grid.Row="6">
-                    <Label x:Name="EmailContLbl" Text="Binding Email"/>
+                    <Label x:Name="EmailContLbl" Text="MartinPerez@Student.tafesa.edu.au"/> <!--{Binding Email}-->
                 </Frame>
+                
             </Grid>
             <Button x:Name="EditButton" Text="{i18n:Translate TranslationEditUsername}" BackgroundColor="#A6E4F7" FontAttributes="Bold" HorizontalOptions="Center" Clicked="EditBtnClicked"/>
         </StackLayout>

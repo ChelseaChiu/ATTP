@@ -32,7 +32,11 @@ namespace ATTP.Views
             InitializeComponent();
             var progressRing = new ProgressRing { RingThickness = 5, Progress = 0.34f, RingBaseColor = Color.Gray, RingProgressColor = Color.Blue, Scale = 10 };
 
-            ParchmentButton.Text = AppResources.TranslationApplyforParchment;
+            ParchmentButton.Text = AppResources.TranslationApplyforParchment; 
+
+
+
+
 
         }
 
@@ -44,13 +48,16 @@ namespace ATTP.Views
 
 
 
+        protected override void OnAppearing()
+        {
 
+            Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES","NO");
+           
 
+            base.OnAppearing();
 
-        //async void OnAlertYesNoClicked(object sender, EventArgs e)
-        //{
-        //    await DisplayAlert("IMPORTANT", "Have you done your orientation?","OK");
-        //}
+        }
+
         protected void ParchmentBtnClicked(object sender, EventArgs e)
         {
             Device.OpenUri(new Uri("https://www.tafesa.edu.au/services/parchments-results/request-parchment"));
