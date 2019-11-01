@@ -33,8 +33,10 @@
                                         <Label x:Name="LELabel" Text="{Binding StringLEResult}" />
                                         <Label x:Name="ProgressLabel" Text="{Binding StringTotalResult}" />
                                     </StackLayout>
-                                    <Label Grid.Column="1" Text="{Binding stringProgress}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                                    <control:ProgressRing Grid.Column="1" x:Name="ProgressRing" RingThickness="16" Progress="{Binding Progress}"  Scale=".9" RingBaseColor="Gray" RingProgressColor="#1CA5DE"  VerticalOptions="Center" InputTransparent="False" />
+                                    <StackLayout Grid.Column="1">
+                                    <Label Text="{Binding stringProgress}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                    <control:ProgressRing x:Name="ProgressRing" RingThickness="16" Progress="{Binding Progress}"  Scale=".9" RingBaseColor="Gray" RingProgressColor="#1CA5DE"  VerticalOptions="Center" InputTransparent="False" />
+                                    </StackLayout>
                                 </Grid>
                             </Frame>
                         </ViewCell>
