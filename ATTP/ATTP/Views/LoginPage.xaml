@@ -20,7 +20,7 @@
             <Label x:Name="TranslationUsernameLabel" Text="{i18n:Translate TranslationUsername}" Margin="6" />
             <Entry x:Name="Entry_Username" Placeholder="{i18n:Translate TranslationLogin}" Margin="6" Text="000724247"/>
             <Label x:Name="TranslationPasswordLabel" Text="{i18n:Translate TranslationPassword}" Margin="6" />
-            <Entry x:Name="Entry_Password" Placeholder="{i18n:Translate TranslationPassword}" Margin="6"/>
+            <Entry x:Name="Entry_Password" Placeholder="{i18n:Translate TranslationPassword}" Margin="6" IsPassword="True"/>
             <Label x:Name="languageLabel" Text="{i18n:Translate TranslationSelectLanguage}" Margin="6" />
             <Picker ItemsSource="{Binding Languages}" ItemDisplayBinding="{Binding DisplayName}" x:Name="PickerLanguages" Margin="6"/>
             <Button x:Name="Btn_SignIn" Text="{i18n:Translate TranslationSignIn}" Clicked="SignInProcedure" BackgroundColor="Red" TextColor="White"/>
