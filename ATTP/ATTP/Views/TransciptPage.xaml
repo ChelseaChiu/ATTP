@@ -3,14 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i18n="clr-namespace:ATTP.Helpers;assembly=ATTP"
              mc:Ignorable="d"
               ControlTemplate="{StaticResource MainPageTemplate}"
              x:Class="ATTP.Views.TransciptPage">
     <ContentPage.Content>
         <StackLayout BackgroundColor="White" Margin="20,10,20,20">
-            <Label x:Name="TranscriptLbl" Text="Academic Transcript" FontSize="30" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" />
+            <Label x:Name="TranscriptLbl" Text="{i18n:Translate TranslationTranscript}" FontSize="30" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" />
 
-            <Label Text="Year 2018" FontAttributes="Bold"/>
+            <Label Text="{i18n:Translate TranslationYear2018}" FontAttributes="Bold"/>
 
             <Grid BackgroundColor="#DE1616" RowSpacing="3" ColumnSpacing="10" Padding="5,0,0,0">
                 <Grid.ColumnDefinitions>
@@ -53,7 +54,7 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <Label Text="Year 2019" FontAttributes="Bold"/>
+            <Label Text="{i18n:Translate TranslationYear2019}" FontAttributes="Bold"/>
 
             <Grid BackgroundColor="#DE1616" RowSpacing="3" ColumnSpacing="10" Padding="5,0,0,0">
                 <Grid.ColumnDefinitions>

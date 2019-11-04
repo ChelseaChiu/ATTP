@@ -54,10 +54,91 @@ namespace ATTP.Views
         protected override void OnAppearing()
         {
 
-            Application.Current.MainPage.DisplayAlert("IMPORTANT", "Please click on 'Select the timetable day' to select the day : ", "OK");
+            switch (App._language)
+            {
+                case "zh-Hans":
+                    {
+                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Please click on 'Select the timetable day' to select the day : ", "OK");
 
-            base.OnAppearing();
+                        base.OnAppearing();
 
+                        break;
+                    }
+                case "zh-Hant":
+                    {
+                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Please click on 'Select the timetable day' to select the day : ", "OK");
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "en":
+                    {
+                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Please click on 'Select the timetable day' to select the day : ", "OK");
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "mn-MN":
+                    {
+                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Please click on 'Select the timetable day' to select the day : ", "OK");
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "ms":
+                    {
+                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Please click on 'Select the timetable day' to select the day : ", "OK");
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "fr":
+                    {
+                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Please click on 'Select the timetable day' to select the day : ", "OK");
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "de":
+                    {
+                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Please click on 'Select the timetable day' to select the day : ", "OK");
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "ja":
+                    {
+                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Please click on 'Select the timetable day' to select the day : ", "OK");
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "ko":
+                    {
+                        Application.Current.MainPage.DisplayAlert("중요", "요일을 선택하십시오. : ", "확인");
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "ru":
+                    {
+                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Please click on 'Select the timetable day' to select the day : ", "OK");
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+
+
+            }
         }
 
         public void CRNDAYPicker_SelectedIndexChanged(object sender, EventArgs e)

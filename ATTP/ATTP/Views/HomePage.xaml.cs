@@ -127,7 +127,7 @@ namespace ATTP.Views
                     }
                 case "ko":
                     {
-                        Application.Current.MainPage.DisplayAlert("중대한", "오리엔테이션을 했습니까 ? ", "예", "아니");
+                        Application.Current.MainPage.DisplayAlert("중요", "오리엔테이션을 완료했습니까 ? ", "예", "아니오");
 
 
                         base.OnAppearing();

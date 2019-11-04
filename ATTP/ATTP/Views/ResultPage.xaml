@@ -3,15 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+              xmlns:i18n="clr-namespace:ATTP.Helpers;assembly=ATTP"
              xmlns:control="clr-namespace:ATTP.Control"
              mc:Ignorable="d"
               ControlTemplate="{StaticResource MainPageTemplate}"
              x:Class="ATTP.Views.ResultPage">
     <ContentPage.Content>
         <StackLayout BackgroundColor="White" Margin="20,10,20,20">
-            <Label x:Name="ResultLbl" Text="Result" FontSize="30" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" />
-            <Label x:Name="StudyLbl" Text="Study Path" FontAttributes="Bold" FontSize="14"/>
-            <control:CustomPicker x:Name="StudyPicker" Title="Please select your study path" ItemsSource="{Binding StudyPaths}" ItemDisplayBinding="{Binding StudyPathName}" FontSize="14" />
+            <Label x:Name="ResultLbl" Text="{i18n:Translate TranslationResult}" FontSize="30" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" />
+            <Label x:Name="StudyLbl" Text="{i18n:Translate  TranslationStudyPath}" FontAttributes="Bold" FontSize="14"/>
+            <control:CustomPicker x:Name="StudyPicker" Title="{i18n:Translate  TranslationStudypicker}" ItemsSource="{Binding StudyPaths}" ItemDisplayBinding="{Binding StudyPathName}" FontSize="14" />
 
             <Label x:Name="CompleteLbl" Text="Completed" FontAttributes="Bold" FontSize="12"/>
             <Grid BackgroundColor="#DE1616" RowSpacing="3" ColumnSpacing="10">

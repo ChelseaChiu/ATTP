@@ -41,7 +41,7 @@
     <comment>Comment Postcode</comment>
   </data>
   <data name="TranslationStateLbl" xml:space="preserve">
-    <value>상태</value>
+    <value>시</value>
     <comment>Comment State</comment>
   </data>
   <data name="TranslationStreet1Lbl" xml:space="preserve">
@@ -57,10 +57,10 @@
     <comment>Comment Name</comment>
   </data>
   <data name="TranslationEmailLbl" xml:space="preserve">
-    <value>전자 메일 /이메일</value>
+    <value>이메일</value>
   </data>
   <data name="TranslationPhoneLbl" xml:space="preserve">
-    <value>전화 번호 / 휴대 전화 번호</value>
+    <value>전화 번호 / 핸드폰번호</value>
     <comment>Comment Contact Number</comment>
   </data>
   <data name="TranslationCoreLabel" xml:space="preserve">
@@ -80,7 +80,7 @@
     <comment>Comment Forget Password</comment>
   </data>
   <data name="TranslationLoginPageClickerHere" xml:space="preserve">
-    <value>여기를 클릭</value>
+    <value>여기를 클릭하세요</value>
     <comment>Comment Click Here</comment>
   </data>
   <data name="TranslationSelectLanguage" xml:space="preserve">
@@ -88,11 +88,11 @@
     <comment>Comment Select Language </comment>
   </data>
   <data name="TranslationReset" xml:space="preserve">
-    <value>재설정하려면 </value>
+    <value>재설정</value>
     <comment>Comment to reset</comment>
   </data>
   <data name="TranslationHome" xml:space="preserve">
-    <value>홈</value>
+    <value>환영합니다.</value>
   </data>
   <data name="TranslationLogOut" xml:space="preserve">
     <value>로그아웃</value>
@@ -103,11 +103,14 @@
   <data name="TranslationResult" xml:space="preserve">
     <value>결과</value>
   </data>
+  <data name="TranslationTimeTable" xml:space="preserve">
+    <value>시간표</value>
+  </data>
   <data name="TranslationTranscript" xml:space="preserve">
-    <value>기록</value>
+    <value>성적증명서</value>
   </data>
   <data name="TranslationApplyforParchment" xml:space="preserve">
-    <value>양피지 신청</value>
+    <value>성적증명서 발급</value>
     <comment>Comment Apply for Parchment</comment>
   </data>
   <data name="TranslationEditUsername" xml:space="preserve">

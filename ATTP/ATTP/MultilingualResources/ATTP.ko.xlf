@@ -44,7 +44,7 @@
         </trans-unit>
         <trans-unit id="TranslationStateLbl" translate="yes" xml:space="preserve">
           <source>State</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">상태</target>
+          <target state="translated">시</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Comment State</note>
         </trans-unit>
         <trans-unit id="TranslationStreet1Lbl" translate="yes" xml:space="preserve">
@@ -64,11 +64,11 @@
         </trans-unit>
         <trans-unit id="TranslationEmailLbl" translate="yes" xml:space="preserve">
           <source>Email</source>
-          <target state="translated">전자 메일 /이메일</target>
+          <target state="translated">이메일</target>
         </trans-unit>
         <trans-unit id="TranslationPhoneLbl" translate="yes" xml:space="preserve">
           <source>Phone Number / Moblie Number</source>
-          <target state="translated">전화 번호 / 휴대 전화 번호</target>
+          <target state="translated">전화 번호 / 핸드폰번호</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Comment Contact Number</note>
         </trans-unit>
         <trans-unit id="TranslationCoreLabel" translate="yes" xml:space="preserve">
@@ -94,7 +94,7 @@
         </trans-unit>
         <trans-unit id="TranslationLoginPageClickerHere" translate="yes" xml:space="preserve">
           <source>Click Here</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">여기를 클릭</target>
+          <target state="translated">여기를 클릭하세요</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Comment Click Here</note>
         </trans-unit>
         <trans-unit id="TranslationSelectLanguage" translate="yes" xml:space="preserve">
@@ -104,13 +104,12 @@
         </trans-unit>
         <trans-unit id="TranslationReset" translate="yes" xml:space="preserve">
           <source>to Reset </source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">재설정하려면 </target>
+          <target state="translated">재설정</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Comment to reset</note>
         </trans-unit>
         <trans-unit id="TranslationHome" translate="yes" xml:space="preserve">
           <source>Welcome Home </source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">홈</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">환영합니다.</target>
         </trans-unit>
         <trans-unit id="TranslationLogOut" translate="yes" xml:space="preserve">
           <source>Log-Out</source>
@@ -126,21 +125,41 @@
         </trans-unit>
         <trans-unit id="TranslationTimeTable" translate="yes" xml:space="preserve">
           <source>Timetable</source>
-          <target state="new">Timetable</target>
+          <target state="translated">시간표</target>
         </trans-unit>
         <trans-unit id="TranslationTranscript" translate="yes" xml:space="preserve">
           <source>Transcript</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">기록</target>
+          <target state="translated">성적증명서</target>
         </trans-unit>
         <trans-unit id="TranslationApplyforParchment" translate="yes" xml:space="preserve">
           <source>Apply for Parchment</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">양피지 신청</target>
+          <target state="translated">성적증명서 발급</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Comment Apply for Parchment</note>
         </trans-unit>
         <trans-unit id="TranslationEditUsername" translate="yes" xml:space="preserve">
           <source>Edit Profile</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">프로필 수정</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Comment Edit Profile </note>
+        </trans-unit>
+        <trans-unit id="TranslationStudyPath" translate="yes" xml:space="preserve">
+          <source>Study Path</source>
+          <target state="new">Study Path</target>
+        </trans-unit>
+        <trans-unit id="TranslationStudypicker" translate="yes" xml:space="preserve">
+          <source>Please select your study path</source>
+          <target state="new">Please select your study path</target>
+        </trans-unit>
+        <trans-unit id="TranslationTimetablePicker" translate="yes" xml:space="preserve">
+          <source>Select the Day</source>
+          <target state="new">Select the Day</target>
+        </trans-unit>
+        <trans-unit id="TranslationYear2018" translate="yes" xml:space="preserve">
+          <source>Year 2018</source>
+          <target state="new">Year 2018</target>
+        </trans-unit>
+        <trans-unit id="TranslationYear2019" translate="yes" xml:space="preserve">
+          <source>Year 2019</source>
+          <target state="new">Year 2019</target>
         </trans-unit>
       </group>
     </body>

@@ -19,7 +19,7 @@ namespace ATTP.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class AppResources {
@@ -286,6 +286,15 @@ namespace ATTP.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Study Path.
+        /// </summary>
+        internal static string TranslationStudyPath {
+            get {
+                return ResourceManager.GetString("TranslationStudyPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
         internal static string TranslationStudyPathLabel {
@@ -295,11 +304,29 @@ namespace ATTP.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please select your study path.
+        /// </summary>
+        internal static string TranslationStudypicker {
+            get {
+                return ResourceManager.GetString("TranslationStudypicker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Timetable.
         /// </summary>
         internal static string TranslationTimeTable {
             get {
                 return ResourceManager.GetString("TranslationTimeTable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the Day.
+        /// </summary>
+        internal static string TranslationTimetablePicker {
+            get {
+                return ResourceManager.GetString("TranslationTimetablePicker", resourceCulture);
             }
         }
         
@@ -318,6 +345,24 @@ namespace ATTP.Resources {
         internal static string TranslationUsername {
             get {
                 return ResourceManager.GetString("TranslationUsername", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Year 2018.
+        /// </summary>
+        internal static string TranslationYear2018 {
+            get {
+                return ResourceManager.GetString("TranslationYear2018", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Year 2019.
+        /// </summary>
+        internal static string TranslationYear2019 {
+            get {
+                return ResourceManager.GetString("TranslationYear2019", resourceCulture);
             }
         }
     }

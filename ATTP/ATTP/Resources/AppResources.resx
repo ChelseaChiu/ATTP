@@ -222,4 +222,19 @@
     <value>Username</value>
     <comment>Comment Login Details</comment>
   </data>
+  <data name="TranslationStudyPath" xml:space="preserve">
+    <value>Study Path</value>
+  </data>
+  <data name="TranslationStudypicker" xml:space="preserve">
+    <value>Please select your study path</value>
+  </data>
+  <data name="TranslationTimetablePicker" xml:space="preserve">
+    <value>Select the Day</value>
+  </data>
+  <data name="TranslationYear2018" xml:space="preserve">
+    <value>Year 2018</value>
+  </data>
+  <data name="TranslationYear2019" xml:space="preserve">
+    <value>Year 2019</value>
+  </data>
 </root>

@@ -143,6 +143,26 @@
           <target state="new">Edit Profile</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Comment Edit Profile </note>
         </trans-unit>
+        <trans-unit id="TranslationStudyPath" translate="yes" xml:space="preserve">
+          <source>Study Path</source>
+          <target state="new">Study Path</target>
+        </trans-unit>
+        <trans-unit id="TranslationStudypicker" translate="yes" xml:space="preserve">
+          <source>Please select your study path</source>
+          <target state="new">Please select your study path</target>
+        </trans-unit>
+        <trans-unit id="TranslationTimetablePicker" translate="yes" xml:space="preserve">
+          <source>Select the Day</source>
+          <target state="new">Select the Day</target>
+        </trans-unit>
+        <trans-unit id="TranslationYear2018" translate="yes" xml:space="preserve">
+          <source>Year 2018</source>
+          <target state="new">Year 2018</target>
+        </trans-unit>
+        <trans-unit id="TranslationYear2019" translate="yes" xml:space="preserve">
+          <source>Year 2019</source>
+          <target state="new">Year 2019</target>
+        </trans-unit>
       </group>
     </body>
   </file>
