@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:i18n="clr-namespace:ATTP.Helpers;assembly=ATTP"
+             xmlns:local="clr-namespace:ATTP"
              mc:Ignorable="d"
              ControlTemplate="{StaticResource MainPageTemplate}"
              x:Class="ATTP.Views.ProfilePage">
@@ -24,6 +25,7 @@
                         IsClippedToBounds="True" HorizontalOptions="Center" VerticalOptions="Center">
                     <Image x:Name="profileImg" Source="profilepicture.png" Aspect="AspectFill" Margin="-20" HeightRequest="60" WidthRequest="60" />
                 </Frame>
+                
                 <Label x:Name="nameLbl" Text="{Binding Source = {x:Static local:App._Username} }" Grid.Column="1" Grid.Row="0"/>
                 <Label x:Name="StudentNumLbl" Text="{Binding Source = {x:Static local:App._Id} }" Grid.Column="1" Grid.Row="1"/>
             </Grid>
