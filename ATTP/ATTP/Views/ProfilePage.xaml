@@ -24,8 +24,8 @@
                         IsClippedToBounds="True" HorizontalOptions="Center" VerticalOptions="Center">
                     <Image x:Name="profileImg" Source="profilepicture.png" Aspect="AspectFill" Margin="-20" HeightRequest="60" WidthRequest="60" />
                 </Frame>
-                <Label x:Name="nameLbl" Text="Binding student name" Grid.Column="1" Grid.Row="0"/>
-                <Label x:Name="StudentNumLbl" Text="Binding student number" Grid.Column="1" Grid.Row="1"/>
+                <Label x:Name="nameLbl" Text="{Binding Source = {x:Static local:App._Username} }" Grid.Column="1" Grid.Row="0"/>
+                <Label x:Name="StudentNumLbl" Text="{Binding Source = {x:Static local:App._Id} }" Grid.Column="1" Grid.Row="1"/>
             </Grid>
             <Grid Margin="10,10,10,30">
                 <Grid.ColumnDefinitions>
