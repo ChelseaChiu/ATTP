@@ -4,12 +4,97 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+              ControlTemplate="{StaticResource MainPageTemplate}"
              x:Class="ATTP.Views.TransciptPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Transcript Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="White" Margin="20,10,20,20">
+            <Label x:Name="TranscriptLbl" Text="Academic Transcript" FontSize="30" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" />
+
+            <Label Text="Year 2018" FontAttributes="Bold"/>
+
+            <Grid BackgroundColor="#DE1616" RowSpacing="3" ColumnSpacing="10" Padding="5,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.16*"/>
+                    <ColumnDefinition Width="0.22*"/>
+                    <ColumnDefinition Width="0.50*"/>
+                    <ColumnDefinition Width="0.12*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="2"/>
+                </Grid.RowDefinitions>
+                <BoxView Grid.Row="0" Grid.ColumnSpan="4" Color="#8F0000" HorizontalOptions="Fill"/>
+                <Label x:Name="SubjectALbl" Text="Subject Code" Grid.Column="0" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="NatATbl" Text="National Code" Grid.Column="1"  Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="CompNameALbl" Text="Competency Name" Grid.Column="2" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="GradeALbl" Text="Grade" Grid.Column="3"  Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <BoxView Grid.Row="2" Grid.ColumnSpan="4" Color="#8F0000" HorizontalOptions="Fill"/>
+            </Grid>
+
+            <ListView x:Name="CourseListA" SelectionMode="None" HasUnevenRows="True" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid ColumnSpacing="10" Padding="5,0,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.16*"/>
+                                    <ColumnDefinition Width="0.22*"/>
+                                    <ColumnDefinition Width="0.50*"/>
+                                    <ColumnDefinition Width="0.12*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding SubjectCode}" FontSize="12"/>
+                                <Label Grid.Column="1" Text="{Binding NationalCode}" FontSize="12"/>
+                                <Label Grid.Column="2" Text="{Binding CompetencyName}" FontSize="12"/>
+                                <Label Grid.Column="3" Text="{Binding Grade}" FontSize="12"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label Text="Year 2019" FontAttributes="Bold"/>
+
+            <Grid BackgroundColor="#DE1616" RowSpacing="3" ColumnSpacing="10" Padding="5,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.16*"/>
+                    <ColumnDefinition Width="0.22*"/>
+                    <ColumnDefinition Width="0.50*"/>
+                    <ColumnDefinition Width="0.12*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="2"/>
+                </Grid.RowDefinitions>
+                <BoxView Grid.Row="0" Grid.ColumnSpan="4" Color="#8F0000" HorizontalOptions="Fill"/>
+                <Label x:Name="SubjectBLbl" Text="Subject Code" Grid.Column="0" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="NatBTbl" Text="National Code" Grid.Column="1"  Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="CompNameBLbl" Text="Competency Name" Grid.Column="2" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="GradeBLbl" Text="Grade" Grid.Column="3"  Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <BoxView Grid.Row="2" Grid.ColumnSpan="4" Color="#8F0000" HorizontalOptions="Fill"/>
+            </Grid>
+
+            <ListView x:Name="CourseListB" SelectionMode="None" HasUnevenRows="True" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid ColumnSpacing="10" Padding="5,0,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.16*"/>
+                                    <ColumnDefinition Width="0.22*"/>
+                                    <ColumnDefinition Width="0.50*"/>
+                                    <ColumnDefinition Width="0.12*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding SubjectCode}" FontSize="12"/>
+                                <Label Grid.Column="1" Text="{Binding NationalCode}" FontSize="12"/>
+                                <Label Grid.Column="2" Text="{Binding CompetencyName}" FontSize="12"/>
+                                <Label Grid.Column="3" Text="{Binding Grade}" FontSize="12"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
