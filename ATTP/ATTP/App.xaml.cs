@@ -56,6 +56,10 @@ namespace ATTP
 
         protected override void OnStart()
         {
+            if (_desuNot == true)
+            {
+                _UwUnotification = true;
+            }
             // Handle when your app starts
 
         }
@@ -110,7 +114,11 @@ public static TokenDatabaseController TokenDatabase
 
         public static string _Id { get; set; }
 
-        public static string _UwUnotification { get; set; }
+        public static bool _UwUnotification { get; set; }
+
+        public static bool _desuNot { get; set; }
+
+
 
 
 

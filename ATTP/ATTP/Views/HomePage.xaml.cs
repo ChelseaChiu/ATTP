@@ -48,103 +48,237 @@ namespace ATTP.Views
 
 
 
-        protected override void OnAppearing()
+        protected async override void OnAppearing()
         {
+            var result = true;
 
+            if (App._UwUnotification == true)
+            { 
             switch (App._language)
             {
                 case "zh-Hans":
                     {
-                        Application.Current.MainPage.DisplayAlert("重要", "你做完定向了吗？", "是", "没有");
+                         result = await Application.Current.MainPage.DisplayAlert("重要", "你做完定向了吗？", "是", "没有");
+
+                            if (result == true)
+                            {
+                                App._UwUnotification = false;
+                                App._desuNot = false;
+
+                            }
+
+                            else
+                            {
+                                App._UwUnotification = true;
+
+                            }
 
 
-                        base.OnAppearing();
+                            base.OnAppearing();
 
-                        break;
+                            break;
                     }
                 case "zh-Hant":
                     {
-                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
+                            result = await Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
 
+                            if (result == true)
+                            {
+                                App._UwUnotification = false;
+                                App._desuNot = false;
 
-                        base.OnAppearing();
+                            }
+
+                            else
+                            {
+                                App._UwUnotification = true;
+                                App._desuNot = false;
+
+                            }
+
+                            base.OnAppearing();
 
                         break;
                     }
                 case "en":
                     {
-                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
+                            result = await Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
 
+                            if (result == true)
+                            {
+                                App._UwUnotification = false;
+                                App._desuNot = false;
 
-                        base.OnAppearing();
+                            }
 
-                        break;
+                            else
+                            {
+                                App._UwUnotification = true;
+
+                            }
+
+                            base.OnAppearing();
+
+                            break;
+
                     }
                 case "mn-MN":
                     {
-                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
+                            result = await Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
+
+                            if (result == true)
+                            {
+                                App._UwUnotification = false;
+                                App._desuNot = false;
+
+                            }
+
+                            else
+                            {
+                                App._UwUnotification = true;
+
+                            }
+
+                            base.OnAppearing();
+
+                            break;
 
 
-                        base.OnAppearing();
-
-                        break;
                     }
                 case "ms":
                     {
-                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
+                            result = await Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
 
 
-                        base.OnAppearing();
+                            if (result == true)
+                            {
+                                App._UwUnotification = false;
+                                App._desuNot = false;
 
-                        break;
-                    }
+                            }
+
+                            else
+                            {
+                                App._UwUnotification = true;
+
+                            }
+
+                            base.OnAppearing();
+
+                            break;
+                        }
                 case "fr":
                     {
-                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
+                            result = await Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
 
+                            if (result == true)
+                            {
+                                App._UwUnotification = false;
+                                App._desuNot = false;
 
-                        base.OnAppearing();
+                            }
 
-                        break;
-                    }
+                            else
+                            {
+                                App._UwUnotification = true;
+
+                            }
+
+                            base.OnAppearing();
+
+                            break;
+                        }
                 case "de":
                     {
-                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
+                            result = await Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
 
 
-                        base.OnAppearing();
+                            if (result == true)
+                            {
+                                App._UwUnotification = false;
+                                App._desuNot = false;
 
-                        break;
-                    }
+                            }
+
+                            else
+                            {
+                                App._UwUnotification = true;
+
+                            }
+
+                            base.OnAppearing();
+
+                            break;
+                        }
                 case "ja":
                     {
-                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
+                            result = await Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
 
 
-                        base.OnAppearing();
+                            if (result == true)
+                            {
+                                App._UwUnotification = false;
+                                App._desuNot = false;
 
-                        break;
-                    }
+                            }
+
+                            else
+                            {
+                                App._UwUnotification = true;
+
+                            }
+
+                            base.OnAppearing();
+
+                            break;
+                        }
                 case "ko":
                     {
-                        Application.Current.MainPage.DisplayAlert("중요", "오리엔테이션을 완료했습니까 ? ", "예", "아니오");
+                            result = await Application.Current.MainPage.DisplayAlert("중요", "오리엔테이션을 완료했습니까 ? ", "예", "아니오");
 
 
-                        base.OnAppearing();
+                            if (result == true)
+                            {
+                                App._UwUnotification = false;
+                                //App._desuNot = false;
 
-                        break;
-                    }
+                            }
+
+                            else
+                            {
+                                App._UwUnotification = true;
+
+                            }
+
+                            base.OnAppearing();
+
+                            break;
+                        }
                 case "ru":
                     {
-                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
+                            result = await Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
 
 
-                        base.OnAppearing();
+                            if (result == true)
+                            {
+                                App._UwUnotification = false;
+                                App._desuNot = false;
 
-                        break;
-                    }
+                            }
+
+                            else
+                            {
+                                App._UwUnotification = true;
+
+                            }
+
+                            base.OnAppearing();
+
+                            break;
+                        }
             }
-        
+            }
+
 
         }
 

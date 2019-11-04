@@ -39,7 +39,6 @@ namespace ATTP.Views
         public LoginPage()
         {
 
-
             InitializeComponent();
 
 
