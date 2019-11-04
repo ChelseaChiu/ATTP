@@ -51,10 +51,100 @@ namespace ATTP.Views
         protected override void OnAppearing()
         {
 
-            Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES","NO");
-           
+            switch (App._language)
+            {
+                case "zh-Hans":
+                    {
+                        Application.Current.MainPage.DisplayAlert("重要", "你做完定向了吗？", "是", "没有");
 
-            base.OnAppearing();
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "zh-Hant":
+                    {
+                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
+
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "en":
+                    {
+                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
+
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "mn-MN":
+                    {
+                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
+
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "ms":
+                    {
+                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
+
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "fr":
+                    {
+                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
+
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "de":
+                    {
+                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
+
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "ja":
+                    {
+                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
+
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "ko":
+                    {
+                        Application.Current.MainPage.DisplayAlert("중대한", "오리엔테이션을 했습니까 ? ", "예", "아니");
+
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "ru":
+                    {
+                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
+
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+            }
+        
 
         }
 
