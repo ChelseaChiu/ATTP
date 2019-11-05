@@ -54,7 +54,7 @@
         </trans-unit>
         <trans-unit id="TranslationStreetLbl" translate="yes" xml:space="preserve">
           <source>Street Address 1 </source>
-          <target state="new">Street Address 1 </target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Alamat jalan 1 </target>
           <note from="MultilingualBuild" annotates="source" priority="2">Comment</note>
         </trans-unit>
         <trans-unit id="TranslationstudentNameLbl" translate="yes" xml:space="preserve">
@@ -126,7 +126,7 @@
         </trans-unit>
         <trans-unit id="TranslationTimeTable" translate="yes" xml:space="preserve">
           <source>Timetable</source>
-          <target state="new">Timetable</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jadual</target>
         </trans-unit>
         <trans-unit id="TranslationTranscript" translate="yes" xml:space="preserve">
           <source>Transcript</source>
@@ -144,23 +144,23 @@
         </trans-unit>
         <trans-unit id="TranslationStudyPath" translate="yes" xml:space="preserve">
           <source>Study Path</source>
-          <target state="new">Study Path</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Laluan pembelajaran</target>
         </trans-unit>
         <trans-unit id="TranslationStudypicker" translate="yes" xml:space="preserve">
           <source>Please select your study path</source>
-          <target state="new">Please select your study path</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sila pilih laluan pengajian anda</target>
         </trans-unit>
         <trans-unit id="TranslationTimetablePicker" translate="yes" xml:space="preserve">
           <source>Select the Day</source>
-          <target state="new">Select the Day</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pilih hari</target>
         </trans-unit>
         <trans-unit id="TranslationYear2018" translate="yes" xml:space="preserve">
           <source>Year 2018</source>
-          <target state="new">Year 2018</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tahun 2018</target>
         </trans-unit>
         <trans-unit id="TranslationYear2019" translate="yes" xml:space="preserve">
           <source>Year 2019</source>
-          <target state="new">Year 2019</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tahun 2019</target>
         </trans-unit>
       </group>
     </body>

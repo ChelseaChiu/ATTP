@@ -40,7 +40,7 @@
         </trans-unit>
         <trans-unit id="TranslationLogin" translate="yes" xml:space="preserve">
           <source>Username / Student Identification </source>
-          <target state="new">Username / Student Identification </target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Имя пользователя / Идентификация студента </target>
           <note from="MultilingualBuild" annotates="source" priority="2">Comment Username</note>
         </trans-unit>
         <trans-unit id="TranslationLoginPageClickerHere" translate="yes" xml:space="preserve">
@@ -59,7 +59,7 @@
         </trans-unit>
         <trans-unit id="TranslationPhoneLbl" translate="yes" xml:space="preserve">
           <source>Phone Number / Moblie Number</source>
-          <target state="new">Phone Number / Moblie Number</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Номер телефона / Номер Мобли</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Comment Contact Number</note>
         </trans-unit>
         <trans-unit id="TranslationPostcodeLbl" translate="yes" xml:space="preserve">
@@ -120,7 +120,7 @@
         </trans-unit>
         <trans-unit id="TranslationTimeTable" translate="yes" xml:space="preserve">
           <source>Timetable</source>
-          <target state="new">Timetable</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Расписание</target>
         </trans-unit>
         <trans-unit id="TranslationTranscript" translate="yes" xml:space="preserve">
           <source>Transcript</source>
@@ -143,23 +143,23 @@
         </trans-unit>
         <trans-unit id="TranslationStudyPath" translate="yes" xml:space="preserve">
           <source>Study Path</source>
-          <target state="new">Study Path</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Путь исследования</target>
         </trans-unit>
         <trans-unit id="TranslationStudypicker" translate="yes" xml:space="preserve">
           <source>Please select your study path</source>
-          <target state="new">Please select your study path</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Пожалуйста, выберите путь обучения</target>
         </trans-unit>
         <trans-unit id="TranslationTimetablePicker" translate="yes" xml:space="preserve">
           <source>Select the Day</source>
-          <target state="new">Select the Day</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Выберите день</target>
         </trans-unit>
         <trans-unit id="TranslationYear2018" translate="yes" xml:space="preserve">
           <source>Year 2018</source>
-          <target state="new">Year 2018</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Год 2018</target>
         </trans-unit>
         <trans-unit id="TranslationYear2019" translate="yes" xml:space="preserve">
           <source>Year 2019</source>
-          <target state="new">Year 2019</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Год 2019</target>
         </trans-unit>
       </group>
     </body>

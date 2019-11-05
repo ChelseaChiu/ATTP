@@ -117,4 +117,19 @@
     <value>프로필 수정</value>
     <comment>Comment Edit Profile </comment>
   </data>
+  <data name="TranslationStudyPath" xml:space="preserve">
+    <value>학습 경로</value>
+  </data>
+  <data name="TranslationStudypicker" xml:space="preserve">
+    <value>학습 경로를 선택하십시오.</value>
+  </data>
+  <data name="TranslationTimetablePicker" xml:space="preserve">
+    <value>일 선택</value>
+  </data>
+  <data name="TranslationYear2018" xml:space="preserve">
+    <value>2018년</value>
+  </data>
+  <data name="TranslationYear2019" xml:space="preserve">
+    <value>2019년</value>
+  </data>
 </root>
