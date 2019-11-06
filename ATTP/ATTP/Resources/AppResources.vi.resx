@@ -12,124 +12,124 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="TranslationApplyforParchment" xml:space="preserve">
+    <value>Áp dụng cho parchment</value>
+    <comment>Comment Apply for Parchment</comment>
+  </data>
   <data name="TranslationCityLbl" xml:space="preserve">
-    <value>Город</value>
+    <value>Thành phố</value>
     <comment>Comment City</comment>
   </data>
   <data name="TranslationCoreLabel" xml:space="preserve">
     <value></value>
   </data>
+  <data name="TranslationEditUsername" xml:space="preserve">
+    <value>Chỉnh sửa hồ sơ</value>
+    <comment>Comment Edit Profile </comment>
+  </data>
   <data name="TranslationElectiveLabel" xml:space="preserve">
     <value></value>
   </data>
   <data name="TranslationEmailLbl" xml:space="preserve">
-    <value>Электронная почта</value>
+    <value>Gửi email</value>
   </data>
   <data name="TranslationForgetText" xml:space="preserve">
-    <value>Забыли пароль?</value>
+    <value>Quên mật khẩu của bạn?</value>
     <comment>Comment Forget Password</comment>
   </data>
   <data name="TranslationHome" xml:space="preserve">
-    <value>домашний</value>
+    <value>Trang chủ chào mừng </value>
   </data>
   <data name="TranslationIDlbl" xml:space="preserve">
-    <value>ИД учащегося</value>
+    <value>ID học sinh</value>
     <comment>Comment Stu ID</comment>
   </data>
   <data name="TranslationLogin" xml:space="preserve">
-    <value>Имя пользователя / Идентификация студента </value>
+    <value>Tên đăng nhập/nhận dạng học sinh </value>
     <comment>Comment Username</comment>
   </data>
   <data name="TranslationLoginPageClickerHere" xml:space="preserve">
-    <value>щелкните здесь</value>
+    <value>Bấm vào đây</value>
     <comment>Comment Click Here</comment>
   </data>
   <data name="TranslationLogOut" xml:space="preserve">
-    <value>Выход</value>
+    <value>Đăng Xuất</value>
   </data>
   <data name="TranslationPassword" xml:space="preserve">
-    <value>Пароль</value>
+    <value>Mật khẩu</value>
     <comment>Comment Password</comment>
   </data>
   <data name="TranslationPhoneLbl" xml:space="preserve">
-    <value>Номер телефона / Номер Мобли</value>
+    <value>Số điện thoại/số Moblie</value>
     <comment>Comment Contact Number</comment>
   </data>
   <data name="TranslationPostcodeLbl" xml:space="preserve">
-    <value>Почтовый индекс</value>
+    <value>Mã bưu</value>
     <comment>Comment Postcode</comment>
   </data>
   <data name="TranslationProfile" xml:space="preserve">
-    <value>Профиль</value>
+    <value>Hồ sơ</value>
   </data>
   <data name="TranslationProgressLabel" xml:space="preserve">
     <value></value>
   </data>
   <data name="TranslationReset" xml:space="preserve">
-    <value>к перезагрузке </value>
+    <value>để đặt lại </value>
     <comment>Comment to reset</comment>
   </data>
   <data name="TranslationResult" xml:space="preserve">
-    <value>Результат</value>
+    <value>Kết quả</value>
   </data>
   <data name="TranslationSelectLanguage" xml:space="preserve">
-    <value>Выберите язык</value>
+    <value>Chọn Ngôn ngữ</value>
     <comment>Comment Select Language </comment>
   </data>
   <data name="TranslationSignIn" xml:space="preserve">
-    <value>Вход</value>
+    <value>Đăng nhập</value>
     <comment>Comment Sign In</comment>
   </data>
   <data name="TranslationStateLbl" xml:space="preserve">
-    <value>Состояние</value>
+    <value>Bang</value>
     <comment>Comment State</comment>
   </data>
   <data name="TranslationStreet1Lbl" xml:space="preserve">
-    <value>Адрес</value>
+    <value>Địa chỉ</value>
     <comment>Comment</comment>
   </data>
   <data name="TranslationStreetLbl" xml:space="preserve">
-    <value>Адрес 1</value>
+    <value>Địa chỉ đường phố 1 </value>
     <comment>Comment</comment>
   </data>
   <data name="TranslationstudentNameLbl" xml:space="preserve">
-    <value>Название</value>
+    <value>Tên</value>
     <comment>Comment Name</comment>
   </data>
   <data name="TranslationStudyPathLabel" xml:space="preserve">
     <value></value>
   </data>
   <data name="TranslationTimeTable" xml:space="preserve">
-    <value>Расписание</value>
+    <value>Thời gian biểu</value>
   </data>
   <data name="TranslationTranscript" xml:space="preserve">
-    <value>Расшифровка</value>
+    <value>Bản chép lại</value>
   </data>
   <data name="TranslationUsername" xml:space="preserve">
-    <value>пользователя</value>
+    <value>Tên người dùng</value>
     <comment>Comment Login Details</comment>
   </data>
-  <data name="TranslationApplyforParchment" xml:space="preserve">
-    <value>Подать заявку на пергамент</value>
-    <comment>Comment Apply for Parchment</comment>
-  </data>
-  <data name="TranslationEditUsername" xml:space="preserve">
-    <value>Изменить профиль</value>
-    <comment>Comment Edit Profile </comment>
-  </data>
   <data name="TranslationStudyPath" xml:space="preserve">
-    <value>Путь исследования</value>
+    <value>Hướng dẫn học tập</value>
   </data>
   <data name="TranslationStudypicker" xml:space="preserve">
-    <value>Пожалуйста, выберите путь обучения</value>
+    <value>Vui lòng chọn đường dẫn học tập</value>
   </data>
   <data name="TranslationTimetablePicker" xml:space="preserve">
-    <value>Выберите день</value>
+    <value>Chọn ngày</value>
   </data>
   <data name="TranslationYear2018" xml:space="preserve">
-    <value>Год 2018</value>
+    <value>Năm 2018</value>
   </data>
   <data name="TranslationYear2019" xml:space="preserve">
-    <value>Год 2019</value>
+    <value>Năm 2019</value>
   </data>
 </root>

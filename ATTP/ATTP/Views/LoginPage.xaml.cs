@@ -33,7 +33,12 @@ namespace ATTP.Views
                 new Language { DisplayName =  "Deutsche - German", ShortName = "de" },
                 new Language { DisplayName =  "日本語 - Japanese", ShortName = "ja" },
                 new Language { DisplayName =  "한국어 - Korean", ShortName = "ko" },
+                new Language { DisplayName =  "Dansk - Danish", ShortName = "da" },
+                new Language { DisplayName =  "bahasa Indonesia - Indonesian", ShortName = "id" },
+                new Language { DisplayName =  "Tiếng Việt - Vietnamese", ShortName = "vi" },
                 new Language { DisplayName =  "Русский - Russian", ShortName = "ru" }
+
+
             };
         public ICommand TapCommand => new Command<string>(OpenBrowser);
         public LoginPage()
@@ -171,6 +176,21 @@ namespace ATTP.Views
                             DisplayAlert("로그인", "로그인 성공", "괜찮아");
                             break;
                         }
+                    case "da":
+                        {
+                            DisplayAlert("Log på", "Login succes", "Okay");
+                            break;
+                        }
+                    case "id":
+                        {
+                            DisplayAlert("Gabung", "Sukses Masuk", "baik");
+                            break;
+                        }
+                    case "vi":
+                        {
+                            DisplayAlert("Đăng nhập", "Đăng nhập thành công", "đồng ý");
+                            break;
+                        }
                     case "ru":
                         {
                             DisplayAlert("Авторизоваться", "Войти успешно", "Хорошо");
@@ -234,6 +254,21 @@ namespace ATTP.Views
                     case "ko":
                         {
                             DisplayAlert("로그인", "로그인이 올바르지 않습니다 오류 : 빈 사용자 이름 또는 비밀번호", "괜찮아");
+                            break;
+                        }
+                    case "da":
+                        {
+                            DisplayAlert("Log på", "Login Ikke korrekt Fejl: tomt brugernavn eller adgangskode", "Okay");
+                            break;
+                        }
+                    case "id":
+                        {
+                            DisplayAlert("Gabung", "Login Bukan Kesalahan Benar: nama pengguna atau kata sandi kosong", "baik");
+                            break;
+                        }
+                    case "vi":
+                        {
+                            DisplayAlert("Đăng nhập", "Đăng nhập Không đúng Lỗi: tên người dùng hoặc mật khẩu trống", "đồng ý");
                             break;
                         }
                     case "ru":

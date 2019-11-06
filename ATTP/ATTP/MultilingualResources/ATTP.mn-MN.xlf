@@ -115,7 +115,7 @@
         </trans-unit>
         <trans-unit id="TranslationLogOut" translate="yes" xml:space="preserve">
           <source>Log-Out</source>
-          <target state="new">Log-Out</target>
+          <target state="translated">Гарах</target>
         </trans-unit>
         <trans-unit id="TranslationProfile" translate="yes" xml:space="preserve">
           <source>Profile</source>
@@ -127,11 +127,11 @@
         </trans-unit>
         <trans-unit id="TranslationTimeTable" translate="yes" xml:space="preserve">
           <source>Timetable</source>
-          <target state="new">Timetable</target>
+          <target state="translated">Цагийн хуваарь</target>
         </trans-unit>
         <trans-unit id="TranslationTranscript" translate="yes" xml:space="preserve">
           <source>Transcript</source>
-          <target state="new">Transcript</target>
+          <target state="translated">Орчуулга</target>
         </trans-unit>
         <trans-unit id="TranslationApplyforParchment" translate="yes" xml:space="preserve">
           <source>Apply for Parchment</source>
@@ -140,28 +140,28 @@
         </trans-unit>
         <trans-unit id="TranslationEditUsername" translate="yes" xml:space="preserve">
           <source>Edit Profile</source>
-          <target state="new">Edit Profile</target>
+          <target state="translated">Засварлах Хувийн мэдээллийг vзэх</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Comment Edit Profile </note>
         </trans-unit>
         <trans-unit id="TranslationStudyPath" translate="yes" xml:space="preserve">
           <source>Study Path</source>
-          <target state="new">Study Path</target>
+          <target state="translated">Судалгааны зам</target>
         </trans-unit>
         <trans-unit id="TranslationStudypicker" translate="yes" xml:space="preserve">
           <source>Please select your study path</source>
-          <target state="new">Please select your study path</target>
+          <target state="translated">Суралцах замаа сонгоно уу</target>
         </trans-unit>
         <trans-unit id="TranslationTimetablePicker" translate="yes" xml:space="preserve">
           <source>Select the Day</source>
-          <target state="new">Select the Day</target>
+          <target state="translated">Өдөр сонгох</target>
         </trans-unit>
         <trans-unit id="TranslationYear2018" translate="yes" xml:space="preserve">
           <source>Year 2018</source>
-          <target state="new">Year 2018</target>
+          <target state="translated">2018 он</target>
         </trans-unit>
         <trans-unit id="TranslationYear2019" translate="yes" xml:space="preserve">
           <source>Year 2019</source>
-          <target state="new">Year 2019</target>
+          <target state="translated">2019 он</target>
         </trans-unit>
       </group>
     </body>

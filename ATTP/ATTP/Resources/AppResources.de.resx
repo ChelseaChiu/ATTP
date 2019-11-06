@@ -33,6 +33,10 @@
     <value>Schüler-ID</value>
     <comment>Comment Stu ID</comment>
   </data>
+  <data name="TranslationLogin" xml:space="preserve">
+    <value>Benutzername / Studentenidentifikation </value>
+    <comment>Comment Username</comment>
+  </data>
   <data name="TranslationLoginPageClickerHere" xml:space="preserve">
     <value>Klicken Sie hier.</value>
     <comment>Comment Click Here</comment>
@@ -40,6 +44,10 @@
   <data name="TranslationPassword" xml:space="preserve">
     <value>Passwort</value>
     <comment>Comment Password</comment>
+  </data>
+  <data name="TranslationPhoneLbl" xml:space="preserve">
+    <value>Telefonnummer / Moblie-Nummer</value>
+    <comment>Comment Contact Number</comment>
   </data>
   <data name="TranslationPostcodeLbl" xml:space="preserve">
     <value>PLZ</value>
@@ -95,6 +103,9 @@
   <data name="TranslationResult" xml:space="preserve">
     <value>Ergebnis</value>
   </data>
+  <data name="TranslationTimeTable" xml:space="preserve">
+    <value>fahr-</value>
+  </data>
   <data name="TranslationTranscript" xml:space="preserve">
     <value>Protokoll</value>
   </data>
@@ -105,5 +116,20 @@
   <data name="TranslationEditUsername" xml:space="preserve">
     <value>Profil bearbeiten</value>
     <comment>Comment Edit Profile </comment>
+  </data>
+  <data name="TranslationStudyPath" xml:space="preserve">
+    <value>Studienweg</value>
+  </data>
+  <data name="TranslationStudypicker" xml:space="preserve">
+    <value>Bitte wählen Sie Ihren Studienweg</value>
+  </data>
+  <data name="TranslationTimetablePicker" xml:space="preserve">
+    <value>Wählen Sie den Tag</value>
+  </data>
+  <data name="TranslationYear2018" xml:space="preserve">
+    <value>Jahr 2018</value>
+  </data>
+  <data name="TranslationYear2019" xml:space="preserve">
+    <value>Jahr 2019</value>
   </data>
 </root>

@@ -56,10 +56,7 @@ namespace ATTP
 
         protected override void OnStart()
         {
-            if (_desuNot == true)
-            {
                 _UwUnotification = true;
-            }
             // Handle when your app starts
 
         }

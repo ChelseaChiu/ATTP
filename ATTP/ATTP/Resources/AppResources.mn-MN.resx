@@ -95,14 +95,42 @@
   <data name="TranslationHome" xml:space="preserve">
     <value>Эхлэл</value>
   </data>
+  <data name="TranslationLogOut" xml:space="preserve">
+    <value>Гарах</value>
+  </data>
   <data name="TranslationProfile" xml:space="preserve">
     <value>Хувийн тохиргоо</value>
   </data>
   <data name="TranslationResult" xml:space="preserve">
     <value>Үр дүн</value>
   </data>
+  <data name="TranslationTimeTable" xml:space="preserve">
+    <value>Цагийн хуваарь</value>
+  </data>
+  <data name="TranslationTranscript" xml:space="preserve">
+    <value>Орчуулга</value>
+  </data>
   <data name="TranslationApplyforParchment" xml:space="preserve">
     <value>Илгэн цаасаар түрхэнэ</value>
     <comment>Comment Apply for Parchment</comment>
+  </data>
+  <data name="TranslationEditUsername" xml:space="preserve">
+    <value>Засварлах Хувийн мэдээллийг vзэх</value>
+    <comment>Comment Edit Profile </comment>
+  </data>
+  <data name="TranslationStudyPath" xml:space="preserve">
+    <value>Судалгааны зам</value>
+  </data>
+  <data name="TranslationStudypicker" xml:space="preserve">
+    <value>Суралцах замаа сонгоно уу</value>
+  </data>
+  <data name="TranslationTimetablePicker" xml:space="preserve">
+    <value>Өдөр сонгох</value>
+  </data>
+  <data name="TranslationYear2018" xml:space="preserve">
+    <value>2018 он</value>
+  </data>
+  <data name="TranslationYear2019" xml:space="preserve">
+    <value>2019 он</value>
   </data>
 </root>

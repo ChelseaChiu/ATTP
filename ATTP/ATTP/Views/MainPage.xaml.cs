@@ -187,6 +187,48 @@ namespace ATTP.Views
                         Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(HomePage)));
                         break;
                     }
+                case "vi":
+                    {
+                        menuList.Add(new MasterPageItem() { Title = "Trang Chủ", ImageSource = "Home.png", TargetType = typeof(HomePage) });
+                        menuList.Add(new MasterPageItem() { Title = "Kết quả", ImageSource = "Result.png", TargetType = typeof(ResultPage) });
+                        menuList.Add(new MasterPageItem() { Title = "Bảng điểm", ImageSource = "Transcript.png", TargetType = typeof(TransciptPage) });
+                        menuList.Add(new MasterPageItem() { Title = "Thời gian biểu", ImageSource = "Calendar.png", TargetType = typeof(TimetablePage) });
+                        menuList.Add(new MasterPageItem() { Title = "Hồ sơ", ImageSource = "Profile.png", TargetType = typeof(ProfilePage) });
+                        menuList.Add(new MasterPageItem() { Title = "Đăng xuất", ImageSource = "Exit.png", TargetType = typeof(LoginPage) });
+                        // Setting our list to be ItemSource for ListView in MainPage.xaml
+                        navigationDrawerList.ItemsSource = menuList;
+                        // Initial navigation, this can be used for our home page
+                        Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(HomePage)));
+                        break;
+                    }
+                case "da":
+                    {
+                        menuList.Add(new MasterPageItem() { Title = "Hjem", ImageSource = "Home.png", TargetType = typeof(HomePage) });
+                        menuList.Add(new MasterPageItem() { Title = "Resultat", ImageSource = "Result.png", TargetType = typeof(ResultPage) });
+                        menuList.Add(new MasterPageItem() { Title = "Udskrift", ImageSource = "Transcript.png", TargetType = typeof(TransciptPage) });
+                        menuList.Add(new MasterPageItem() { Title = "Tidsplan", ImageSource = "Calendar.png", TargetType = typeof(TimetablePage) });
+                        menuList.Add(new MasterPageItem() { Title = "Profil", ImageSource = "Profile.png", TargetType = typeof(ProfilePage) });
+                        menuList.Add(new MasterPageItem() { Title = "Log ud", ImageSource = "Exit.png", TargetType = typeof(LoginPage) });
+                        // Setting our list to be ItemSource for ListView in MainPage.xaml
+                        navigationDrawerList.ItemsSource = menuList;
+                        // Initial navigation, this can be used for our home page
+                        Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(HomePage)));
+                        break;
+                    }
+                case "id":
+                    {
+                        menuList.Add(new MasterPageItem() { Title = "Rumah", ImageSource = "Home.png", TargetType = typeof(HomePage) });
+                        menuList.Add(new MasterPageItem() { Title = "Hasil", ImageSource = "Result.png", TargetType = typeof(ResultPage) });
+                        menuList.Add(new MasterPageItem() { Title = "Udskrift", ImageSource = "Transcript.png", TargetType = typeof(TransciptPage) });
+                        menuList.Add(new MasterPageItem() { Title = "Tabel Waktu", ImageSource = "Calendar.png", TargetType = typeof(TimetablePage) });
+                        menuList.Add(new MasterPageItem() { Title = "Profil", ImageSource = "Profile.png", TargetType = typeof(ProfilePage) });
+                        menuList.Add(new MasterPageItem() { Title = "Keluar", ImageSource = "Exit.png", TargetType = typeof(LoginPage) });
+                        // Setting our list to be ItemSource for ListView in MainPage.xaml
+                        navigationDrawerList.ItemsSource = menuList;
+                        // Initial navigation, this can be used for our home page
+                        Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(HomePage)));
+                        break;
+                    }
             }
 
 

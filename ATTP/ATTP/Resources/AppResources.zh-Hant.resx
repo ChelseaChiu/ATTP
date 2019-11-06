@@ -103,6 +103,9 @@
   <data name="TranslationResult" xml:space="preserve">
     <value>結果</value>
   </data>
+  <data name="TranslationTimeTable" xml:space="preserve">
+    <value>時程表</value>
+  </data>
   <data name="TranslationTranscript" xml:space="preserve">
     <value>文字記錄</value>
   </data>
@@ -113,5 +116,20 @@
   <data name="TranslationEditUsername" xml:space="preserve">
     <value>編輯設定檔</value>
     <comment>Comment Edit Profile </comment>
+  </data>
+  <data name="TranslationStudyPath" xml:space="preserve">
+    <value>學習路徑</value>
+  </data>
+  <data name="TranslationStudypicker" xml:space="preserve">
+    <value>請選擇您的學習路徑</value>
+  </data>
+  <data name="TranslationTimetablePicker" xml:space="preserve">
+    <value>選擇日</value>
+  </data>
+  <data name="TranslationYear2018" xml:space="preserve">
+    <value>2018年</value>
+  </data>
+  <data name="TranslationYear2019" xml:space="preserve">
+    <value>2019年</value>
   </data>
 </root>

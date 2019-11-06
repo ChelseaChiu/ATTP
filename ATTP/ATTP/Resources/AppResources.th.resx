@@ -48,6 +48,10 @@
     <value>ที่อยู่</value>
     <comment>Comment</comment>
   </data>
+  <data name="TranslationStreetLbl" xml:space="preserve">
+    <value>ที่อยู่ของถนน1 </value>
+    <comment>Comment</comment>
+  </data>
   <data name="TranslationstudentNameLbl" xml:space="preserve">
     <value>ชื่อ</value>
     <comment>Comment Name</comment>
@@ -99,6 +103,9 @@
   <data name="TranslationResult" xml:space="preserve">
     <value>ผลการแข่งขัน</value>
   </data>
+  <data name="TranslationTimeTable" xml:space="preserve">
+    <value>ตาราง</value>
+  </data>
   <data name="TranslationTranscript" xml:space="preserve">
     <value>สำเนาบทสนทนา</value>
   </data>
@@ -109,5 +116,20 @@
   <data name="TranslationEditUsername" xml:space="preserve">
     <value>แก้ไขโปรไฟล์</value>
     <comment>Comment Edit Profile </comment>
+  </data>
+  <data name="TranslationStudyPath" xml:space="preserve">
+    <value>เส้นทางการศึกษา</value>
+  </data>
+  <data name="TranslationStudypicker" xml:space="preserve">
+    <value>โปรดเลือกเส้นทางการศึกษาของคุณ</value>
+  </data>
+  <data name="TranslationTimetablePicker" xml:space="preserve">
+    <value>เลือกวัน</value>
+  </data>
+  <data name="TranslationYear2018" xml:space="preserve">
+    <value>ปี๒๐๑๘</value>
+  </data>
+  <data name="TranslationYear2019" xml:space="preserve">
+    <value>ปี๒๐๑๙</value>
   </data>
 </root>

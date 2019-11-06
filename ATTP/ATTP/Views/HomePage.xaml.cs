@@ -80,7 +80,7 @@ namespace ATTP.Views
                     }
                 case "zh-Hant":
                     {
-                            result = await Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
+                            result = await Application.Current.MainPage.DisplayAlert("重要", "你做完定向了嗎？", "是", "沒有");
 
                             if (result == true)
                             {
@@ -191,89 +191,104 @@ namespace ATTP.Views
                 case "de":
                     {
                             result = await Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
-
-
                             if (result == true)
                             {
                                 App._UwUnotification = false;
                                 App._desuNot = false;
-
                             }
-
                             else
                             {
                                 App._UwUnotification = true;
-
                             }
-
                             base.OnAppearing();
-
                             break;
                         }
-                case "ja":
-                    {
-                            result = await Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
-
-
-                            if (result == true)
-                            {
-                                App._UwUnotification = false;
-                                App._desuNot = false;
-
-                            }
-
-                            else
-                            {
-                                App._UwUnotification = true;
-
-                            }
-
-                            base.OnAppearing();
-
-                            break;
-                        }
-                case "ko":
-                    {
+                    case "ko":
+                        {
                             result = await Application.Current.MainPage.DisplayAlert("중요", "오리엔테이션을 완료했습니까 ? ", "예", "아니오");
+                            if (result == true)
+                            {
+                                App._UwUnotification = false;
+                                //App._desuNot = false;
+                            }
+                            else
+                            {
+                                App._UwUnotification = true;
+
+                            }
+                            base.OnAppearing();
+                            break;
+                        }
+                    case "da":
+                    {
+                            result = await Application.Current.MainPage.DisplayAlert("VIGTIG", "Har du gjort din orientering ? ", "JA", "Ingen");
 
 
+                            if (result == true)
+                            {
+                                App._UwUnotification = false;
+                                App._desuNot = false;
+
+                            }
+
+                            else
+                            {
+                                App._UwUnotification = true;
+
+                            }
+
+                            base.OnAppearing();
+
+                            break;
+                        }
+                    case "id":
+                        {
+                            result = await Application.Current.MainPage.DisplayAlert("PENTING", "Sudahkah Anda melakukan orientasi ? ", "IYA", "Tidak");
                             if (result == true)
                             {
                                 App._UwUnotification = false;
                                 //App._desuNot = false;
 
                             }
-
                             else
                             {
                                 App._UwUnotification = true;
 
                             }
-
                             base.OnAppearing();
-
                             break;
                         }
-                case "ru":
+                    case "vi":
+                        {
+                            result = await Application.Current.MainPage.DisplayAlert("QUAN TRỌNG", "Bạn đã thực hiện định hướng của bạn ? ", "ĐÚNG", "Không");
+                            if (result == true)
+                            {
+                                App._UwUnotification = false;
+                                //App._desuNot = false;
+
+                            }
+                            else
+                            {
+                                App._UwUnotification = true;
+
+                            }
+                            base.OnAppearing();
+                            break;
+                        }
+                    case "ru":
                     {
                             result = await Application.Current.MainPage.DisplayAlert("IMPORTANT", "Have you done your orientation?", "YES", "NO");
-
-
                             if (result == true)
                             {
                                 App._UwUnotification = false;
                                 App._desuNot = false;
-
                             }
-
                             else
                             {
                                 App._UwUnotification = true;
 
                             }
-
                             base.OnAppearing();
-
                             break;
                         }
             }

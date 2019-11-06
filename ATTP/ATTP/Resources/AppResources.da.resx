@@ -12,124 +12,124 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="TranslationApplyforParchment" xml:space="preserve">
+    <value>Ansøg om pergament</value>
+    <comment>Comment Apply for Parchment</comment>
+  </data>
   <data name="TranslationCityLbl" xml:space="preserve">
-    <value>Город</value>
+    <value>By</value>
     <comment>Comment City</comment>
   </data>
   <data name="TranslationCoreLabel" xml:space="preserve">
     <value></value>
   </data>
+  <data name="TranslationEditUsername" xml:space="preserve">
+    <value>Rediger profil</value>
+    <comment>Comment Edit Profile </comment>
+  </data>
   <data name="TranslationElectiveLabel" xml:space="preserve">
     <value></value>
   </data>
   <data name="TranslationEmailLbl" xml:space="preserve">
-    <value>Электронная почта</value>
+    <value>E-mail</value>
   </data>
   <data name="TranslationForgetText" xml:space="preserve">
-    <value>Забыли пароль?</value>
+    <value>Har du glemt din adgangskode?</value>
     <comment>Comment Forget Password</comment>
   </data>
   <data name="TranslationHome" xml:space="preserve">
-    <value>домашний</value>
+    <value>Velkommen hjem </value>
   </data>
   <data name="TranslationIDlbl" xml:space="preserve">
-    <value>ИД учащегося</value>
+    <value>Elev-id</value>
     <comment>Comment Stu ID</comment>
   </data>
   <data name="TranslationLogin" xml:space="preserve">
-    <value>Имя пользователя / Идентификация студента </value>
+    <value>Identifikation af Brugernavn/elev </value>
     <comment>Comment Username</comment>
   </data>
   <data name="TranslationLoginPageClickerHere" xml:space="preserve">
-    <value>щелкните здесь</value>
+    <value>Klik her</value>
     <comment>Comment Click Here</comment>
   </data>
   <data name="TranslationLogOut" xml:space="preserve">
-    <value>Выход</value>
+    <value>Log af</value>
   </data>
   <data name="TranslationPassword" xml:space="preserve">
-    <value>Пароль</value>
+    <value>Adg.kode</value>
     <comment>Comment Password</comment>
   </data>
   <data name="TranslationPhoneLbl" xml:space="preserve">
-    <value>Номер телефона / Номер Мобли</value>
+    <value>Telefonnummer/Moblie nummer</value>
     <comment>Comment Contact Number</comment>
   </data>
   <data name="TranslationPostcodeLbl" xml:space="preserve">
-    <value>Почтовый индекс</value>
+    <value>Postnr.</value>
     <comment>Comment Postcode</comment>
   </data>
   <data name="TranslationProfile" xml:space="preserve">
-    <value>Профиль</value>
+    <value>Profil</value>
   </data>
   <data name="TranslationProgressLabel" xml:space="preserve">
     <value></value>
   </data>
   <data name="TranslationReset" xml:space="preserve">
-    <value>к перезагрузке </value>
+    <value>for at nulstille </value>
     <comment>Comment to reset</comment>
   </data>
   <data name="TranslationResult" xml:space="preserve">
-    <value>Результат</value>
+    <value>Resultat</value>
   </data>
   <data name="TranslationSelectLanguage" xml:space="preserve">
-    <value>Выберите язык</value>
+    <value>Vælg et sprog</value>
     <comment>Comment Select Language </comment>
   </data>
   <data name="TranslationSignIn" xml:space="preserve">
-    <value>Вход</value>
+    <value>Log på</value>
     <comment>Comment Sign In</comment>
   </data>
   <data name="TranslationStateLbl" xml:space="preserve">
-    <value>Состояние</value>
+    <value>Tilstand</value>
     <comment>Comment State</comment>
   </data>
   <data name="TranslationStreet1Lbl" xml:space="preserve">
-    <value>Адрес</value>
+    <value>Adresse</value>
     <comment>Comment</comment>
   </data>
   <data name="TranslationStreetLbl" xml:space="preserve">
-    <value>Адрес 1</value>
+    <value>Adresse 1</value>
     <comment>Comment</comment>
   </data>
   <data name="TranslationstudentNameLbl" xml:space="preserve">
-    <value>Название</value>
+    <value>Name</value>
     <comment>Comment Name</comment>
   </data>
   <data name="TranslationStudyPathLabel" xml:space="preserve">
     <value></value>
   </data>
   <data name="TranslationTimeTable" xml:space="preserve">
-    <value>Расписание</value>
+    <value>Tidsplan</value>
   </data>
   <data name="TranslationTranscript" xml:space="preserve">
-    <value>Расшифровка</value>
+    <value>Afskrift</value>
   </data>
   <data name="TranslationUsername" xml:space="preserve">
-    <value>пользователя</value>
+    <value>Brugernavn</value>
     <comment>Comment Login Details</comment>
   </data>
-  <data name="TranslationApplyforParchment" xml:space="preserve">
-    <value>Подать заявку на пергамент</value>
-    <comment>Comment Apply for Parchment</comment>
-  </data>
-  <data name="TranslationEditUsername" xml:space="preserve">
-    <value>Изменить профиль</value>
-    <comment>Comment Edit Profile </comment>
-  </data>
   <data name="TranslationStudyPath" xml:space="preserve">
-    <value>Путь исследования</value>
+    <value>Studieforløb</value>
   </data>
   <data name="TranslationStudypicker" xml:space="preserve">
-    <value>Пожалуйста, выберите путь обучения</value>
+    <value>Vælg venligst din studiesti</value>
   </data>
   <data name="TranslationTimetablePicker" xml:space="preserve">
-    <value>Выберите день</value>
+    <value>Vælg den dag</value>
   </data>
   <data name="TranslationYear2018" xml:space="preserve">
-    <value>Год 2018</value>
+    <value>Året 2018</value>
   </data>
   <data name="TranslationYear2019" xml:space="preserve">
-    <value>Год 2019</value>
+    <value>Året 2019</value>
   </data>
 </root>

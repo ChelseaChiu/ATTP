@@ -128,6 +128,30 @@ namespace ATTP.Views
 
                         break;
                     }
+                case "da":
+                    {
+                        Application.Current.MainPage.DisplayAlert("VIGTIG", "Klik på 'Vælg køreplandag' for at vælge dagen: ", "Okay");
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "id":
+                    {
+                        Application.Current.MainPage.DisplayAlert("PENTING", "Silakan klik 'Pilih hari jadwal' untuk memilih hari: ", "baik");
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "vi":
+                    {
+                        Application.Current.MainPage.DisplayAlert("QUAN TRỌNG", "Vui lòng nhấp vào 'Chọn ngày có thời gian biểu' để chọn ngày: ", "đồng ý");
+
+                        base.OnAppearing();
+
+                        break;
+                    }
                 case "ru":
                     {
                         Application.Current.MainPage.DisplayAlert("IMPORTANT", "Please click on 'Select the timetable day' to select the day : ", "OK");

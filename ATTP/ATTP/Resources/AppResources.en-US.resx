@@ -28,6 +28,41 @@
     <value>Sign in</value>
     <comment>Comment Sign In</comment>
   </data>
+  <data name="TranslationCityLbl" xml:space="preserve">
+    <value>City</value>
+    <comment>Comment City</comment>
+  </data>
+  <data name="TranslationIDlbl" xml:space="preserve">
+    <value>Student ID</value>
+    <comment>Comment Stu ID</comment>
+  </data>
+  <data name="TranslationPostcodeLbl" xml:space="preserve">
+    <value>Postcode</value>
+    <comment>Comment Postcode</comment>
+  </data>
+  <data name="TranslationStateLbl" xml:space="preserve">
+    <value>State</value>
+    <comment>Comment State</comment>
+  </data>
+  <data name="TranslationStreet1Lbl" xml:space="preserve">
+    <value>Address</value>
+    <comment>Comment</comment>
+  </data>
+  <data name="TranslationStreetLbl" xml:space="preserve">
+    <value>Street Address 1 </value>
+    <comment>Comment</comment>
+  </data>
+  <data name="TranslationstudentNameLbl" xml:space="preserve">
+    <value>Name</value>
+    <comment>Comment Name</comment>
+  </data>
+  <data name="TranslationEmailLbl" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="TranslationPhoneLbl" xml:space="preserve">
+    <value>Phone Number / Moblie Number</value>
+    <comment>Comment Contact Number</comment>
+  </data>
   <data name="TranslationCoreLabel" xml:space="preserve">
     <value></value>
   </data>
@@ -39,5 +74,62 @@
   </data>
   <data name="TranslationStudyPathLabel" xml:space="preserve">
     <value></value>
+  </data>
+  <data name="TranslationForgetText" xml:space="preserve">
+    <value>Forget your password ?</value>
+    <comment>Comment Forget Password</comment>
+  </data>
+  <data name="TranslationLoginPageClickerHere" xml:space="preserve">
+    <value>Click Here</value>
+    <comment>Comment Click Here</comment>
+  </data>
+  <data name="TranslationSelectLanguage" xml:space="preserve">
+    <value>Select a Language</value>
+    <comment>Comment Select Language </comment>
+  </data>
+  <data name="TranslationReset" xml:space="preserve">
+    <value>to Reset </value>
+    <comment>Comment to reset</comment>
+  </data>
+  <data name="TranslationHome" xml:space="preserve">
+    <value>Welcome Home </value>
+  </data>
+  <data name="TranslationLogOut" xml:space="preserve">
+    <value>Log-Out</value>
+  </data>
+  <data name="TranslationProfile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="TranslationResult" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="TranslationTimeTable" xml:space="preserve">
+    <value>Timetable</value>
+  </data>
+  <data name="TranslationTranscript" xml:space="preserve">
+    <value>Transcript</value>
+  </data>
+  <data name="TranslationApplyforParchment" xml:space="preserve">
+    <value>Apply for Parchment</value>
+    <comment>Comment Apply for Parchment</comment>
+  </data>
+  <data name="TranslationEditUsername" xml:space="preserve">
+    <value>Edit Profile</value>
+    <comment>Comment Edit Profile </comment>
+  </data>
+  <data name="TranslationStudyPath" xml:space="preserve">
+    <value>Study Path</value>
+  </data>
+  <data name="TranslationStudypicker" xml:space="preserve">
+    <value>Please select your study path</value>
+  </data>
+  <data name="TranslationTimetablePicker" xml:space="preserve">
+    <value>Select the Day</value>
+  </data>
+  <data name="TranslationYear2018" xml:space="preserve">
+    <value>Year 2018</value>
+  </data>
+  <data name="TranslationYear2019" xml:space="preserve">
+    <value>Year 2019</value>
   </data>
 </root>
