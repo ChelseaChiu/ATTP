@@ -36,6 +36,8 @@ namespace ATTP.Views
                 new Language { DisplayName =  "Dansk - Danish", ShortName = "da" },
                 new Language { DisplayName =  "bahasa Indonesia - Indonesian", ShortName = "id" },
                 new Language { DisplayName =  "Tiếng Việt - Vietnamese", ShortName = "vi" },
+                new Language { DisplayName =  "Српски - Serbian", ShortName = "sr-Cyrl" },
+                new Language { DisplayName =  "Српски - Serbian", ShortName = "it" },
                 new Language { DisplayName =  "Русский - Russian", ShortName = "ru" }
 
 
@@ -191,6 +193,16 @@ namespace ATTP.Views
                             DisplayAlert("Đăng nhập", "Đăng nhập thành công", "đồng ý");
                             break;
                         }
+                    case "sr-Cyrl":
+                        {
+                            DisplayAlert("Пријавите се", "Успех за пријаву", "ок");
+                            break;
+                        }
+                    case "it":
+                        {
+                            DisplayAlert("Accesso", "ccesso riuscito", "OK");
+                            break;
+                        }
                     case "ru":
                         {
                             DisplayAlert("Авторизоваться", "Войти успешно", "Хорошо");
@@ -269,6 +281,16 @@ namespace ATTP.Views
                     case "vi":
                         {
                             DisplayAlert("Đăng nhập", "Đăng nhập Không đúng Lỗi: tên người dùng hoặc mật khẩu trống", "đồng ý");
+                            break;
+                        }
+                    case "sr-Cyrl":
+                        {
+                            DisplayAlert("Пријавите се", "Грешка код пријаве није исправна: празно корисничко име или лозинка", "ок");
+                            break;
+                        }
+                    case "it":
+                        {
+                            DisplayAlert("Accesso", "Errore di accesso non corretto: nome utente o password vuoti", "sì");
                             break;
                         }
                     case "ru":

@@ -15,7 +15,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-
 namespace ATTP.UWP
 {
     /// <summary>
@@ -29,7 +28,7 @@ namespace ATTP.UWP
         /// </summary>
         public App()
         {
-            InitializeComponent();
+            this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
 

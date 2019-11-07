@@ -134,7 +134,7 @@
         </trans-unit>
         <trans-unit id="TranslationApplyforParchment" translate="yes" xml:space="preserve">
           <source>Apply for Parchment</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">申请羊皮纸</target>
+          <target state="translated">申请结业证书</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Comment Apply for Parchment</note>
         </trans-unit>
         <trans-unit id="TranslationEditUsername" translate="yes" xml:space="preserve">

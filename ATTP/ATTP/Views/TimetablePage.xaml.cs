@@ -58,7 +58,7 @@ namespace ATTP.Views
             {
                 case "zh-Hans":
                     {
-                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Please click on 'Select the timetable day' to select the day : ", "OK");
+                        Application.Current.MainPage.DisplayAlert("重要", "请点击'选择时间表日期'以选择日期： ", "是");
 
                         base.OnAppearing();
 
@@ -66,7 +66,7 @@ namespace ATTP.Views
                     }
                 case "zh-Hant":
                     {
-                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Please click on 'Select the timetable day' to select the day : ", "OK");
+                        Application.Current.MainPage.DisplayAlert("重要", "請點擊'選擇時間表日期'以選擇日期： ", "是");
 
                         base.OnAppearing();
 
@@ -82,7 +82,7 @@ namespace ATTP.Views
                     }
                 case "mn-MN":
                     {
-                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Please click on 'Select the timetable day' to select the day : ", "OK");
+                        Application.Current.MainPage.DisplayAlert("ЧУХАЛ", "Өдөр сонгохын тулд 'Цагийн хуваарийг сонгох' гэснийг товшино уу: ", "тийм");
 
                         base.OnAppearing();
 
@@ -90,7 +90,7 @@ namespace ATTP.Views
                     }
                 case "ms":
                     {
-                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Please click on 'Select the timetable day' to select the day : ", "OK");
+                        Application.Current.MainPage.DisplayAlert("PENTING", "Sila klik pada 'Pilih jadual waktu' untuk memilih hari: ", "okey");
 
                         base.OnAppearing();
 
@@ -98,7 +98,7 @@ namespace ATTP.Views
                     }
                 case "fr":
                     {
-                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Please click on 'Select the timetable day' to select the day : ", "OK");
+                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "S'il vous plaît cliquer sur 'Sélectionnez le jour de l'horaire' pour sélectionner le jour: ", "Oui");
 
                         base.OnAppearing();
 
@@ -106,7 +106,7 @@ namespace ATTP.Views
                     }
                 case "de":
                     {
-                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Please click on 'Select the timetable day' to select the day : ", "OK");
+                        Application.Current.MainPage.DisplayAlert("WICHTIG", "Bitte klicken Sie auf Stundenplan auswählen , um den Tag auszuwählen: ", "Ja");
 
                         base.OnAppearing();
 
@@ -114,7 +114,7 @@ namespace ATTP.Views
                     }
                 case "ja":
                     {
-                        Application.Current.MainPage.DisplayAlert("IMPORTANT", "Please click on 'Select the timetable day' to select the day : ", "OK");
+                        Application.Current.MainPage.DisplayAlert("「重要」", "時刻表の日を選択」をクリックして日を選択してください：", "はい");
 
                         base.OnAppearing();
 
@@ -147,6 +147,14 @@ namespace ATTP.Views
                 case "vi":
                     {
                         Application.Current.MainPage.DisplayAlert("QUAN TRỌNG", "Vui lòng nhấp vào 'Chọn ngày có thời gian biểu' để chọn ngày: ", "đồng ý");
+
+                        base.OnAppearing();
+
+                        break;
+                    }
+                case "sr-Cyrl":
+                    {
+                        Application.Current.MainPage.DisplayAlert("ВАЖНО", "Молимо кликните на„ Изаберите дан распореда “да бисте изабрали дан: ", "ОК");
 
                         base.OnAppearing();
 

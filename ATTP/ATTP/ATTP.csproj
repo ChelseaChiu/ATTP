@@ -50,7 +50,10 @@
     <None Remove="MultilingualResources\ATTP.ko.xlf" />
     <None Remove="MultilingualResources\ATTP.mn-MN.xlf" />
     <None Remove="MultilingualResources\ATTP.ms.xlf" />
+    <None Remove="MultilingualResources\ATTP.ru.xlf" />
+    <None Remove="MultilingualResources\ATTP.sr-Cyrl.xlf" />
     <None Remove="MultilingualResources\ATTP.th.xlf" />
+    <None Remove="MultilingualResources\ATTP.vi.xlf" />
     <None Remove="MultilingualResources\ATTP.zh-Hans.xlf" />
     <None Remove="MultilingualResources\ATTP.zh-Hant.xlf" />
     <None Remove="MultilingualResources\ATTP.zh-TW.xlf" />
@@ -116,7 +119,10 @@
     <XliffResource Include="MultilingualResources\ATTP.ko.xlf" />
     <XliffResource Include="MultilingualResources\ATTP.mn-MN.xlf" />
     <XliffResource Include="MultilingualResources\ATTP.ms.xlf" />
+    <XliffResource Include="MultilingualResources\ATTP.ru.xlf" />
+    <XliffResource Include="MultilingualResources\ATTP.sr-Cyrl.xlf" />
     <XliffResource Include="MultilingualResources\ATTP.th.xlf" />
+    <XliffResource Include="MultilingualResources\ATTP.vi.xlf" />
     <XliffResource Include="MultilingualResources\ATTP.zh-Hans.xlf" />
     <XliffResource Include="MultilingualResources\ATTP.zh-Hant.xlf" />
     <XliffResource Include="MultilingualResources\ATTP.zh-TW.xlf" />

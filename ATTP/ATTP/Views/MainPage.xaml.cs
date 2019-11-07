@@ -229,6 +229,20 @@ namespace ATTP.Views
                         Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(HomePage)));
                         break;
                     }
+                case "sr-Cyrl":
+                    {
+                        menuList.Add(new MasterPageItem() { Title = "Почетна страница", ImageSource = "Home.png", TargetType = typeof(HomePage) });
+                        menuList.Add(new MasterPageItem() { Title = "Страница са резултатима", ImageSource = "Result.png", TargetType = typeof(ResultPage) });
+                        menuList.Add(new MasterPageItem() { Title = "Трансцрипт Паге", ImageSource = "Transcript.png", TargetType = typeof(TransciptPage) });
+                        menuList.Add(new MasterPageItem() { Title = "Распоред", ImageSource = "Calendar.png", TargetType = typeof(TimetablePage) });
+                        menuList.Add(new MasterPageItem() { Title = "профил страница", ImageSource = "Profile.png", TargetType = typeof(ProfilePage) });
+                        menuList.Add(new MasterPageItem() { Title = "Одјави се", ImageSource = "Exit.png", TargetType = typeof(LoginPage) });
+                        // Setting our list to be ItemSource for ListView in MainPage.xaml
+                        navigationDrawerList.ItemsSource = menuList;
+                        // Initial navigation, this can be used for our home page
+                        Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(HomePage)));
+                        break;
+                    }
             }
 
 
