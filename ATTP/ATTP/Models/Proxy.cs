@@ -1,4 +1,5 @@
-﻿using StudentServiceRef;
+﻿//using StudentServiceRef;
+using StudentServiceRef;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -179,7 +180,7 @@ namespace ATTP.Models
                     {
                         proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
                         double progress = 0.00d;
-                        progress = proxy.CalQualProgress(studentId, qualCode);
+                        progress = proxy.CalQualProgressAsync(studentId, qualCode);
                         if (progress >= 1)
                         {
                             proxy.CloseAsync();
@@ -237,7 +238,7 @@ namespace ATTP.Models
                     {
                         proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
                         List<Competency> competencies = new List<Competency>();
-                        var cList = proxy.GetCompetencyList(studentId, qualCode);
+                        var cList = proxy.CalQualProgressAsync(studentId, qualCode);
                         for (int i = 0; i < cList.Count; i++)
                         {
                             Competency comp = new Competency();

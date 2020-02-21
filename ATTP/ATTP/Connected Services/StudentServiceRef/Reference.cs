@@ -13,7 +13,7 @@ namespace StudentServiceRef
     
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Student", Namespace="http://schemas.datacontract.org/2004/07/SRV_WcfService")]
     public partial class Student : object
     {
@@ -95,7 +95,7 @@ namespace StudentServiceRef
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Qualification", Namespace="http://schemas.datacontract.org/2004/07/SRV_WcfService")]
     public partial class Qualification : object
     {
@@ -297,7 +297,7 @@ namespace StudentServiceRef
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Competency", Namespace="http://schemas.datacontract.org/2004/07/SRV_WcfService")]
     public partial class Competency : object
     {
@@ -453,55 +453,43 @@ namespace StudentServiceRef
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="StudentServiceRef.IStudentService")]
     public interface IStudentService
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetStudentById", ReplyAction="http://tempuri.org/IStudentService/GetStudentByIdResponse")]
-        StudentServiceRef.Student GetStudentById(string studentId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetStudentById", ReplyAction="http://tempuri.org/IStudentService/GetStudentByIdResponse")]
         System.Threading.Tasks.Task<StudentServiceRef.Student> GetStudentByIdAsync(string studentId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/Login", ReplyAction="http://tempuri.org/IStudentService/LoginResponse")]
-        bool Login(string inUserId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/Login", ReplyAction="http://tempuri.org/IStudentService/LoginResponse")]
         System.Threading.Tasks.Task<bool> LoginAsync(string inUserId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/CalQualProgress", ReplyAction="http://tempuri.org/IStudentService/CalQualProgressResponse")]
-        double CalQualProgress(string studentID, string qualCode);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/CalQualProgress", ReplyAction="http://tempuri.org/IStudentService/CalQualProgressResponse")]
         System.Threading.Tasks.Task<double> CalQualProgressAsync(string studentID, string qualCode);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetQualificationList", ReplyAction="http://tempuri.org/IStudentService/GetQualificationListResponse")]
-        System.Collections.Generic.List<StudentServiceRef.Qualification> GetQualificationList(string studentID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetQualificationList", ReplyAction="http://tempuri.org/IStudentService/GetQualificationListResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<StudentServiceRef.Qualification>> GetQualificationListAsync(string studentID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetCompetencyList", ReplyAction="http://tempuri.org/IStudentService/GetCompetencyListResponse")]
-        System.Collections.Generic.List<StudentServiceRef.Competency> GetCompetencyList(string studentID, string qualificationID);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetCompetencyList", ReplyAction="http://tempuri.org/IStudentService/GetCompetencyListResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<StudentServiceRef.Competency>> GetCompetencyListAsync(string studentID, string qualificationID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetQualification", ReplyAction="http://tempuri.org/IStudentService/GetQualificationResponse")]
-        StudentServiceRef.Qualification GetQualification(string qualCode);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetQualification", ReplyAction="http://tempuri.org/IStudentService/GetQualificationResponse")]
         System.Threading.Tasks.Task<StudentServiceRef.Qualification> GetQualificationAsync(string qualCode);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetStudents", ReplyAction="http://tempuri.org/IStudentService/GetStudentsResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<StudentServiceRef.Student>> GetStudentsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetNotPassedCompetencies", ReplyAction="http://tempuri.org/IStudentService/GetNotPassedCompetenciesResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<StudentServiceRef.Competency>> GetNotPassedCompetenciesAsync(string studentID, string qualicationID);
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     public interface IStudentServiceChannel : StudentServiceRef.IStudentService, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     public partial class StudentServiceClient : System.ServiceModel.ClientBase<StudentServiceRef.IStudentService>, StudentServiceRef.IStudentService
     {
         
@@ -538,19 +526,9 @@ namespace StudentServiceRef
         {
         }
         
-        public StudentServiceRef.Student GetStudentById(string studentId)
-        {
-            return base.Channel.GetStudentById(studentId);
-        }
-        
         public System.Threading.Tasks.Task<StudentServiceRef.Student> GetStudentByIdAsync(string studentId)
         {
             return base.Channel.GetStudentByIdAsync(studentId);
-        }
-        
-        public bool Login(string inUserId)
-        {
-            return base.Channel.Login(inUserId);
         }
         
         public System.Threading.Tasks.Task<bool> LoginAsync(string inUserId)
@@ -558,19 +536,9 @@ namespace StudentServiceRef
             return base.Channel.LoginAsync(inUserId);
         }
         
-        public double CalQualProgress(string studentID, string qualCode)
-        {
-            return base.Channel.CalQualProgress(studentID, qualCode);
-        }
-        
         public System.Threading.Tasks.Task<double> CalQualProgressAsync(string studentID, string qualCode)
         {
             return base.Channel.CalQualProgressAsync(studentID, qualCode);
-        }
-        
-        public System.Collections.Generic.List<StudentServiceRef.Qualification> GetQualificationList(string studentID)
-        {
-            return base.Channel.GetQualificationList(studentID);
         }
         
         public System.Threading.Tasks.Task<System.Collections.Generic.List<StudentServiceRef.Qualification>> GetQualificationListAsync(string studentID)
@@ -578,24 +546,24 @@ namespace StudentServiceRef
             return base.Channel.GetQualificationListAsync(studentID);
         }
         
-        public System.Collections.Generic.List<StudentServiceRef.Competency> GetCompetencyList(string studentID, string qualificationID)
-        {
-            return base.Channel.GetCompetencyList(studentID, qualificationID);
-        }
-        
         public System.Threading.Tasks.Task<System.Collections.Generic.List<StudentServiceRef.Competency>> GetCompetencyListAsync(string studentID, string qualificationID)
         {
             return base.Channel.GetCompetencyListAsync(studentID, qualificationID);
         }
         
-        public StudentServiceRef.Qualification GetQualification(string qualCode)
-        {
-            return base.Channel.GetQualification(qualCode);
-        }
-        
         public System.Threading.Tasks.Task<StudentServiceRef.Qualification> GetQualificationAsync(string qualCode)
         {
             return base.Channel.GetQualificationAsync(qualCode);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<StudentServiceRef.Student>> GetStudentsAsync()
+        {
+            return base.Channel.GetStudentsAsync();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<StudentServiceRef.Competency>> GetNotPassedCompetenciesAsync(string studentID, string qualicationID)
+        {
+            return base.Channel.GetNotPassedCompetenciesAsync(studentID, qualicationID);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
@@ -636,11 +604,12 @@ namespace StudentServiceRef
         {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IStudentService))
             {
-                return new System.ServiceModel.EndpointAddress("http://srvwcfservice.azurewebsites.net/services/StudentService.svc");
+                return new System.ServiceModel.EndpointAddress("http://srvwcfservice20200221112210.azurewebsites.net/services/StudentService.svc");
             }
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpsBinding_IStudentService))
             {
-                return new System.ServiceModel.EndpointAddress("https://srvwcfservice.azurewebsites.net/services/StudentService.svc");
+                return new System.ServiceModel.EndpointAddress("https://srvwcfservice20200221112210.azurewebsites.net/services/StudentService.svc" +
+                        "");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }

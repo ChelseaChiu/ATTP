@@ -1,12 +1,9 @@
 ﻿{
   "ProviderId": "Microsoft.VisualStudio.ConnectedService.Wcf",
-  "Version": "15.0.30730.948",
-  "GettingStartedDocument": {
-    "Uri": "https://go.microsoft.com/fwlink/?linkid=858517"
-  },
+  "Version": "15.0.31022.994",
   "ExtendedData": {
     "inputs": [
-      "https://srvwcfservice.azurewebsites.net/services/StudentService.svc?wsdl"
+      "https://srvwcfservice20200221112210.azurewebsites.net/services/StudentService.svc"
     ],
     "collectionTypes": [
       "System.Collections.Generic.Dictionary`2",
@@ -37,7 +34,6 @@
       "Xamarin.Forms.Platform, {Xamarin.Forms, 3.3.0.912540}",
       "Xamarin.Forms.Xaml, {Xamarin.Forms, 3.3.0.912540}"
     ],
-    "sync": true,
     "targetFramework": "netstandard2.0",
     "typeReuseMode": "All"
   }

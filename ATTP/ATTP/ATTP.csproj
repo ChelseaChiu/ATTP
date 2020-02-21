@@ -69,6 +69,7 @@
     <Content Include="Assets\Result.png" />
     <Content Include="Assets\Transcript.png" />
     <Content Include="Assets\WLogo.png" />
+    <Content Include="Connected Services\Microsoft WCF Web Service Reference Provider\ConnectedService.json" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Bcl.Build" Version="1.0.14" />
