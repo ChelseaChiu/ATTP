@@ -31,7 +31,6 @@ namespace ATTP.Models
             {
                 if (Proxy.login(id))
                 {
-
                     return true;
                 }
                 else return false;

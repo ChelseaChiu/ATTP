@@ -19,25 +19,21 @@ namespace ATTP.Models
             try
             {
                 proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
-                if (proxy.Login(id))
+                if (proxy.LoginAsync(id).Result)
                 {
-                    proxy.CloseAsync();
                     return true;
                 }
                 else
                 {
-                    proxy.CloseAsync();
                     return false;
                 }
             }
             catch (CommunicationException)
             {
-                proxy.Abort();
                 return false;
             }
             catch (TimeoutException)
             {
-                proxy.Abort();
                 return false;
             }
             catch (Exception)
@@ -49,122 +45,65 @@ namespace ATTP.Models
 
         }
 
-        public static User getStudentById(string id)
+        public static StudentServiceRef.Student getStudentById(string id)
         {
             try
             {
                 proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
-                if (proxy != null)
-                {
-                    if (proxy.State != CommunicationState.Faulted)
-                    {
+
                         proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
-                        User user = new User();
-                        var s = proxy.GetStudentById(id);
+                        var s = proxy.GetStudentByIdAsync(id).Result;
                         if (s != null)
                         {
-                            user.Username = String.Format(s.GivenName + "  " + s.LastName);
-                            user.Id = s.StudentID;
-                            proxy.CloseAsync();
-                            return user;
-
+                            return s;
                         }
                         else
                         {
-                            proxy.CloseAsync();
                             return null;
-                        }
-                    }
-                    else
-                    {
-                        proxy.Abort();
-                        return null;
-                    }
-
-                }
-                else
-                {
-                    proxy.Abort();
-                    return null;
-                }
-
+                        }                  
 
             }
             catch (CommunicationException)
             {
-                proxy.Abort();
                 return null;
             }
             catch (TimeoutException)
             {
-                proxy.Abort();
                 return null;
             }
             catch (Exception)
             {
-
                 throw;
             }
 
         }
 
-        public static List<Qualification> GetQualifications(string studentId)
+        public static List<StudentServiceRef.Qualification> GetQualifications(string studentId)
         {
 
             try
             {
                 proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
-                if (proxy != null)
+                var qList = proxy.GetQualificationListAsync(studentId).Result;
+                List<StudentServiceRef.Qualification> qualifications = new List<StudentServiceRef.Qualification>();
+                foreach (var q in qList)
                 {
-                    if (proxy.State != CommunicationState.Faulted)
-                    {
-                        List<Qualification> qualifications = new List<Qualification>();
-                        var qList = proxy.GetQualificationList(studentId);
-                        for (int i = 0; i < qList.Count; i++)
-                        {
-                            Qualification qual = new Qualification();
-                            qual.QualCode = qList[i].QualCode;
-                            qual.QualName = qList[i].QualName;
-                            qual.CoreUnits = qList[i].CoreUnits;
-                            qual.TafeQualCode = qList[i].TafeQualCode;
-                            qual.NationaQualCode = qList[i].NationalQualCode;
-                            qual.TotalUnits = qList[i].TotalUnits;
-                            qual.ElectedUnits = qList[i].ElectedUnits;
-                            qual.ReqListedElectedUnits = qList[i].ReqListedElectedUnits;
-
-                            qualifications.Add(qual);
-                        }
-                        proxy.CloseAsync();
-                        return qualifications;
-                    }
-                    else
-                    {
-                        proxy.Abort();
-                        return null;
-                    }
-
-                }
-                else
-                {
-                    proxy.Abort();
-                    return null;
+                    qualifications.Add(q);
                 }
 
+                return qualifications;
 
             }
             catch (CommunicationException)
             {
-                proxy.Abort();
                 return null;
             }
             catch (TimeoutException)
             {
-                proxy.Abort();
                 return null;
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -174,52 +113,27 @@ namespace ATTP.Models
             try
             {
                 proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
-                if (proxy != null)
+                var progress = proxy.CalQualProgressAsync(studentId, qualCode).Result;
+                if (progress >= 1)
                 {
-                    if (proxy.State != CommunicationState.Faulted)
-                    {
-                        proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
-                        double progress = 0.00d;
-                        progress = proxy.CalQualProgressAsync(studentId, qualCode);
-                        if (progress >= 1)
-                        {
-                            proxy.CloseAsync();
-                            return 1.00d;
-                        }
-                        else
-                        {
-                            proxy.CloseAsync();
-                            return progress;
-                        }
-                    }
-                    else
-                    {
-                        proxy.Abort();
-                        return 0;
-                    }
-
+                    return 1.00d;
                 }
                 else
                 {
-                    proxy.Abort();
-                    return 0;
+                    return progress;
                 }
-
 
             }
             catch (CommunicationException)
             {
-                proxy.Abort();
                 return 0;
             }
             catch (TimeoutException)
             {
-                proxy.Abort();
                 return 0;
             }
             catch (Exception)
             {
-
                 throw;
             }
 
@@ -227,45 +141,18 @@ namespace ATTP.Models
 
 
 
-        public static List<Competency> GetCompetencies(string studentId, string qualCode)
+        public static List<StudentServiceRef.Competency> GetCompetencies(string studentId, string qualCode)
         {
             try
             {
                 proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
-                if (proxy != null)
+                List<StudentServiceRef.Competency> competencies = new List<StudentServiceRef.Competency>();
+                var cList = proxy.GetCompetencyListAsync(studentId, qualCode).Result;
+                foreach (var c in cList)
                 {
-                    if (proxy.State != CommunicationState.Faulted)
-                    {
-                        proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
-                        List<Competency> competencies = new List<Competency>();
-                        var cList = proxy.CalQualProgressAsync(studentId, qualCode);
-                        for (int i = 0; i < cList.Count; i++)
-                        {
-                            Competency comp = new Competency();
-                            comp.TafeCompCode = cList[i].TafeCode;
-                            comp.NationaCompCode = cList[i].NationalCode;
-                            comp.CompetencyName = cList[i].CompetencyName;
-                            comp.SubjectCode = cList[i].SubjectCode;
-                            comp.CompTypeCode = cList[i].TrainingPakckageUsage;
-                            comp.Results = cList[i].Results;
-                            competencies.Add(comp);
-
-                        }
-                        proxy.CloseAsync();
-                        return competencies;
-                    }
-                    else
-                    {
-                        proxy.Abort();
-                        return null;
-                    }
-
+                    competencies.Add(c);
                 }
-                else
-                {
-                    proxy.Abort();
-                    return null;
-                }
+                return competencies;
 
 
             }
