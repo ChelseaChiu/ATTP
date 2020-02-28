@@ -15,31 +15,35 @@
             <Label x:Name="HomeLbl" Text="{i18n:Translate TranslationHome}" FontSize="30"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="Start" />
-            <ListView x:Name="qualListView" ItemsSource="{Binding Qualifications}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <!--The design of the home page need to be enhance-->
-                                <Frame CornerRadius="5" Padding="8" BackgroundColor="#DEFDFF"  HeightRequest="300">
-                                <StackLayout Orientation="Horizontal">
-                                    <StackLayout Orientation="Vertical">
-                                        <Label x:Name="StudyPathLabel" Text="{Binding QualName}" HorizontalOptions="FillAndExpand" FontAttributes="Bold" />
-
-                                        <Label x:Name="CoreLabel" Text="{Binding StringCoreResult}" />
-                                        <Label x:Name="ElectiveLabel" Text="{Binding stringElectiveResult}" />
-                                        <Label x:Name="LELabel" Text="{Binding StringLEResult}" />
-                                        <Label x:Name="ProgressLabel" Text="{Binding StringTotalResult}" />
+            <StackLayout Orientation="Vertical" VerticalOptions="Fill" HorizontalOptions="StartAndExpand">
+                <ListView x:Name="qualListView" ItemsSource="{Binding qualifications}" VerticalOptions="FillAndExpand" RowHeight="170">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <!--The design of the home page need to be enhance-->
+                                <Frame CornerRadius="5" Padding="8" BackgroundColor="#DEFDFF" >
+                                    <StackLayout>
+                                        <Label x:Name="StudyPathLabel" Text="{Binding QualName}" FontAttributes="Bold" FontSize="Medium" />
+                                        <StackLayout Orientation="Horizontal">
+                                            <StackLayout Orientation="Vertical"  >
+                                                <Label x:Name="CoreLabel" Text="{Binding StringCoreResult}" />
+                                                <Label x:Name="ElectiveLabel" Text="{Binding StringElectiveResult}" />
+                                                <Label x:Name="LELabel" Text="{Binding StringLEResult}" />
+                                                <Label x:Name="TotalLabel" Text="{Binding StringTotalResult}" />
+                                            </StackLayout>
+                                            <StackLayout Spacing="0" HorizontalOptions="Fill" Margin="80,0,0,0">
+                                                <control:ProgressRing x:Name="ProgressRing" RingThickness="16" Progress="{Binding Progress}"  Scale=".9" RingBaseColor="Gray" RingProgressColor="#1CA5DE" WidthRequest="90" HeightRequest="90" />
+                                                <Label Text="{Binding StringProgress}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                                            </StackLayout>
+                                        </StackLayout>
                                     </StackLayout>
-                                    <Label Text="{Binding stringProgress}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                                    <control:ProgressRing x:Name="ProgressRing" RingThickness="16" Progress="{Binding Progress}"  Scale=".9" RingBaseColor="Gray" RingProgressColor="#1CA5DE"  VerticalOptions="Center" InputTransparent="False" />
-                                </StackLayout>
-                            </Frame>
-                        </ViewCell>
-                    </DataTemplate>
-                   
-                </ListView.ItemTemplate>
-            </ListView>
-            <Button x:Name="ParchmentButton" Text="{i18n:Translate TranslationApplyforParchment}" BackgroundColor="#A6E4F7" FontAttributes="Bold" HorizontalOptions="Center" Clicked="ParchmentBtnClicked" IsEnabled="False"/>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <Button x:Name="ParchmentButton" Text="{i18n:Translate TranslationApplyforParchment}" BackgroundColor="#A6E4F7" FontAttributes="Bold" HorizontalOptions="Center" Clicked="ParchmentBtnClicked" IsEnabled="True"/>
 
         </StackLayout>
     </ContentPage.Content>

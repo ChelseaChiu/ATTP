@@ -48,7 +48,7 @@ namespace ATTP.Models
 
         }
 
-        public static User getStudentById(string id)
+        public static Student getStudentById(string id)
         {
             try
             {
@@ -57,15 +57,11 @@ namespace ATTP.Models
                 {
                     if (proxy.State != CommunicationState.Faulted)
                     {
-                        proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
-                        User user = new User();
                         var s = proxy.GetStudentById(id);
                         if (s != null)
                         {
-                            user.Username = String.Format(s.GivenName + "  " + s.LastName);
-                            user.Id = s.StudentID;
                             proxy.CloseAsync();
-                            return user;
+                            return s;
                         }
                         else
                         {
@@ -106,15 +102,65 @@ namespace ATTP.Models
 
         }
 
+        //public static List<StudentServiceRef.Qualification> GetQualifications(string studentId)
+        //{
+        //    try
+        //    {
+        //        proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
+        //        if (proxy!=null)
+        //        {
+        //            if (proxy.State!=CommunicationState.Faulted)
+        //            {
+        //                var qList = proxy.GetQualificationList(studentId);
+        //                proxy.CloseAsync();
+        //                List<StudentServiceRef.Qualification> qualifications = new List<StudentServiceRef.Qualification>();
+        //                foreach (var q in qList)
+        //                {
+        //                    qualifications.Add(q);
+        //                }
+        //                return qualifications;
+        //            }
+        //            else
+        //            {
+        //                proxy.Abort();
+        //                return null;
+        //            }
+
+        //        }
+        //        else
+        //        {
+        //            proxy.Abort();
+        //            return null;
+        //        }
+
+
+        //    }
+        //    catch (CommunicationException)
+        //    {
+        //        proxy.Abort();
+        //        return null;
+        //    }
+        //    catch (TimeoutException)
+        //    {
+        //        proxy.Abort();
+        //        return null;
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        throw;
+        //    }
+        //}
+
         public static List<Qualification> GetQualifications(string studentId)
         {
 
             try
             {
                 proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
-                if (proxy!=null)
+                if (proxy != null)
                 {
-                    if (proxy.State!=CommunicationState.Faulted)
+                    if (proxy.State != CommunicationState.Faulted)
                     {
                         List<Qualification> qualifications = new List<Qualification>();
                         var qList = proxy.GetQualificationList(studentId);
@@ -129,7 +175,11 @@ namespace ATTP.Models
                             qual.TotalUnits = qList[i].TotalUnits;
                             qual.ElectedUnits = qList[i].ElectedUnits;
                             qual.ReqListedElectedUnits = qList[i].ReqListedElectedUnits;
-
+                            qual.DoneC=qList[i].DoneC;
+                            qual.DoneE = qList[i].DoneE;
+                            qual.DoneLE = qList[i].DoneLE;
+                            qual.DoneTotal = qList[i].DoneTotal;
+                            
                             qualifications.Add(qual);
                         }
                         proxy.CloseAsync();
@@ -140,7 +190,7 @@ namespace ATTP.Models
                         proxy.Abort();
                         return null;
                     }
-                    
+
                 }
                 else
                 {
@@ -166,7 +216,6 @@ namespace ATTP.Models
                 throw;
             }
         }
-
         public static double CalQualProgress(string studentId, string qualCode)
         {
             try
@@ -176,12 +225,11 @@ namespace ATTP.Models
                 {
                     if (proxy.State != CommunicationState.Faulted)
                     {
-                        proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
                         double progress = 0.00d;
                         progress = proxy.CalQualProgress(studentId, qualCode);
                         if (progress >= 1)
                         {
-                         proxy.CloseAsync();
+                            proxy.CloseAsync();
                             return 1.00d;
                         }
                         else
@@ -225,7 +273,7 @@ namespace ATTP.Models
 
 
 
-        public static List<Competency> GetCompetencies(string studentId, string qualCode)
+        public static List<StudentServiceRef.Competency> GetCompetencies(string studentId, string qualCode)
         {
             try
             {
@@ -234,20 +282,11 @@ namespace ATTP.Models
                 {
                     if (proxy.State != CommunicationState.Faulted)
                     {
-                        proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
-                        List<Competency> competencies = new List<Competency>();
+                        List<StudentServiceRef.Competency> competencies = new List<StudentServiceRef.Competency>();
                         var cList = proxy.GetCompetencyList(studentId, qualCode);
-                        for (int i = 0; i < cList.Count; i++)
+                        foreach (var c in cList)
                         {
-                            Competency comp = new Competency();
-                            comp.TafeCompCode = cList[i].TafeCode;
-                            comp.NationaCompCode = cList[i].NationalCode;
-                            comp.CompetencyName = cList[i].CompetencyName;
-                            comp.SubjectCode = cList[i].SubjectCode;
-                            comp.CompTypeCode = cList[i].TrainingPakckageUsage;
-                            comp.Results = cList[i].Results;
-                            competencies.Add(comp);
-
+                            competencies.Add(c);
                         }
                         proxy.CloseAsync();
                         return competencies;
