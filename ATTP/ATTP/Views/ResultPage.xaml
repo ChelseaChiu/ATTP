@@ -10,7 +10,7 @@
         <StackLayout BackgroundColor="White" Margin="20,10,20,20">
             <Label x:Name="ResultLbl" Text="Result" FontSize="30" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" />
             <Label x:Name="StudyLbl" Text="Study Path" FontAttributes="Bold" FontSize="14"/>
-            <Picker x:Name="StudyPicker" Title="Please select your study path" ItemsSource="{Binding StudyPaths}" ItemDisplayBinding="{Binding StudyPathName}" FontSize="14" />
+            <Picker x:Name="StudyPicker" Title="Please select your study path" ItemsSource="{Binding qualifications}" ItemDisplayBinding="{Binding QualName}" FontSize="14" />
 
             <Label x:Name="CompleteLbl" Text="Completed" FontAttributes="Bold" FontSize="12"/>
             <Grid BackgroundColor="#DE1616" RowSpacing="3" ColumnSpacing="10">
@@ -29,8 +29,8 @@
                 </Grid.RowDefinitions>
                 <BoxView Grid.Row="0" Grid.ColumnSpan="6" Color="#8F0000" HorizontalOptions="Fill"/>
                 <Label x:Name="SubjectCLbl" Text="Subject Code" Grid.Column="0" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
-                <Label x:Name="TafeCLbl" Text="Tafe Code" Grid.Column="1" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
-                <Label x:Name="NatCTbl" Text="National Code" Grid.Column="2"  Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <!--<Label x:Name="TafeCLbl" Text="Tafe Code" Grid.Column="1" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Label x:Name="NatCTbl" Text="National Code" Grid.Column="2"  Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>-->
                 <Label x:Name="SemCLbl" Text="Semester" Grid.Column="3" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
                 <Label x:Name="YearCLbl" Text="Year" Grid.Column="4" Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>
                 <Label x:Name="GradeCLbl" Text="Grade" Grid.Column="5"  Grid.Row="1" FontSize="12" TextColor="#FFFFFF" FontAttributes="Bold"/>

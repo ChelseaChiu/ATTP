@@ -20,7 +20,7 @@ namespace ATTP.Models
         public int DoneLE { get; set; }
         public int DoneTotal { get; set; }
 
-        public Competency Competency { get; set; }
+        public List<Competency> Competencies { get; set; }
 
         public double Progress { get; set; }
 
@@ -34,6 +34,8 @@ namespace ATTP.Models
 
 
         public string StringTotalResult { get; set; }
+
+
 
     }
 }

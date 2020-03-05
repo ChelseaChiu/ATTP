@@ -115,7 +115,7 @@ namespace ATTP.Views
             {
                 App._Id = user.Id;
                 StudentServiceRef.Student student = Proxy.getStudentById(user.Id);
-                App._Username = $"{student.GivenName} {student.LastName}";
+                App._Username = $"{student.FirstName} {student.LastName}";
                 switch (language.ShortName)
                 {
                     // Im aware this is the lazy method that requires alot more work but im tired and lazy rn Kimi

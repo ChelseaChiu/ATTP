@@ -28,9 +28,8 @@ namespace ATTP.Models
         {
             
 
-            if(Proxy.login(id))
+            if(Proxy.login(id,password))
             {
-   
                 return true;
             }
 
