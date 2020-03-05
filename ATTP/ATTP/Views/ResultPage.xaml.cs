@@ -22,7 +22,7 @@ namespace ATTP.Views
         {
             InitializeComponent();
 
-            qualifications = Proxy.GetQualifications(App._Id);
+            //qualifications = Proxy.GetQualifications(App._Id);
             StudyPicker.SelectedIndexChanged += StudyPicker_SelectedIndexChanged;
         }
 

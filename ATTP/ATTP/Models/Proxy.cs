@@ -18,6 +18,11 @@ namespace ATTP.Models
             try
             {
                 proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
+                proxy.ChannelFactory.Endpoint.Binding.SendTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.ReceiveTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.OpenTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.CloseTimeout = TimeSpan.FromMinutes(10);
+                proxy.InnerChannel.OperationTimeout = TimeSpan.FromMinutes(10);
                 if (proxy.Login(id,password))
                 {
                     proxy.CloseAsync();
@@ -57,6 +62,11 @@ namespace ATTP.Models
             try
             {
                 proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
+                proxy.ChannelFactory.Endpoint.Binding.SendTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.ReceiveTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.OpenTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.CloseTimeout = TimeSpan.FromMinutes(10);
+                proxy.InnerChannel.OperationTimeout = TimeSpan.FromMinutes(10);
                 if (proxy != null)
                 {
                     if (proxy.State != CommunicationState.Faulted)
@@ -113,6 +123,11 @@ namespace ATTP.Models
             try
             {
                 proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
+                proxy.ChannelFactory.Endpoint.Binding.SendTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.ReceiveTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.OpenTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.CloseTimeout = TimeSpan.FromMinutes(10);
+                proxy.InnerChannel.OperationTimeout = TimeSpan.FromMinutes(10);
                 if (proxy != null)
                 {
                     if (proxy.State != CommunicationState.Faulted)
@@ -164,6 +179,11 @@ namespace ATTP.Models
             try
             {
                 proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
+                proxy.ChannelFactory.Endpoint.Binding.SendTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.ReceiveTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.OpenTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.CloseTimeout = TimeSpan.FromMinutes(10);
+                proxy.InnerChannel.OperationTimeout = TimeSpan.FromMinutes(10);
                 if (proxy != null)
                 {
                     if (proxy.State != CommunicationState.Faulted)
@@ -291,10 +311,15 @@ namespace ATTP.Models
             try
             {
                 proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
+                proxy.ChannelFactory.Endpoint.Binding.SendTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.ReceiveTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.OpenTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.CloseTimeout = TimeSpan.FromMinutes(10);
+                proxy.InnerChannel.OperationTimeout=TimeSpan.FromMinutes(10);
                 if (proxy != null)
                 {
                     if (proxy.State != CommunicationState.Faulted)
-                    {
+                    {                   
                         List<StudentServiceRef.Competency> competencies = new List<StudentServiceRef.Competency>();
                         var cList = proxy.GetCompetencyList(studentId, qualificationID);
                         foreach (var c in cList)
