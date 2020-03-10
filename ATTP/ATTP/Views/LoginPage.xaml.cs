@@ -120,7 +120,8 @@ namespace ATTP.Views
             if (user.Valdation(user.Id, user.Password))
             {
                 App._Id = user.Id;
-                App._Username = Proxy.getStudentById(user.Id).Username;
+                StudentServiceRef.Student student = Proxy.getStudentById(user.Id);
+                App._Username = $"{student.FirstName} {student.LastName}";
                 switch (language.ShortName)
                 {
                     // Im aware this is the lazy method that requires alot more work but im tired and lazy rn Kimi

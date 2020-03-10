@@ -14,7 +14,7 @@ namespace ATTP.Models
         public string Username { get; set; }
         public string Password { get; set; }
 
-       // public string Dob { get; set; }
+        // public string Dob { get; set; }
 
         public User() { }
         public User(string id, string password)
@@ -23,24 +23,17 @@ namespace ATTP.Models
             this.Password = password;
         }
 
-        
-         public bool Valdation(string id, string password)
+
+        public bool Valdation(string id, string password)
         {
 
-            if ((!string.IsNullOrWhiteSpace(id) && !string.IsNullOrWhiteSpace(password) && password == "SRV"))
-            {
-                if (Proxy.login(id))
-                {
 
-                    return true;
-                }
-                else return false;
+            if (Proxy.login(id, password))
+            {
+                return true;
             }
 
-
-
-
-            //           if (!string.IsNullOrWhiteSpace(this.Username) && !string.IsNullOrWhiteSpace(this.Password) && this.Password=="001096907")
+            //           if (!string.IsNullOrWhiteSpace(this.Username) && !string.IsNullOrWhiteSpace(this.Password) && this.Username=="001096907")
             //           {
             //               return true;
             //           }

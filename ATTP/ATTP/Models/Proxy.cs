@@ -13,66 +13,133 @@ namespace ATTP.Models
     {
         private static StudentServiceClient proxy = null;
 
-        public static bool login(string id)
+        public static bool login(string id, string password)
         {
             try
             {
                 proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
-                if (proxy.Login(id))
+                proxy.ChannelFactory.Endpoint.Binding.SendTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.ReceiveTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.OpenTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.CloseTimeout = TimeSpan.FromMinutes(10);
+                proxy.InnerChannel.OperationTimeout = TimeSpan.FromMinutes(10);
+                if (proxy.Login(id, password))
                 {
                     proxy.CloseAsync();
+                    Console.WriteLine("login successfully");
                     return true;
                 }
                 else
                 {
                     proxy.CloseAsync();
+                    Console.WriteLine("login failed");
                     return false;
                 }
             }
-            catch (CommunicationException)
+            catch (CommunicationException ex)
             {
                 proxy.Abort();
+                Console.WriteLine(ex.Message);
                 return false;
             }
-            catch (TimeoutException)
+            catch (TimeoutException ex)
             {
                 proxy.Abort();
+                Console.WriteLine(ex.Message);
                 return false;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                Console.WriteLine(ex.Message);
+                return false;
             }
 
 
         }
 
-        public static User getStudentById(string id)
+        public static Student getStudentById(string id)
         {
             try
             {
                 proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
+                proxy.ChannelFactory.Endpoint.Binding.SendTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.ReceiveTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.OpenTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.CloseTimeout = TimeSpan.FromMinutes(10);
+                proxy.InnerChannel.OperationTimeout = TimeSpan.FromMinutes(10);
                 if (proxy != null)
                 {
                     if (proxy.State != CommunicationState.Faulted)
                     {
-                        proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
-                        User user = new User();
                         var s = proxy.GetStudentById(id);
                         if (s != null)
                         {
-                            user.Username = String.Format(s.GivenName + "  " + s.LastName);
-                            user.Id = s.StudentID;
                             proxy.CloseAsync();
-                            return user;
-
+                            return s;
                         }
                         else
                         {
                             proxy.CloseAsync();
                             return null;
                         }
+                    }
+                    else
+                    {
+                        proxy.Abort();
+                        return null;
+                    }
+
+                }
+                else
+                {
+                    proxy.Abort();
+                    return null;
+                }
+
+
+            }
+            catch (CommunicationException ex)
+            {
+                proxy.Abort();
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+            catch (TimeoutException ex)
+            {
+                proxy.Abort();
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+
+        }
+
+        public static List<StudentServiceRef.Qualification> GetQualificationList(string studentId)
+        {
+            try
+            {
+                proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
+                proxy.ChannelFactory.Endpoint.Binding.SendTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.ReceiveTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.OpenTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.CloseTimeout = TimeSpan.FromMinutes(10);
+                proxy.InnerChannel.OperationTimeout = TimeSpan.FromMinutes(10);
+                if (proxy != null)
+                {
+                    if (proxy.State != CommunicationState.Faulted)
+                    {
+                        var qList = proxy.GetQualificationList(studentId);
+                        proxy.CloseAsync();
+                        List<StudentServiceRef.Qualification> qualifications = new List<StudentServiceRef.Qualification>();
+                        foreach (var q in qList)
+                        {
+                            qualifications.Add(q);
+                        }
+                        return qualifications;
                     }
                     else
                     {
@@ -104,7 +171,6 @@ namespace ATTP.Models
 
                 throw;
             }
-
         }
 
         public static List<Qualification> GetQualifications(string studentId)
@@ -113,6 +179,11 @@ namespace ATTP.Models
             try
             {
                 proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
+                proxy.ChannelFactory.Endpoint.Binding.SendTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.ReceiveTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.OpenTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.CloseTimeout = TimeSpan.FromMinutes(10);
+                proxy.InnerChannel.OperationTimeout = TimeSpan.FromMinutes(10);
                 if (proxy != null)
                 {
                     if (proxy.State != CommunicationState.Faulted)
@@ -130,6 +201,16 @@ namespace ATTP.Models
                             qual.TotalUnits = qList[i].TotalUnits;
                             qual.ElectedUnits = qList[i].ElectedUnits;
                             qual.ReqListedElectedUnits = qList[i].ReqListedElectedUnits;
+                            qual.Progress = qList[i].Progress;
+                            qual.DoneC = qList[i].DoneC;
+                            qual.DoneE = qList[i].DoneE;
+                            qual.DoneLE = qList[i].DoneLE;
+                            qual.DoneTotal = qList[i].DoneTotal;
+                            qual.StringCoreResult = String.Format("Core Units: {0} of {1}", qual.DoneC, qual.CoreUnits);
+                            qual.StringElectiveResult = String.Format("Elective Units: {0} of {1}", qual.DoneE, qual.ElectedUnits);
+                            qual.StringLEResult = String.Format("List Elective Units: {0} of {1}", qual.DoneLE, qual.ReqListedElectedUnits);
+                            qual.StringTotalResult = String.Format("Total Units: {0} of {1}", qual.DoneTotal, qual.TotalUnits);
+                            qual.StringProgress = String.Format(qual.Progress * 100 + "%");
 
                             qualifications.Add(qual);
                         }
@@ -168,87 +249,82 @@ namespace ATTP.Models
             }
         }
 
-        public static double CalQualProgress(string studentId, string qualCode)
+        //public static double CalQualProgress(string studentId, string qualCode)
+        //{
+        //    try
+        //    {
+        //        proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
+        //        if (proxy != null)
+        //        {
+        //            if (proxy.State != CommunicationState.Faulted)
+        //            {
+        //                double progress = 0.00d;
+        //                progress = proxy.CalQualProgress(studentId, qualCode);
+        //                if (progress >= 1)
+        //                {
+        //                    proxy.CloseAsync();
+        //                    return 1.00d;
+        //                }
+        //                else
+        //                {
+        //                    proxy.CloseAsync();
+        //                    return progress;
+        //                }
+        //            }
+        //            else
+        //            {
+        //                proxy.Abort();
+        //                return 0;
+        //            }
+
+        //        }
+        //        else
+        //        {
+        //            proxy.Abort();
+        //            return 0;
+        //        }
+
+
+        //    }
+        //    catch (CommunicationException)
+        //    {
+        //        proxy.Abort();
+        //        return 0;
+        //    }
+        //    catch (TimeoutException)
+        //    {
+        //        proxy.Abort();
+        //        return 0;
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        throw;
+        //    }
+
+        //}
+
+
+
+        public static List<StudentServiceRef.Competency> GetCompetencies(string studentId, string qualificationID)
         {
             try
             {
                 proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
+                proxy.ChannelFactory.Endpoint.Binding.SendTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.ReceiveTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.OpenTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.CloseTimeout = TimeSpan.FromMinutes(10);
+                proxy.InnerChannel.OperationTimeout = TimeSpan.FromMinutes(10);
                 if (proxy != null)
                 {
                     if (proxy.State != CommunicationState.Faulted)
                     {
-                        proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
-                        double progress = 0.00d;
-                        progress = proxy.CalQualProgress(studentId, qualCode);
-                        if (progress >= 1)
+                        List<StudentServiceRef.Competency> competencies = new List<StudentServiceRef.Competency>();
+                        var cList = proxy.GetCompetencyList(studentId, qualificationID);
+                        foreach (var c in cList)
                         {
-                            proxy.CloseAsync();
-                            return 1.00d;
-                        }
-                        else
-                        {
-                            proxy.CloseAsync();
-                            return progress;
-                        }
-                    }
-                    else
-                    {
-                        proxy.Abort();
-                        return 0;
-                    }
-
-                }
-                else
-                {
-                    proxy.Abort();
-                    return 0;
-                }
-
-
-            }
-            catch (CommunicationException)
-            {
-                proxy.Abort();
-                return 0;
-            }
-            catch (TimeoutException)
-            {
-                proxy.Abort();
-                return 0;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
-        }
-
-
-
-        public static List<Competency> GetCompetencies(string studentId, string qualCode)
-        {
-            try
-            {
-                proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
-                if (proxy != null)
-                {
-                    if (proxy.State != CommunicationState.Faulted)
-                    {
-                        proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
-                        List<Competency> competencies = new List<Competency>();
-                        var cList = proxy.GetCompetencyList(studentId, qualCode);
-                        for (int i = 0; i < cList.Count; i++)
-                        {
-                            Competency comp = new Competency();
-                            comp.TafeCompCode = cList[i].TafeCode;
-                            comp.NationaCompCode = cList[i].NationalCode;
-                            comp.CompetencyName = cList[i].CompetencyName;
-                            comp.SubjectCode = cList[i].SubjectCode;
-                            comp.CompTypeCode = cList[i].TrainingPakckageUsage;
-                            comp.Results = cList[i].Results;
-                            competencies.Add(comp);
-
+                            competencies.Add(c);
                         }
                         proxy.CloseAsync();
                         return competencies;
