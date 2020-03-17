@@ -36,7 +36,7 @@ namespace ATTP
 
 
 
-    public App()
+        public App()
         {
             InitializeComponent();
 
@@ -52,11 +52,11 @@ namespace ATTP
 
 
 
-    }
+        }
 
         protected override void OnStart()
         {
-                _UwUnotification = true;
+            _UwUnotification = true;
             // Handle when your app starts
 
         }
@@ -75,7 +75,7 @@ namespace ATTP
 
 
 
-public static TokenDatabaseController TokenDatabase
+        public static TokenDatabaseController TokenDatabase
         {
             get
             {
@@ -110,6 +110,8 @@ public static TokenDatabaseController TokenDatabase
         public static string _Username { get; set; }
 
         public static string _Id { get; set; }
+
+        public static string _QualId { get; set; }
 
         public static bool _UwUnotification { get; set; }
 

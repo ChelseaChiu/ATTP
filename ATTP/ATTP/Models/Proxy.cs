@@ -211,7 +211,7 @@ namespace ATTP.Models
                             qual.StringLEResult = String.Format("List Elective Units: {0} of {1}", qual.DoneLE, qual.ReqListedElectedUnits);
                             qual.StringTotalResult = String.Format("Total Units: {0} of {1}", qual.DoneTotal, qual.TotalUnits);
                             qual.StringProgress = String.Format(qual.Progress * 100 + "%");
-
+                            App._QualId = qual.QualCode;
                             qualifications.Add(qual);
                         }
                         proxy.CloseAsync();
@@ -303,6 +303,62 @@ namespace ATTP.Models
         //    }
 
         //}
+        // hope 
+
+        public static List<StudentServiceRef.Competency> GetCompetenciesPassed(string studentID, string qualificationID)
+        {
+            try
+            {
+                proxy = new StudentServiceClient(StudentServiceClient.EndpointConfiguration.BasicHttpsBinding_IStudentService);
+                proxy.ChannelFactory.Endpoint.Binding.SendTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.ReceiveTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.OpenTimeout = TimeSpan.FromMinutes(10);
+                proxy.ChannelFactory.Endpoint.Binding.CloseTimeout = TimeSpan.FromMinutes(10);
+                proxy.InnerChannel.OperationTimeout = TimeSpan.FromMinutes(10);
+                if (proxy != null)
+                {
+                    if (proxy.State != CommunicationState.Faulted)
+                    {
+                        List<StudentServiceRef.Competency> passedComp = new List<StudentServiceRef.Competency>();
+                        var cList = proxy.GetCompetencyList(studentID, qualificationID);
+                        for (int i = 0; i < cList.Count; i++)
+                        {
+                            proxy.CloseAsync();
+                        }
+                        return passedComp;
+                    }
+                    else
+                    {
+                        proxy.Abort();
+                        return null;
+                    }
+
+                }
+                else
+                {
+                    proxy.Abort();
+                    return null;
+                }
+
+
+            }
+            catch (CommunicationException)
+            {
+                proxy.Abort();
+                return null;
+            }
+            catch (TimeoutException)
+            {
+                proxy.Abort();
+                return null;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
 
 
 

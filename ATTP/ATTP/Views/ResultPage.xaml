@@ -12,7 +12,11 @@
         <StackLayout BackgroundColor="White" Margin="20,10,20,20">
             <Label x:Name="ResultLbl" Text="{i18n:Translate TranslationResult}" FontSize="30" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" />
             <Label x:Name="StudyLbl" Text="{i18n:Translate  TranslationStudyPath}" FontAttributes="Bold" FontSize="14"/>
-            <control:CustomPicker x:Name="StudyPicker" Title="{i18n:Translate  TranslationStudypicker}" ItemsSource="{Binding StudyPaths}" ItemDisplayBinding="{Binding StudyPathName}" FontSize="14" />
+
+            <control:CustomPicker x:Name="StudyPicker" 
+                                  Title="{i18n:Translate  TranslationStudypicker}"
+                                  ItemsSource="{Binding StudyPaths}" 
+                                  ItemDisplayBinding="{Binding QualName}" FontSize="14" />
 
             <Label x:Name="CompleteLbl" Text="Completed" FontAttributes="Bold" FontSize="12"/>
             <Grid BackgroundColor="#DE1616" RowSpacing="3" ColumnSpacing="10" Padding="10,0,0,0">

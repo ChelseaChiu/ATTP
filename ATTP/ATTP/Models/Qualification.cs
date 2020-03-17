@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace ATTP.Models
@@ -35,5 +37,49 @@ namespace ATTP.Models
 
         public string StringTotalResult { get; set; }
 
+
+
     }
+    //public class QualficationResultView : INotifyPropertyChanged
+    //{
+    //    List<Qualification> studyPaths;
+    //    public List<Qualification> StudyPaths
+    //    {
+    //        get { return studyPaths; }
+    //        set
+    //        {
+    //            if (studyPaths != value)
+    //            {
+    //                studyPaths = value;
+    //                OnPropertyChanged();
+    //            }
+    //        }
+    //    }
+
+    //    Qualification selectedJob;
+    //    public Qualification SelectedJob
+    //    {
+    //        get { return selectedJob; }
+    //        set
+    //        {
+    //            if (selectedJob != value)
+    //            {
+    //                selectedJob = value;
+    //                OnPropertyChanged();
+    //            }
+    //        }
+    //    }
+
+
+    //    public event PropertyChangedEventHandler PropertyChanged;
+
+    //    protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+    //    {
+    //        PropertyChangedEventHandler handler = PropertyChanged;
+    //        if (handler != null)
+    //        {
+    //            handler(this, new PropertyChangedEventArgs(propertyName));
+    //        }
+    //    }
+    //}
 }
