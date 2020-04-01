@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ATTP.Models;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -14,11 +15,13 @@ namespace ATTP.Views
     public partial class CampusDirectory : ContentPage
     {
         public string imgURL;
-        //set up collections for picker herehere
-        public List<String> FloorList = new List<string>() { "Currie St Basement" };
-        public String floor1 = "Currie St First Floor";
         
+        //set up collections for picker here
+        public List<String> FloorList = new List<string>() { "Currie St Basement" }; //TODO change this to use models.
+        public String floor1 = "Currie St First Floor";
 
+        //Model setup
+        public ObservableCollection<Floor> Floors { get; set; }
         public CampusDirectory()
         {
             InitializeComponent();
@@ -26,17 +29,39 @@ namespace ATTP.Views
             imgURL = "Assets/CampusImages/SouthAustralia/CurrieStBasementFloor.png";
             //set up initial picker content (Comment this out when models implemented)
             FloorList.Add(floor1);
-            //FloorList.Add("Currie St First Floor");
 
-            imagePicker.ItemsSource = FloorList;
+            //using model
+            Floors = new ObservableCollection<Floor> { new Floor { FloorName = "Basement", FloorImgUrl = "Assets/CampusImages/SouthAustralia/CurrieStBasementFloor.png" } };
+            //Floors.Add(new Floor { );
+            Floors.Add(new Floor { FloorName = "First Floor", FloorImgUrl = "Assets/CampusImages/SouthAustralia/CurrieStFirstFloor.png" });
+            Floors.Add(new Floor { FloorName = "Second Floor", FloorImgUrl = "Assets/CampusImages/SouthAustralia/CurrieStSecondFloor.png" });
+            Floors.Add(new Floor { FloorName = "Third Floor", FloorImgUrl = "Assets/CampusImages/SouthAustralia/CurrieStThirdFloor.png" });
+            Floors.Add(new Floor { FloorName = "Fourth Floor", FloorImgUrl = "Assets/CampusImages/SouthAustralia/CurrieStFourthFloor.png" });
+
+
+            //the picker that chooses the floor. TODO: have default floors be Currie St.
+            //imagePicker.ItemsSource = FloorList;
+
+            imagePicker.ItemsSource = Floors;
+
+            BindingContext = this;
+
 
         }
 
+        //picks the floor
         private void imagePicker_SelectedIndexChanged(object sender, EventArgs e)
         {
             //code to handle specific image picked. Old way.
             var selection = imagePicker.SelectedIndex;
+            var floorSelection = imagePicker.SelectedItem as Floor;
+
             string newImg = imgURL; //default image change
+
+            newImg = floorSelection.FloorImgUrl;
+            /*
+             *
+            //Hard coded method
             switch (selection)
             {
                 case 0:
@@ -57,7 +82,7 @@ namespace ATTP.Views
                         break;
                     }
             }
-            
+            */
 
 
             floorImg.Source = newImg;
