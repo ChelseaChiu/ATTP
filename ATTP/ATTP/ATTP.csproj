@@ -33,7 +33,10 @@
     <EmbeddedResource Remove="Views\StaticResource.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Assets\AllCampuses.PNG" />
     <None Remove="Assets\Calendar.png" />
+    <None Remove="Assets\Campus.png" />
+    <None Remove="Assets\CampusImages\SouthAustralia\AllCampuses.PNG" />
     <None Remove="Assets\circle.png" />
     <None Remove="Assets\circle2.png" />
     <None Remove="Assets\Exit.png" />
@@ -59,7 +62,16 @@
     <None Remove="MultilingualResources\ATTP.zh-TW.xlf" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\AllCampuses.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\Calendar.png" />
+    <Content Include="Assets\Campus.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\CampusImages\SouthAustralia\AllCampuses.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\circle.png" />
     <Content Include="Assets\circle2.png" />
     <Content Include="Assets\Exit.png" />
@@ -121,7 +133,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Home.png" />
+    <Content Include="Assets\Home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <XliffResource Include="MultilingualResources\ATTP.en-AU.xlf" />
     <XliffResource Include="MultilingualResources\ATTP.en-US.xlf" />
     <XliffResource Include="MultilingualResources\ATTP.ja.xlf" />
@@ -148,5 +162,10 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Assets\Bullet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

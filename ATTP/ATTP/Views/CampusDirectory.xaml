@@ -7,9 +7,15 @@
              x:Class="ATTP.Views.CampusDirectory">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackPanel>
+            <!--<control:CustomPicker x:Name="CRNDAYPicker"  Title="Select the timetable day " Grid.Row="3" ItemsSource="{Binding CRNCourseDays}" ItemDisplayBinding="{Binding CRNCourseDayName}" Image="ic_arrow_drop_down" />-->
+            <Picker x:Name="campusPicker" Title="Pick the Campus" />
+
+            <Picker x:Name="imagePicker" Title="Pick the floor to view" ItemsSource="{Binding FloorList}" SelectedIndexChanged="imagePicker_SelectedIndexChanged"/>
+
+            <!-- <Picker x:Name="FloorPicker" Source="" -->
+            <Image x:Name="floorImg" Source="Assets/CampusImages/SouthAustralia/AllCampuses.png" />
+            </StackPanel>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
