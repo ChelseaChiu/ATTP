@@ -68,7 +68,7 @@ namespace ATTP.Views
         //picks the floor
         private void imagePicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //code to handle specific image picked. Old way.
+            //code to handle specific image picked. Old way using hardcoded strings.
             //var selection = imagePicker.SelectedIndex;
 
             var floorSelection = imagePicker.SelectedItem as Floor;
