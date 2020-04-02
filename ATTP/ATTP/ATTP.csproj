@@ -37,6 +37,8 @@
     <None Remove="Assets\Calendar.png" />
     <None Remove="Assets\Campus.png" />
     <None Remove="Assets\CampusImages\SouthAustralia\AllCampuses.PNG" />
+    <None Remove="Assets\CampusImages\SouthAustralia\CurrieStThirdFloor.PNG" />
+    <None Remove="Assets\CampusImages\SouthAustralia\RegencyGroundFloor.PNG" />
     <None Remove="Assets\circle.png" />
     <None Remove="Assets\circle2.png" />
     <None Remove="Assets\Exit.png" />
@@ -70,6 +72,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\CampusImages\SouthAustralia\AllCampuses.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\CampusImages\SouthAustralia\CurrieStThirdFloor.PNG" />
+    <Content Include="Assets\CampusImages\SouthAustralia\RegencyGroundFloor.PNG">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\circle.png" />

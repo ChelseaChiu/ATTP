@@ -127,11 +127,22 @@
     <Content Include="Assets\CampusImages\SouthAustralia\CurrieStFourthFloor.PNG">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Assets\CampusImages\SouthAustralia\CurrieStGroundFloor.PNG" />
+    <Content Include="Assets\CampusImages\SouthAustralia\CurrieStGroundFloor.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\CampusImages\SouthAustralia\CurrieStSecondFloor.PNG">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\CampusImages\SouthAustralia\CurrieStThirdFloor.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\CampusImages\SouthAustralia\RegencyFirstFloor.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\CampusImages\SouthAustralia\RegencyGroundFloor.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Home.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\LargeTile.scale-100.png" />
