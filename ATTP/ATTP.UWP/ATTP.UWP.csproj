@@ -105,10 +105,21 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Assets\AllCampuses.PNG" />
+    <EmbeddedResource Include="Assets\Calendar.png" />
+    <EmbeddedResource Include="Assets\CurrieStBasementFloor.PNG" />
+    <EmbeddedResource Include="Assets\CurrieStFirstFloor.PNG" />
+    <EmbeddedResource Include="Assets\CurrieStFourthFloor.PNG" />
+    <EmbeddedResource Include="Assets\CurrieStGroundFloor.PNG" />
+    <EmbeddedResource Include="Assets\CurrieStSecondFloor.PNG" />
+    <EmbeddedResource Include="Assets\CurrieStThirdFloor.PNG" />
+    <Content Include="Assets\Home.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
     <Content Include="Assets\LoginImageIcon.PNG" />
+    <Content Include="Assets\RegencyFirstFloor.PNG" />
+    <Content Include="Assets\RegencyGroundFloor.PNG" />
     <Content Include="Assets\SmallTile.scale-100.png" />
     <Content Include="Assets\SmallTile.scale-200.png" />
     <Content Include="Assets\SmallTile.scale-400.png" />
