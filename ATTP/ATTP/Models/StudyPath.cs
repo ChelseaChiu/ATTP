@@ -6,9 +6,12 @@ namespace ATTP.Models
 {
     public class StudyPath
     {
-        public string QualNameTest { get; set; }
+        //public string QualName { get; set; }
 
-        public string TafeQualCodeTest { get; set; }
+        //public string TafeQualCode { get; set; }
+
+        public string StudyPathName { get; set; }
+        public string CourseCode { get; set; }
 
     }
 }
